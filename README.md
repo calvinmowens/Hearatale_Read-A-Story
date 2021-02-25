@@ -3,3 +3,4 @@ This is the repo for the Hearatale Read-A-Story app that is currently in develop
 
 TEAM:
 Sungeun Bae
+Selena Do
