@@ -36,7 +36,7 @@
     z-index: 300;
     width: 35%;
     height: 80%;
-    background-image: url(img/Ellipse\ 2.png);
+    background-image: url(../img/Ellipse\ 2.png);
     background-size: contain;
     background-repeat: no-repeat;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -118,52 +118,52 @@
 }
 
 .book-1 {
-    background: url(img/pigeon_book.jpg);
+    background: url(../img/pigeon_book.jpg);
     background-size: cover;
 }
 
 .book-2 {
-    background: url(img/nightbefore.jpg);
+    background: url(../img/nightbefore.jpg);
     background-size: cover;
 }
 
 .book-3 {
-    background: url(img/crayon.jpg);
+    background: url(../img/crayon.jpg);
     background-size: cover;
 }
 
 .book-4 {
-    background: url(img/miss-bindergarten-takes-a-field-trip-with-kindergarten.jpg);
+    background: url(../img/miss-bindergarten-takes-a-field-trip-with-kindergarten.jpg);
     background-size: cover;
 }
 
 .book-5 {
-    background: url(img/king.jfif);
+    background: url(../img/king.jfif);
     background-size: cover;
 }
 
 .book-6 {
-    background: url(img/hicka.jpg);
+    background: url(../img/hicka.jpg);
     background-size: cover;
 }
 
 .book-7 {
-    background: url(img/hungry.jpg);
+    background: url(../img/hungry.jpg);
     background-size: cover;
 }
 
 .book-8 {
-    background: url(img/noeat.jpeg);
+    background: url(../img/noeat.jpeg);
     background-size: cover;
 }
 
 .book-9 {
-    background: url(img/taco.jpg);
+    background: url(../img/taco.jpg);
     background-size: cover;
 }
 
 .book-10 {
-    background: url(img/cliff.jpg);
+    background: url(../img/cliff.jpg);
     background-size: cover;
 }
 
