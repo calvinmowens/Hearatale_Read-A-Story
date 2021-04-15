@@ -117,6 +117,7 @@ a{
     grid-gap: 13px;
 }
 .grid-item {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,7 +154,7 @@ a{
     padding: 10px;
     font-family: 'Alatsi', sans-serif;
     font-size: 36px;
-    color: #fff;
+    color: #000;
 }
 .btn-login {
     cursor: pointer;
@@ -164,6 +165,20 @@ a{
     padding: 12px 25px;
     border-radius: 10px;
     background: #FFB703;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+/*TESTSSSS*/
+.btn-keyboard {
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    border-radius: 10px;
+    /*background: #FFB703;*/
     margin-top: 15%;
     margin-bottom: 15%;
     font-family: 'Archivo Narrow', sans-serif;
