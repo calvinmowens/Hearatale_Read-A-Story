@@ -99,6 +99,7 @@ function verifyLogin() {
 		passwordInput3.value = '';
 		passwordInput4.value = '';
 		passwordInput5.value = '';
+		count = 0;
 
 		//******************************ADD POPUP FOR WRONG PASSWORD HEREEEE*******************************************
 		alert("Wrong password entered, please enter correct password.");
