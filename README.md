@@ -6,5 +6,5 @@ Sungeun Bae
 Selena Do  
 Kush Dabhi  
 Robbie (just Robbie like Rihanna or Beyonce)  
-Calvin Owens 🤠
+Calvin Owens 🤠  
 Luke LaScala
