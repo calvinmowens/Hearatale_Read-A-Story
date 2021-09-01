@@ -2,7 +2,7 @@
 
 This is the repo for the Hearatale Read-A-Story app that is currently in development by Georgia Tech Junior Design Team 1111.
 
-TEAM:
+TEAM:  
 Sungeun (Harry) Bae 🧙  
 Selena Do  
 Kush Dabhi  
