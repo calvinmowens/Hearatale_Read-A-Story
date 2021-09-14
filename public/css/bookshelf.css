@@ -27,7 +27,8 @@
     height: 100%;
     margin-left: 100px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    align-content: center;
     position: relative;
 }
 
@@ -43,12 +44,11 @@
 }
 
 .bookshelf_container_header_menu_container_info {
-    position: absolute;
     z-index: 200;
     width: 90%;
     height: 63%;
-    left: 20px;
-    bottom: 12.2px;
+    left: 5px;
+    bottom: 12px;
     border-radius: 300px;
     background-color: white;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -60,6 +60,7 @@
     font-size: 19px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 5px;
 }
 
 .bookshelf_container_header_logout > form > input {
