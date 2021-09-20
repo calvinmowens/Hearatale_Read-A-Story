@@ -207,3 +207,7 @@ p{
     padding-left: 10px;
     padding-right: 10px;
 }
+
+audio {
+    margin-right: 30px;
+}
