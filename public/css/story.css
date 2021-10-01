@@ -165,6 +165,10 @@ p{
     overflow: auto;
 }
 
+.story-mid::-webkit-scrollbar {
+    display: none;
+}
+
 .volume-control {
     padding: 10px 30px;
     border-radius: 100px;
@@ -184,7 +188,7 @@ p{
 
 .story-title{
     font-family: 'Alatsi', sans-serif;
-    font-size: 32px;
+    font-size: 25px;
     margin-left: 10%;
 }
 
@@ -210,4 +214,5 @@ p{
 
 audio {
     margin-right: 30px;
+    width: 250px;
 }
