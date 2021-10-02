@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alatsi&family=Archivo+Narrow:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bookshelf.css">
+</head>
+
+<body>
+    <section class="bookshelf_container">
+        <div class="bookshelf_container_header">
+            <div class="bookshelf_container_header_menu_container">
+                <div class="bookshelf_container_header_menu_container_img">
+                </div>
+                <div class="bookshelf_container_header_menu_container_info">
+                    <p>
+                        Elijah White <br> 26💰 12⭐
+                    </p>
+                </div>
+            </div>
+            <!-- Why are we doing this like this? Why not button? -->
+            <div class="bookshelf_container_header_logout">
+                <form action="index.html">
+                    <input type="submit" name="" id="" value="log out">
+                </form>
+            </div>
+        </div>
+        <div class="bookshelf-grid-container">
+            <a href="story.html" id="pigeon" class="grid-item book-1">
+                <div id="pigeon-overlay"></div>
+                <h2 class="book-title" id="pigeon-title">Little Red <br>Riding Hood</h2>
+            </a>
+            <a href="#" id=nightBefore class="grid-item book-2">
+                <div id="night-overlay"></div>
+                <h2 class="book-title" id="night-title">The Night Before Kindergarten</h2>
+            </a>
+            <a href="#" id="crayon" class="grid-item book-3">
+                <div id="crayon-overlay"></div>
+                <h2 class="book-title" id="crayon-title">The Day the Crayons Quit</h2>
+            </a>
+            <a href="#" id="bindergarten" class="grid-item book-4">
+                <div id="bindergarten-overlay"></div>
+                <h2 class="book-title" id="bindergarten-title">Miss Bindergarten Gets Ready for Kindergarten</h2>
+            </a>
+            <a href="#" id="king" class="grid-item book-5">
+                <div id="king-overlay"></div>
+                <h2 class="book-title" id="king-title">The King of Kindergarten</h2>
+            </a>
+            <a href="#" id="chicka" class="grid-item book-6">
+                <div id="chicka-overlay"></div>
+                <h2 class="book-title" id="chicka-title">Chicka Chicka Boom Boom</h2>
+            </a>
+            <a href="#" id="hungry" class="grid-item book-7">
+                <div id="hungry-overlay"></div>
+                <h2 class="book-title" id="hungry-title">The Very Hungry Caterpillar</h2>
+            </a>
+            <a href="#" id="classmate" class="grid-item book-8">
+                <div id="classmate-overlay"></div>
+                <h2 class="book-title" id="classmate-title">We Don't Eat Our Classmates</h2>
+            </a>
+            <a href="#" id="dragons" class="grid-item book-9">
+                <div id="dragons-overlay"></div>
+                <h2 class="book-title" id="dragons-title">Dragons Love Tacos</h2>
+            </a>
+            <a href="#" id="clifford" class="grid-item book-10">
+                <div id="clifford-overlay"></div>
+                <h2 class="book-title" id="clifford-title">Clifford Goes to Kindergarten</h2>
+            </a>
+        </div>
+    </section>
+    <script src="js/bookshelf.js"></script>
+</body>
+
+</html>
