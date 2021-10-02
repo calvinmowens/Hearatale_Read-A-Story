@@ -200,10 +200,11 @@ p{
     margin-bottom: 100px;
     width: 80%;
     height: 50%;
+    background: url(../img/LR_cover.jpeg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background: url(../img/exampleStoryImg.png);
+    
 }
 
 .highlight-line {

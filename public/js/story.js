@@ -6,7 +6,7 @@ sound.onplay = function () {
     sound.ontimeupdate = function () { highlight() };
 
     function highlight() {
-        let counter = Math.round(sound.currentTime);
+        let counter = Math.round(Math.floor(sound.currentTime));
         switch (counter) {
             case 1:
                 document.getElementById("title").classList.add('highlight-line');
@@ -51,6 +51,16 @@ sound.onplay = function () {
                 console.log("reached " + counter);
                 document.getElementById("line7").classList.remove('highlight-line');
                 document.getElementById("line8").classList.add('highlight-line');
+                break;
+            case 28:
+                console.log("reached " + counter);
+                document.getElementById("line8").classList.remove('highlight-line');
+                document.getElementById("line9").classList.add('highlight-line');
+                break;
+            case 30:
+                console.log("reached " + counter);
+                document.getElementById("line9").classList.remove('highlight-line');
+                document.getElementById("line10").classList.add('highlight-line');
                 break;
             //continue and add more cases...
         }

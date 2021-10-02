@@ -1,5 +1,8 @@
 // Auto-scroll
 ScrollRate = 150;
+
+setTimeout(scrollDiv_init, 8000);
+
 function scrollDiv_init() {
     DivElmnt = document.getElementById('story-scroll');
 	reachedMaxScroll = false;
@@ -9,7 +12,6 @@ function scrollDiv_init() {
     
 	scrollInterval = setInterval('scrollDiv()', ScrollRate);
 }
-
 
 function scrollDiv() {
 	if (!reachedMaxScroll) {
