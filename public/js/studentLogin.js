@@ -85,15 +85,11 @@ function myFunction(e) {
 
 }
 
-
 function verifyLogin() {
-	if (passwordInput1.value == 'C' && passwordInput2.value == 'C' && passwordInput3.value == 'C'
-		 && passwordInput4.value == 'C' && passwordInput5.value == 'C') {
-
-		console.log("verified");
-		location.href = "bookshelf.html";
-
-	} else {
+	console.log("Password validation");
+	if (passwordInput1.value == '' || passwordInput2.value == '' || passwordInput3.value == '' || passwordInput4.value == '' || passwordInput5.value == '') {
+		// TODO set to empty and return
+		console.log("One box empty!");
 		passwordInput1.value = '';
 		passwordInput2.value = '';
 		passwordInput3.value = '';
@@ -101,8 +97,44 @@ function verifyLogin() {
 		passwordInput5.value = '';
 		count = 0;
 
-		//******************************ADD POPUP FOR WRONG PASSWORD HEREEEE*******************************************
-		alert("Wrong password entered, please enter correct password.");
+		alert("Please enter a 5-digit passcode.");
+	} else {
+		console.log("Passcode is full... attempting POST request.");
+
+		fetch('http://localhost:5000/student/login', {
+				method: 'POST', // or 'PUT'
+				headers: {
+					'Content-Type': 'application/json', 'Accept': 'application/json'
+				},
+				body: '{"password":"calv1n"}',
+				mode: 'no-cors'
+			})
+			.then(response => response.json())
+			.then(data => {
+				console.log('Success:', data);
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+			});
 	}
+
+
+	// if (passwordInput1.value == 'C' && passwordInput2.value == 'C' && passwordInput3.value == 'C'
+	// 	 && passwordInput4.value == 'C' && passwordInput5.value == 'C') {
+
+	// 	console.log("verified");
+	// 	location.href = "bookshelf.html";
+
+	// } else {
+	// 	passwordInput1.value = '';
+	// 	passwordInput2.value = '';
+	// 	passwordInput3.value = '';
+	// 	passwordInput4.value = '';
+	// 	passwordInput5.value = '';
+	// 	count = 0;
+
+	// 	//******************************ADD POPUP FOR WRONG PASSWORD HEREEEE*******************************************
+	// 	alert("Wrong password entered, please enter correct password.");
+	// }
 }
 

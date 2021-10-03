@@ -17,6 +17,7 @@ def home():
 
 @app.route("/student/login", methods=["POST"])
 def slogin():
+    print(request.json)
     password = request.json.get("password", None)
 
     s = Student.login(password)
