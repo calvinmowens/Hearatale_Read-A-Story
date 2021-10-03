@@ -21,7 +21,7 @@ def slogin():
 
     s = Student.login(password)
     if not s:
-        return jsonify({"msg": "Bad username or password"}), 401
+        return jsonify({"msg": "Bad password"}), 401
 
     access_token = create_access_token(identity=s.uuid)
     return jsonify(access_token=access_token)
@@ -45,5 +45,6 @@ def tlogin():
 def protected():
     # Access the identity of the current user with get_jwt_identity
     return jsonify(logged_in_as=current_user.uuid), 200
+
 
 from models import *
