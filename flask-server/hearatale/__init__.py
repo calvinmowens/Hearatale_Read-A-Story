@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager, create_access_token, get_jwt_identity, jwt_required, current_user
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
 app.config.from_object('config')
 
 jwt = JWTManager(app)
@@ -16,9 +18,11 @@ def home():
 
 
 @app.route("/student/login", methods=["POST"])
+@cross_origin()
 def slogin():
     print(request.json)
-    password = request.json.get("password", None)
+    password = request.json.get("password")
+    print(password)
 
     s = Student.login(password)
     if not s:

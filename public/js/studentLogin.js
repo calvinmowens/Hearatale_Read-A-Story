@@ -1,4 +1,3 @@
-
 // button.addEventListener('click', input);
 
 // function input() {
@@ -101,20 +100,46 @@ function verifyLogin() {
 	} else {
 		console.log("Passcode is full... attempting POST request.");
 
+		let pass = passwordInput1.value + passwordInput2.value + passwordInput3.value + passwordInput4.value + passwordInput5.value;
+		let data = { password: pass }
+		console.log(pass);
+
 		fetch('http://localhost:5000/student/login', {
 				method: 'POST', // or 'PUT'
 				headers: {
-					'Content-Type': 'application/json', 'Accept': 'application/json'
+					'Content-Type': 'application/json',
+					'Access-Control-Allow-Origin': '*'
 				},
-				body: '{"password":"calv1n"}',
-				mode: 'no-cors'
+				body: JSON.stringify(data)
 			})
 			.then(response => response.json())
 			.then(data => {
 				console.log('Success:', data);
+				console.log(data);
+				console.log(data.msg);
+				if (data.msg == "Bad password") {
+					passwordInput1.value = '';
+					passwordInput2.value = '';
+					passwordInput3.value = '';
+					passwordInput4.value = '';
+					passwordInput5.value = '';
+					count = 0;
+
+					alert("User not found.");
+				} else {
+					location.href = "bookshelf.html";
+				}
 			})
 			.catch((error) => {
 				console.error('Error:', error);
+				passwordInput1.value = '';
+				passwordInput2.value = '';
+				passwordInput3.value = '';
+				passwordInput4.value = '';
+				passwordInput5.value = '';
+				count = 0;
+
+				alert("API Failure, contact admin.");
 			});
 	}
 
@@ -123,7 +148,6 @@ function verifyLogin() {
 	// 	 && passwordInput4.value == 'C' && passwordInput5.value == 'C') {
 
 	// 	console.log("verified");
-	// 	location.href = "bookshelf.html";
 
 	// } else {
 	// 	passwordInput1.value = '';
