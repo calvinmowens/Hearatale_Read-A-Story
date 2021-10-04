@@ -20,15 +20,15 @@ def home():
 @app.route("/student/login", methods=["POST"])
 @cross_origin()
 def slogin():
-    print(request.json)
     password = request.json.get("password")
-    print(password)
+    print("Searching for user: " + password)
 
     s = Student.login(password)
     if not s:
         return jsonify({"msg": "Bad password"}), 401
 
     access_token = create_access_token(identity=s.uuid)
+    print("User found: " + s.name)
     return jsonify(access_token=access_token)
 
 
