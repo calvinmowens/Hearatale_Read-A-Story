@@ -102,7 +102,7 @@ function verifyLogin() {
 		count = 0;
 
 		//******************************ADD POPUP FOR WRONG PASSWORD HEREEEE*******************************************
-		alert("Wrong password entered, please enter correct password.");
+		alert("Wrong password entered, please enter correct password");
 	}
 }
 
