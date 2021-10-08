@@ -46,33 +46,17 @@
                         </div>
                         <div id="story-scroll" class="story-mid">
                         <!-- <div class="story-mid"> -->
-                            <p class="story-text">
-                                <span id="line1" class="">Once upon a time there was a sweet little girl</span> <br>
-                                <span id="line2" class=""> who was loved by everyone who knew
-                                    her, </span>
-                                <br>
-                                <span id="line3" class=""> but most of all by her grandmother, and there </span>
-                                <br>
-                                <span id="line4" class=""> was nothing
-                                    that she would not have given
-                                     </span>
-                                <br>
-                                <span id="line5" class=""> to the child. Once she gave the girl a little 
-                                </span>
-                                <br>
-                                <span id="line6" class=""> cape with a hood of red velvet, </span>
-                                <br>
-                                <span id="line7" class=""> which suited her so well
-                                </span>
-                                <br>
-                                <span id="line8" class=""> that she would never wear anything else; </span>
-                                <br>
-                                <span id="line9" class=""> so she was alawys called 
-                                </span>
-                                <br>
-                                <span id="line10" class="">'Little Red Riding Hood.’</span>
-                                <br>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                            <p class="story-text" id="story-text">
+                                <!-- Import from a .txt -->
+                                Placeholder
                             </p>
+                            <script>
+                            jQuery.get('/assets/story.txt', function (data) {
+                                var output = document.getElementById("story-text");
+                                output.textContent = data;
+                            });
+                            </script>
                         </div>
                     </div>
                 </div>
