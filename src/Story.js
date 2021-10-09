@@ -7,8 +7,17 @@ function Story() {
     const [resourceType, setResourceType] = useState('posts')
 
     useEffect(() => {
-
         let sound = document.getElementById("story");
+        let btnChecker = document.getElementById("closeBtn");
+        if (btnChecker != null) {
+            togglePlay();
+        } else {
+            togglePlay();
+        }
+
+        function togglePlay() {
+            return sound.paused ? sound.play() : sound.pause();
+        };
 
         sound.onplay = function () {
             let storyDuration = Math.round(Math.floor(sound.duration));
@@ -75,7 +84,6 @@ function Story() {
                 }
             }
         }
-
         sound.onpause = function () {
             // let currentTimeSec = sound.currentTime.toPrecision(3);
             // alert("The story is paused and the paused time in second is " + currentTimeSec);
@@ -153,7 +161,7 @@ function Story() {
                     </div>
                 </div>
             </section>
-            <Popup trigger={buttonPopup} setTrigger={setWordPopup}>
+            <Popup id="popup" trigger={buttonPopup} setTrigger={setWordPopup}>
                 <h3>popup</h3>
             </Popup>
         </div>
