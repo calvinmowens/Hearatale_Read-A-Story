@@ -129,6 +129,7 @@ p{
     height: 100%;
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(184, 184, 184, 0.25);
+    position: relative;
 }
 
 .right-page {
@@ -163,6 +164,11 @@ p{
     padding-left: 10%;
     padding-right: 13%;
     overflow: auto;
+    z-index: 0;
+}
+
+.story-mid::-webkit-scrollbar {
+    display: none;
 }
 
 .volume-control {
@@ -184,7 +190,7 @@ p{
 
 .story-title{
     font-family: 'Alatsi', sans-serif;
-    font-size: 32px;
+    font-size: 25px;
     margin-left: 10%;
 }
 
@@ -196,18 +202,31 @@ p{
     margin-bottom: 100px;
     width: 80%;
     height: 50%;
+    background: url(../img/LR_cover.jpeg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background: url(../img/exampleStoryImg.png);
+    
 }
 
 .highlight-line {
     background-color: rgb(255, 217, 0);
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 450px;
+    height: 55px;
+    margin-left: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow: auto;
+    
+}
+
+.story-mid, .highlight-line {
+    position: absolute;
+    /* top: 0; */
+    left: 0;
 }
 
 audio {
     margin-right: 30px;
+    width: 250px;
 }

@@ -13,7 +13,7 @@
 </head>
 
 <!-- <body> -->
-<body onLoad="scrollDiv_init()">
+<body>
     <div class="nav">
         <div class="back-to-bookshelf">
             <a href="bookshelf.html">
@@ -39,42 +39,57 @@
                 <div class="left-page-middle">
                     <div class="story-text-div">
                         <div class="story-top">
-                            <h1 id="tracktime" class="story-title">Title of the Book Here!</h1>
+                            <h1 id="title" class="story-title">LITTLE RED RIDING HOOD</h1>
                             <audio id="story" controls autoplay controlsList="nodownload noplaybackrate">
-                                <source src="audio/exampleAudio.mp3" type="audio/mpeg">
+                                <source src="audio/LR1_cut.mp3" type="audio/mpeg">
                             </audio>
                         </div>
                         <div id="story-scroll" class="story-mid">
                         <!-- <div class="story-mid"> -->
-                            <p class="story-text">
-                                <span id="line1" class="highlight-line">Lorem ipsum dolor sit amet,
-                                    consectetur</span> <br>
-                                <span id="line2" class=""> adipiscing elit, sed do eiusmod tempor
-                                    incididunt </span>
+
+                            <div class="highlight-line"></div>
+                            <div id="story-scroll" class="story-mid">
+                            <!-- <div class="story-mid"> -->
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                                <p class="story-text" id="story-text">
+                                    <!-- Import from a .txt -->
+                                    Placeholder
+                                </p>
+                                <script>
+                                jQuery.get('/assets/story.txt', function (data) {
+                                    var output = document.getElementById("story-text");
+                                    output.textContent = data;
+                                });
+                                </script>
+                            </div>
+
+                            <!-- <p class="story-text">
+                                <span id="line1" class="">Once upon a time there was a sweet little girl</span> <br>
+                                <span id="line2" class=""> who was loved by everyone who knew
+                                    her, </span>
                                 <br>
-                                <span id="line3" class=""> ut labore et dolore magna aliqua. </span>
+                                <span id="line3" class=""> but most of all by her grandmother, and there </span>
                                 <br>
-                                <span id="line4" class=""> Ut enim ad minim veniam, quis nostrud </span>
+                                <span id="line4" class=""> was nothing
+                                    that she would not have given
+                                     </span>
                                 <br>
-                                <span id="line5" class=""> exercitation ullamco laboris nisi ut aliquip
+                                <span id="line5" class=""> to the child. Once she gave the girl a little 
                                 </span>
                                 <br>
-                                <span id="line6" class=""> ex ea commodo consequat. Duis aute iruredolor
-                                    in </span>
+                                <span id="line6" class=""> cape with a hood of red velvet, </span>
                                 <br>
-                                <span id="line7" class=""> reprehenderit in voluptate velit esse cillum
+                                <span id="line7" class=""> which suited her so well
                                 </span>
                                 <br>
-                                <span id="line8" class=""> dolore eu fugiat nulla pariatur. </span>
+                                <span id="line8" class=""> that she would never wear anything else; </span>
                                 <br>
-                                <span id="line9" class=""> Excepteur sint occaecat cupidatat non proident,
+                                <span id="line9" class=""> so she was alawys called 
                                 </span>
                                 <br>
-                                <span id="line10" class="">sunt in culpa qui officia deserunt mollit
-                                    anim</span>
+                                <span id="line10" class="">'Little Red Riding Hood.’</span>
                                 <br>
-                                <span id="line11" class=""> id est laborum. </span>
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>
@@ -85,6 +100,7 @@
         </div>
     </section>
     <script src="js/story.js"></script>
+    <script src="js/autoscroll.js"></script>
 </body>
 
 </html>
