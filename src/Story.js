@@ -9,6 +9,7 @@ function Story() {
     useEffect(() => {
         let sound = document.getElementById("story");
         let btnChecker = document.getElementById("closeBtn");
+
         if (btnChecker != null) {
             togglePlay();
         } else {
@@ -20,74 +21,115 @@ function Story() {
         };
 
         sound.onplay = function () {
-            let storyDuration = Math.round(Math.floor(sound.duration));
-            sound.ontimeupdate = function () { highlight() };
+            // let storyDuration = Math.round(Math.floor(sound.duration));
+            // sound.ontimeupdate = function () { highlight() };
 
-            function highlight() {
-                let counter = Math.round(Math.floor(sound.currentTime));
-                switch (counter) {
-                    case 1:
-                        document.getElementById("title").classList.add('highlight-line');
-                        break;
-                    case 8:
-                        document.getElementById("title").classList.remove('highlight-line');
-                        document.getElementById("line1").classList.add('highlight-line');
-                        console.log("reached " + counter);
-                        break;
-                    case 11:
-                        console.log("reached " + counter);
-                        document.getElementById("line1").classList.remove('highlight-line');
-                        document.getElementById("line2").classList.add('highlight-line');
-                        break;
-                    case 13:
-                        console.log("reached " + counter);
-                        document.getElementById("line2").classList.remove('highlight-line');
-                        document.getElementById("line3").classList.add('highlight-line');
-                        document.getElementById("picHolder").style = "background: url(../img/exampleImg2.jpg); background-size: contain; background-position: center; background-repeat: no-repeat";
-                        break;
-                    case 16:
-                        console.log("reached " + counter);
-                        document.getElementById("line3").classList.remove('highlight-line');
-                        document.getElementById("line4").classList.add('highlight-line');
-                        break;
-                    case 18:
-                        console.log("reached " + counter);
-                        document.getElementById("line4").classList.remove('highlight-line');
-                        document.getElementById("line5").classList.add('highlight-line');
-                        break;
-                    case 22:
-                        console.log("reached " + counter);
-                        document.getElementById("line5").classList.remove('highlight-line');
-                        document.getElementById("line6").classList.add('highlight-line');
-                        break;
-                    case 24:
-                        console.log("reached " + counter);
-                        document.getElementById("line6").classList.remove('highlight-line');
-                        document.getElementById("line7").classList.add('highlight-line');
-                        break;
-                    case 26:
-                        console.log("reached " + counter);
-                        document.getElementById("line7").classList.remove('highlight-line');
-                        document.getElementById("line8").classList.add('highlight-line');
-                        break;
-                    case 28:
-                        console.log("reached " + counter);
-                        document.getElementById("line8").classList.remove('highlight-line');
-                        document.getElementById("line9").classList.add('highlight-line');
-                        break;
-                    case 30:
-                        console.log("reached " + counter);
-                        document.getElementById("line9").classList.remove('highlight-line');
-                        document.getElementById("line10").classList.add('highlight-line');
-                        break;
-                    //continue and add more cases...
-                }
-            }
+            // function highlight() {
+            //     let counter = Math.round(Math.floor(sound.currentTime));
+            //     switch (counter) {
+            //         case 1:
+            //             document.getElementById("title").classList.add('highlight-line');
+            //             break;
+            //         case 8:
+            //             document.getElementById("title").classList.remove('highlight-line');
+            //             document.getElementById("line1").classList.add('highlight-line');
+            //             console.log("reached " + counter);
+            //             break;
+            //         case 11:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line1").classList.remove('highlight-line');
+            //             document.getElementById("line2").classList.add('highlight-line');
+            //             break;
+            //         case 13:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line2").classList.remove('highlight-line');
+            //             document.getElementById("line3").classList.add('highlight-line');
+            //             document.getElementById("picHolder").style = "background: url(../img/exampleImg2.jpg); background-size: contain; background-position: center; background-repeat: no-repeat";
+            //             break;
+            //         case 16:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line3").classList.remove('highlight-line');
+            //             document.getElementById("line4").classList.add('highlight-line');
+            //             break;
+            //         case 18:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line4").classList.remove('highlight-line');
+            //             document.getElementById("line5").classList.add('highlight-line');
+            //             break;
+            //         case 22:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line5").classList.remove('highlight-line');
+            //             document.getElementById("line6").classList.add('highlight-line');
+            //             break;
+            //         case 24:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line6").classList.remove('highlight-line');
+            //             document.getElementById("line7").classList.add('highlight-line');
+            //             break;
+            //         case 26:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line7").classList.remove('highlight-line');
+            //             document.getElementById("line8").classList.add('highlight-line');
+            //             break;
+            //         case 28:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line8").classList.remove('highlight-line');
+            //             document.getElementById("line9").classList.add('highlight-line');
+            //             break;
+            //         case 30:
+            //             console.log("reached " + counter);
+            //             document.getElementById("line9").classList.remove('highlight-line');
+            //             document.getElementById("line10").classList.add('highlight-line');
+            //             break;
+            //         //continue and add more cases...
+            //     }
+            // }
         }
         sound.onpause = function () {
             // let currentTimeSec = sound.currentTime.toPrecision(3);
             // alert("The story is paused and the paused time in second is " + currentTimeSec);
         }
+
+        //autoscroll
+        let ScrollRate = 1;
+        let EndWord = 700;
+        let reachedMaxScroll;
+        let DivElmnt;
+        let previousScrollTop
+        let scrollInterval
+
+        setTimeout(scrollDiv_init, 7000);
+
+        function scrollDiv_init() {
+            DivElmnt = document.getElementById('story-scroll');
+            reachedMaxScroll = false;
+
+            DivElmnt.scrollTop = 0;
+            previousScrollTop = 0;
+
+            DivElmnt.word = 0;
+
+            scrollInterval = setInterval('scrollDiv()', ScrollRate);
+        }
+
+        function scrollDiv() {
+            if (!reachedMaxScroll) {
+                if (DivElmnt.word >= EndWord) {
+                    console.log(DivElmnt.word);
+                    DivElmnt.scrollTop = previousScrollTop;
+                    previousScrollTop += 60;
+                    DivElmnt.scrollTop += 60;
+
+                    reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
+                    DivElmnt.word = 0;
+                }
+                DivElmnt.word++;
+                console.log(DivElmnt.word);
+            } else {
+                reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
+            }
+        }
+
     })
 
     return (
