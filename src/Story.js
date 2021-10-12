@@ -20,8 +20,8 @@ function Story() {
         };
 
         sound.onplay = function () {
-            let storyDuration = Math.round(Math.floor(sound.duration));
-            sound.ontimeupdate = function () { highlight() };
+            // let storyDuration = Math.round(Math.floor(sound.duration));
+            // sound.ontimeupdate = function () { highlight() };
 
             // function highlight() {
             //     let counter = Math.round(Math.floor(sound.currentTime));
@@ -88,6 +88,47 @@ function Story() {
             // let currentTimeSec = sound.currentTime.toPrecision(3);
             // alert("The story is paused and the paused time in second is " + currentTimeSec);
         }
+
+        //autoscroll
+        let ScrollRate = 1;
+        let EndWord = 700;
+        let reachedMaxScroll;
+        let DivElmnt;
+        let previousScrollTop
+        let scrollInterval
+
+        setTimeout(scrollDiv_init, 7000);
+
+        function scrollDiv_init() {
+            DivElmnt = document.getElementById('story-scroll');
+            reachedMaxScroll = false;
+
+            DivElmnt.scrollTop = 0;
+            previousScrollTop = 0;
+
+            DivElmnt.word = 0;
+
+            scrollInterval = setInterval('scrollDiv()', ScrollRate);
+        }
+
+        function scrollDiv() {
+            if (!reachedMaxScroll) {
+                if (DivElmnt.word >= EndWord) {
+                    console.log(DivElmnt.word);
+                    DivElmnt.scrollTop = previousScrollTop;
+                    previousScrollTop += 60;
+                    DivElmnt.scrollTop += 60;
+
+                    reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
+                    DivElmnt.word = 0;
+                }
+                DivElmnt.word++;
+                console.log(DivElmnt.word);
+            } else {
+                reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
+            }
+        }
+
     })
 
     return (
@@ -125,24 +166,7 @@ function Story() {
                                 </div>
                                 <div id="story-scroll" className="story-mid">
                                     {/* <div class="story-mid"> */}
-
-                                    <div class="highlight-line"></div>
-                                    <div id="story-scroll" class="story-mid">
-                                    {/* <div class="story-mid"> */}
-                                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                                        <p class="story-text" id="story-text">
-                                            {/* Import from a .txt */}
-                                            Placeholder
-                                        </p>
-                                        <script>
-                                        jQuery.get('/assets/story.txt', function (data) {
-                                            var output = document.getElementById("story-text");
-                                            output.textContent = data;
-                                        });
-                                        </script>
-                                    </div>
-
-                                    {/* <p className="story-text">
+                                    <p className="story-text">
                                         <span id="line1" className><span className="targetWord" onClick={() => setWordPopup(true)}>Once</span> upon a time there was a sweet little girl</span> <br />
                                         <span id="line2" className> who was loved by everyone who knew
                                             her, </span>
@@ -168,7 +192,7 @@ function Story() {
                                         <br />
                                         <span id="line10" className>'Little Red Riding Hood.’</span>
                                         <br />
-                                    </p> */}
+                                    </p>
                                 </div>
                             </div>
                         </div>

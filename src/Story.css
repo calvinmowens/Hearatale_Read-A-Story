@@ -140,7 +140,9 @@ p{
     height: 100%;
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(184, 184, 184, 0.25);
+    position: relative;
 }
+
 
 .right-page {
     width: 50%;
@@ -220,8 +222,19 @@ p{
 
 .highlight-line {
     background-color: rgb(255, 217, 0);
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 450px;
+    height: 55px;
+    margin-left: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow: auto;
+    
+}
+
+.story-mid, .highlight-line {
+    position: absolute;
+    /* top: 0; */
+    left: 0;
 }
 
 audio {

@@ -129,7 +129,10 @@ p{
     height: 100%;
     background: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(184, 184, 184, 0.25);
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> 471aa6b154ed906a739078f8d076636636fabe5e
 }
 
 .right-page {
@@ -164,7 +167,10 @@ p{
     padding-left: 10%;
     padding-right: 13%;
     overflow: auto;
+<<<<<<< HEAD
     z-index: 0;
+=======
+>>>>>>> 471aa6b154ed906a739078f8d076636636fabe5e
 }
 
 .story-mid::-webkit-scrollbar {
@@ -211,6 +217,7 @@ p{
 
 .highlight-line {
     background-color: rgb(255, 217, 0);
+<<<<<<< HEAD
     width: 450px;
     height: 55px;
     margin-left: 10%;
@@ -224,6 +231,10 @@ p{
     position: absolute;
     /* top: 0; */
     left: 0;
+=======
+    padding-left: 10px;
+    padding-right: 10px;
+>>>>>>> 471aa6b154ed906a739078f8d076636636fabe5e
 }
 
 audio {
