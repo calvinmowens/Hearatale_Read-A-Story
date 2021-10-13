@@ -9,6 +9,7 @@ function Story() {
     useEffect(() => {
         let sound = document.getElementById("story");
         let btnChecker = document.getElementById("closeBtn");
+
         if (btnChecker != null) {
             togglePlay();
         } else {
@@ -90,7 +91,7 @@ function Story() {
         }
 
         //autoscroll
-        let ScrollRate = 1;
+        let ScrollRate = 0.5;
         let EndWord = 700;
         let reachedMaxScroll;
         let DivElmnt;
@@ -108,26 +109,43 @@ function Story() {
 
             DivElmnt.word = 0;
 
-            scrollInterval = setInterval('scrollDiv()', ScrollRate);
-        }
+            // scrollInterval = setInterval('scrollDiv()', ScrollRate);
+            scrollInterval = setInterval(()=>{
+                if (!reachedMaxScroll) {
+                    if (DivElmnt.word >= EndWord) {
+                        console.log(DivElmnt.word);
+                        DivElmnt.scrollTop = previousScrollTop;
+                        previousScrollTop += 60;
+                        DivElmnt.scrollTop += 60;
 
-        function scrollDiv() {
-            if (!reachedMaxScroll) {
-                if (DivElmnt.word >= EndWord) {
+                        reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
+                        DivElmnt.word = 0;
+                    }
+                    DivElmnt.word++;
                     console.log(DivElmnt.word);
-                    DivElmnt.scrollTop = previousScrollTop;
-                    previousScrollTop += 60;
-                    DivElmnt.scrollTop += 60;
-
-                    reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                    DivElmnt.word = 0;
+                } else {
+                    reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
                 }
-                DivElmnt.word++;
-                console.log(DivElmnt.word);
-            } else {
-                reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-            }
+                }, ScrollRate);
         }
+
+        // function scrollDiv() {
+        //     if (!reachedMaxScroll) {
+        //         if (DivElmnt.word >= EndWord) {
+        //             console.log(DivElmnt.word);
+        //             DivElmnt.scrollTop = previousScrollTop;
+        //             previousScrollTop += 60;
+        //             DivElmnt.scrollTop += 60;
+
+        //             reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
+        //             DivElmnt.word = 0;
+        //         }
+        //         DivElmnt.word++;
+        //         console.log(DivElmnt.word);
+        //     } else {
+        //         reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
+        //     }
+        // }
 
     })
 
