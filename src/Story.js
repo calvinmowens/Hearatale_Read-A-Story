@@ -110,23 +110,23 @@ function Story() {
             DivElmnt.word = 0;
 
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
-            scrollInterval = setInterval(()=>{
-                if (!reachedMaxScroll) {
-                    if (DivElmnt.word >= EndWord) {
-                        console.log(DivElmnt.word);
-                        DivElmnt.scrollTop = previousScrollTop;
-                        previousScrollTop += 60;
-                        DivElmnt.scrollTop += 60;
+            // scrollInterval = setInterval(()=>{
+            //     if (!reachedMaxScroll) {
+            //         if (DivElmnt.word >= EndWord) {
+            //             console.log(DivElmnt.word);
+            //             DivElmnt.scrollTop = previousScrollTop;
+            //             previousScrollTop += 60;
+            //             DivElmnt.scrollTop += 60;
 
-                        reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                        DivElmnt.word = 0;
-                    }
-                    DivElmnt.word++;
-                    console.log(DivElmnt.word);
-                } else {
-                    reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-                }
-                }, ScrollRate);
+            //             reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
+            //             DivElmnt.word = 0;
+            //         }
+            //         DivElmnt.word++;
+            //         console.log(DivElmnt.word);
+            //     } else {
+            //         reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
+            //     }
+            //     }, ScrollRate);
         }
 
         // function scrollDiv() {
