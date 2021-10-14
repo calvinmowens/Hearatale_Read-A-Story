@@ -221,6 +221,7 @@ function Story() {
                 </div>
             </section>
             <Popup id="popup" trigger={buttonPopup} setTrigger={setWordPopup}>
+            
             </Popup>
         </div>
     );
