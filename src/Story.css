@@ -175,7 +175,7 @@ p{
     height:500px;
     padding-left: 10%;
     padding-right: 13%;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .story-mid::-webkit-scrollbar {
@@ -244,4 +244,13 @@ audio {
 
 #story-scroll {
     text-align: left;
+}
+
+
+span {
+    margin-right: 10px;
+}
+
+.targetWord {
+    margin-right: 3px;
 }

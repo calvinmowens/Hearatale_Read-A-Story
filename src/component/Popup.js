@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import './Popup.css'
+import './Popup.css';
+import Story from '../Story.js';
+import PostData from '../data/targetwords.json';
 
 function Popup(props) {
     const [resourceType, setResourceType] = useState('posts')
@@ -9,12 +11,20 @@ function Popup(props) {
     return (props.trigger) ? (
         <div className="popup">
             <div className="popup-inner">
-            <div className="popupContainer">
+                <div className="popupContainer">
                     <div className="popupContainerLeft">
-                        <h1 id="word">Word</h1>
-                        <h4>words, worded,weosfmskd, something</h4>
-                        <h4>/wərd/</h4>
-                        <p>This is the definition of the word.</p>
+                        {PostData.map((postDetail, index) => {
+                            return <h1 id="word">{postDetail.once.word}</h1>
+                        })}
+                        {PostData.map((postDetail, index) => {
+                            return <h4>{postDetail.once.variation}</h4>
+                        })}
+                        {PostData.map((postDetail, index) => {
+                            return <h4>{postDetail.once.pronounciation}</h4>
+                        })}
+                        {PostData.map((postDetail, index) => {
+                            return <p>{postDetail.once.definition}</p>
+                        })}
                         <button className="quizBtnDesign" id="quizBtn">Quiz</button>
                     </div>
                     <div className="popupContainerRight">
@@ -27,5 +37,9 @@ function Popup(props) {
         </div>
     ) : "";
 }
+
+// {PostData.map((postDetail, index) => {
+//     return <h1>{postDetail.word}</h1>
+// })}
 
 export default Popup
