@@ -6,11 +6,17 @@ import $ from 'jquery';
 
 
 function Story() {
+    let triggeredWord;
+
     const [buttonPopup, setWordPopup] = useState(false);
     const [resourceType, setResourceType] = useState('posts')
-
+    let [wordClicked, setWordClicked] = useState('word')
     useEffect(() => {
 
+        /**
+         * splits the story, paragraph, into each span.
+         * This span onClick finds the clicked "word" calls popup function.
+         */
         let txt = $('.story-text').text().split(' ')
         let len = txt.length,
             result = [];
@@ -19,16 +25,21 @@ function Story() {
         }
         $('.story-text').html(result.join(' '));
 
-        let triggeredWord;
         let trigger = $('SPAN').click(
             function () {
                 triggeredWord = $(this).text();
                 console.log(triggeredWord);
+                //word trigger?
+                setWordClicked(wordClicked = triggeredWord);
+                //popup trigger
                 setWordPopup(true);
+                return sound.paused ? sound.play() : sound.pause();
             }
         );
 
-
+        /**
+         * Plays audio.
+         */
         let sound = document.getElementById("story");
         let btnChecker = document.getElementById("closeBtn");
 
@@ -99,8 +110,9 @@ function Story() {
                     </div>
                 </div>
             </section>
-            <Popup id="popup" trigger={buttonPopup} setTrigger={setWordPopup}>
+            <Popup id="popup" trigger={buttonPopup} setWordClicked={"loved"} setTrigger={setWordPopup}>
             </Popup>
+
         </div>
 
     );
