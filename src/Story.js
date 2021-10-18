@@ -10,7 +10,7 @@ function Story() {
 
     const [buttonPopup, setWordPopup] = useState(false);
     const [resourceType, setResourceType] = useState('posts')
-    let [wordClicked, setWordClicked] = useState('word')
+    const [wordClicked, setWordClicked] = useState('word')
     useEffect(() => {
 
         /**
@@ -30,7 +30,7 @@ function Story() {
                 triggeredWord = $(this).text();
                 console.log(triggeredWord);
                 //word trigger?
-                setWordClicked(wordClicked = triggeredWord);
+                setWordClicked(triggeredWord);
                 //popup trigger
                 setWordPopup(true);
                 return sound.paused ? sound.play() : sound.pause();
@@ -110,7 +110,7 @@ function Story() {
                     </div>
                 </div>
             </section>
-            <Popup id="popup" trigger={buttonPopup} setWordClicked={"loved"} setTrigger={setWordPopup}>
+            <Popup id="popup" trigger={buttonPopup} setWordClicked={triggeredWord} setTrigger={setWordPopup}>
             </Popup>
 
         </div>
