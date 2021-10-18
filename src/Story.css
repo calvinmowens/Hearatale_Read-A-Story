@@ -254,3 +254,7 @@ span {
 .targetWord {
     margin-right: 3px;
 }
+
+#title {
+    text-align: left;
+}

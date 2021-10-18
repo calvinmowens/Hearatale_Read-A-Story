@@ -9,8 +9,8 @@ function Story() {
     let triggeredWord;
 
     const [buttonPopup, setWordPopup] = useState(false);
-    const [resourceType, setResourceType] = useState('posts')
-    const [wordClicked, setWordClicked] = useState('word')
+    const [resourceType, setResourceType] = useState('posts');
+    const [wordClicked, setWordClicked] = useState('word');
     useEffect(() => {
 
         /**
@@ -27,7 +27,7 @@ function Story() {
 
         let trigger = $('SPAN').click(
             function () {
-                triggeredWord = $(this).text();
+                triggeredWord = $(this).text().toLowerCase().replace(/[^a-z0-9\s]/gi, '');
                 console.log(triggeredWord);
                 //word trigger?
                 setWordClicked(triggeredWord);

@@ -13,16 +13,16 @@ function Popup(props) {
                 <div className="popupContainer">
                     <div className="popupContainerLeft">
                         {PostData.map((postDetail, index) => {
-                            return <h1 id="word">{postDetail.once.word}</h1>
+                            return <h1 id="word" key={index}>{postDetail.once.word}</h1>
                         })}
                         {PostData.map((postDetail, index) => {
-                            return <h4>{postDetail.once.variation}</h4>
+                            return <h4 id="variation" key={index}>{postDetail.once.variation}</h4>
                         })}
                         {PostData.map((postDetail, index) => {
-                            return <h4>{postDetail.once.pronounciation}</h4>
+                            return <h4 id="pronounciation" key={index}>{postDetail.once.pronounciation}</h4>
                         })}
                         {PostData.map((postDetail, index) => {
-                            return <p>{postDetail.once.definition}</p>
+                            return <p id="definition" key={index}>{postDetail.once.definition}</p>
                         })}
                         <button className="quizBtnDesign" id="quizBtn">Quiz</button>
                     </div>
