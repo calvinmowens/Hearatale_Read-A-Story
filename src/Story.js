@@ -91,12 +91,11 @@ function Story() {
         }
 
         //autoscroll
-        let ScrollRate = 0.5;
+        let ScrollRate = 1;
         let EndWord = 700;
         let reachedMaxScroll;
         let DivElmnt;
-        let previousScrollTop
-        let scrollInterval
+        let scrollInterval;
 
         setTimeout(scrollDiv_init, 7000);
 
@@ -105,7 +104,6 @@ function Story() {
             reachedMaxScroll = false;
 
             DivElmnt.scrollTop = 0;
-            previousScrollTop = 0;
 
             DivElmnt.word = 0;
 
@@ -113,40 +111,22 @@ function Story() {
             scrollInterval = setInterval(()=>{
                 if (!reachedMaxScroll) {
                     if (DivElmnt.word >= EndWord) {
-                        console.log(DivElmnt.word);
-                        DivElmnt.scrollTop = previousScrollTop;
-                        previousScrollTop += 60;
-                        DivElmnt.scrollTop += 60;
-
-                        reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                        DivElmnt.word = 0;
+                        if (!sound.paused) {
+                            DivElmnt.scrollTop += 60;
+                            DivElmnt.word = 0;
+                        }
+                        reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight; 
+                    } 
+                    // AFTER PAUSE NOT WORKING
+                    else if (sound.paused) {
+                        DivElmnt.word = EndWord - DivElmnt.word;
                     }
                     DivElmnt.word++;
-                    console.log(DivElmnt.word);
                 } else {
                     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
                 }
                 }, ScrollRate);
         }
-
-        // function scrollDiv() {
-        //     if (!reachedMaxScroll) {
-        //         if (DivElmnt.word >= EndWord) {
-        //             console.log(DivElmnt.word);
-        //             DivElmnt.scrollTop = previousScrollTop;
-        //             previousScrollTop += 60;
-        //             DivElmnt.scrollTop += 60;
-
-        //             reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-        //             DivElmnt.word = 0;
-        //         }
-        //         DivElmnt.word++;
-        //         console.log(DivElmnt.word);
-        //     } else {
-        //         reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-        //     }
-        // }
-
     })
 
     return (
@@ -182,33 +162,41 @@ function Story() {
                                         <source src="audio/LR1_cut.mp3" type="audio/mpeg" />
                                     </audio>
                                 </div>
+                                <div className="highlight-line"></div>
                                 <div id="story-scroll" className="story-mid">
                                     {/* <div class="story-mid"> */}
                                     <p className="story-text">
-                                        <span id="line1" className><span className="targetWord" onClick={() => setWordPopup(true)}>Once</span> upon a time there was a sweet little girl</span> <br />
-                                        <span id="line2" className> who was loved by everyone who knew
-                                            her, </span>
+                                        <span id="line1" className><span className="targetWord" onClick={() => setWordPopup(true)}>Once</span> upon a time there was a sweet little</span> <br />
+                                        <span id="line2" className> girl who was loved by everyone who knew</span>
                                         <br />
-                                        <span id="line3" className> but most of all by her grandmother, and there </span>
+                                        <span id="line3" className> her, but most of all by her grandmother, </span>
                                         <br />
-                                        <span id="line4" className> was nothing
-                                            that she would not have given
+                                        <span id="line4" className> and there was nothing that she would not</span>
+                                        <br />
+                                        <span id="line5" className> have given to the child. Once she gave the </span>
+                                        <br />
+                                        <span id="line6" className> girl a little cape with a hood of red velvet, </span>
+                                        <br />
+                                        <span id="line7" className> which suited her so well that she would</span>
+                                        <br />
+                                        <span id="line8" className>  never wear anything else; so she was always</span>
+                                        <br />
+                                        <span id="line9" className>  called 'Little Red Riding Hood.’
                                         </span>
                                         <br />
-                                        <span id="line5" className> to the child. Once she gave the girl a little
-                                        </span>
+                                        <span id="line10" className> </span>
                                         <br />
-                                        <span id="line6" className> cape with a hood of red velvet, </span>
+                                        <span id="line11" className> </span>
                                         <br />
-                                        <span id="line7" className> which suited her so well
-                                        </span>
+                                        <span id="line12" className> </span>
                                         <br />
-                                        <span id="line8" className> that she would never wear anything else; </span>
+                                        <span id="line13" className> </span>
                                         <br />
-                                        <span id="line9" className> so she was alawys called
-                                        </span>
+                                        <span id="line14" className> </span>
                                         <br />
-                                        <span id="line10" className>'Little Red Riding Hood.’</span>
+                                        <span id="line15" className> </span>
+                                        <br />
+                                        <span id="line16" className> </span>
                                         <br />
                                     </p>
                                 </div>
