@@ -258,3 +258,10 @@ span {
 #title {
     text-align: left;
 }
+
+.highlight-line {
+    background-color: rgb(255, 217, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}

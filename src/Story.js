@@ -61,6 +61,8 @@ function Story() {
             // alert("The story is paused and the paused time in second is " + currentTimeSec);
         }
 
+
+
     })
 
     return (
@@ -96,10 +98,11 @@ function Story() {
                                         <source src="audio/LR1_cut.mp3" type="audio/mpeg" />
                                     </audio>
                                 </div>
+                                <div className="highlight-line" id="highlight-line"></div>
                                 <div id="story-scroll" className="story-mid">
                                     {/* <div class="story-mid"> */}
                                     <p className="story-text">
-                                        <span className="targetWord" onClick={() => setWordPopup(true)}>Once</span> upon a time there was a sweet little girl who was loved by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’
+                                        Once upon a time there was a sweet little girl who was loved by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’
                                     </p>
                                 </div>
                             </div>
