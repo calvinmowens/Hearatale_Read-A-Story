@@ -204,13 +204,14 @@ p{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    
+
 }
 
 .highlight-line {
     background-color: rgb(255, 217, 0);
     padding-left: 10px;
     padding-right: 10px;
+    width: 100%;
 }
 
 audio {

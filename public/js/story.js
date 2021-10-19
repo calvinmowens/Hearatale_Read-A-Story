@@ -63,6 +63,8 @@ sound.onplay = function () {
                 document.getElementById("line10").classList.add('highlight-line');
                 break;
             //continue and add more cases...
+            default:
+                break;
         }
     }
 }

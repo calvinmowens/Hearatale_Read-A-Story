@@ -93,41 +93,62 @@ function Story() {
         //autoscroll
         let ScrollRate = 1;
         let EndWord = 700;
-        let reachedMaxScroll;
         let DivElmnt;
         let scrollInterval;
+        let currentScrollPlace = 0;
 
         setTimeout(scrollDiv_init, 7000);
 
         function scrollDiv_init() {
+            console.log("start scroll")
             DivElmnt = document.getElementById('story-scroll');
-            reachedMaxScroll = false;
-
             DivElmnt.scrollTop = 0;
-
             DivElmnt.word = 0;
 
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
             scrollInterval = setInterval(()=>{
-                if (!reachedMaxScroll) {
+
+                // SELENA'S ORIGINAL CODE
+                // if (!reachedMaxScroll) {
+                //     if (DivElmnt.word >= EndWord) {
+                //         if (!sound.paused) {
+                //             DivElmnt.scrollTop += 60;
+                //             DivElmnt.word = 0;
+                //         }
+                //         reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
+                //     }
+                //     // AFTER PAUSE NOT WORKING
+                //     else if (sound.paused) {
+                //         DivElmnt.word = EndWord - DivElmnt.word;
+                //     }
+                //     DivElmnt.word++;
+                // } else {
+                //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
+                // }
+
+
+                DivElmnt.addEventListener('wheel', function(e) {
+                    console.log("scroll triggered");
+                    document.getElementById('highlight-line').style.opacity = 0;
+                });
+
+                if (!sound.paused) {
                     if (DivElmnt.word >= EndWord) {
-                        if (!sound.paused) {
-                            DivElmnt.scrollTop += 60;
-                            DivElmnt.word = 0;
-                        }
-                        reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight; 
-                    } 
-                    // AFTER PAUSE NOT WORKING
-                    else if (sound.paused) {
-                        DivElmnt.word = EndWord - DivElmnt.word;
+                        console.log("scroll condition reached: " + DivElmnt.word);
+                        document.getElementById('highlight-line').style.opacity = 100;
+                        currentScrollPlace += 60;
+                        DivElmnt.scrollTop = currentScrollPlace;
+                        DivElmnt.word = 0;
+                    } else {
+                        DivElmnt.word++;
                     }
-                    DivElmnt.word++;
                 } else {
-                    reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
+                    console.log("Story Paused, Curr Word: " + DivElmnt.word);
                 }
+
                 }, ScrollRate);
         }
-    })
+    });
 
     return (
         <div>
@@ -162,7 +183,7 @@ function Story() {
                                         <source src="audio/LR1_cut.mp3" type="audio/mpeg" />
                                     </audio>
                                 </div>
-                                <div className="highlight-line"></div>
+                                <div className="highlight-line" id="highlight-line"></div>
                                 <div id="story-scroll" className="story-mid">
                                     {/* <div class="story-mid"> */}
                                     <p className="story-text">
