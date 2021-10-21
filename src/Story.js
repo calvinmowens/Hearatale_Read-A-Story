@@ -10,7 +10,6 @@ function Story() {
 
     const [buttonPopup, setWordPopup] = useState(false);
     const [resourceType, setResourceType] = useState('posts');
-    const [wordClicked, setWordClicked] = useState('word');
     useEffect(() => {
 
         /**
@@ -24,16 +23,14 @@ function Story() {
             result[i] = '<span class="' + "targetWord" + '">' + txt[i] + '</span>';
         }
         $('.story-text').html(result.join(' '));
-
         let trigger = $('SPAN').click(
             function () {
                 triggeredWord = $(this).text().toLowerCase().replace(/[^a-z0-9\s]/gi, '');
                 console.log(triggeredWord);
                 //word trigger?
-                setWordClicked(triggeredWord);
                 //popup trigger
                 setWordPopup(true);
-                return sound.paused ? sound.play() : sound.pause();
+                let changeWord = $("#hidden_trigger").text(triggeredWord);
             }
         );
 
@@ -57,8 +54,7 @@ function Story() {
 
         }
         sound.onpause = function () {
-            // let currentTimeSec = sound.currentTime.toPrecision(3);
-            // alert("The story is paused and the paused time in second is " + currentTimeSec);
+
         }
 
 
@@ -114,9 +110,9 @@ function Story() {
                 </div>
             </section>
             <Popup id="popup" trigger={buttonPopup} setWordClicked={triggeredWord} setTrigger={setWordPopup}>
+                <h3 id="hidden_trigger">hidden</h3>
             </Popup>
-
-        </div>
+        </div >
 
     );
 }

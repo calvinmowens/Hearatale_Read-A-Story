@@ -120,3 +120,6 @@ p {
     transform: rotate(-45deg);
   }
   
+  .post{
+      text-align: left;
+  }
