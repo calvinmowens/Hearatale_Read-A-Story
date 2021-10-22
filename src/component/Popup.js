@@ -4,10 +4,6 @@ import Story from '../Story.js';
 import PostData from '../data/targetwords.json';
 import $ from 'jquery';
 
-let triggerWord;
-let changeWord;
-let y;
-
 const dataSet = [
     {
         id: 1,
@@ -29,6 +25,8 @@ const dataSet = [
 function Popup(props) {
     const [resourceType, setResourceType] = useState('posts')
     const [word, setWord] = useState('Parent');
+    const [changeWord, setChangeWord] = useState('')
+
 
     const PostData = [
         {
@@ -47,10 +45,10 @@ function Popup(props) {
         },
     ];
     useEffect(() => {
-        triggerWord = $("#hidden_trigger").text();
-        changeWord = $("#changed").text(triggerWord).text();
-        $("#changed").text(changeWord);
-        y = $("#changed").text()
+        let triggerWord = $("#hidden_trigger").text();
+        changeWord = $("#changed").text(triggerWord);
+        let y = $("#changed").text();
+        console.log(y);
     });
 
     return (props.trigger) ? (
