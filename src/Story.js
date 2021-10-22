@@ -8,31 +8,41 @@ import $ from 'jquery';
 function Story() {
     let triggeredWord;
 
-    const [buttonPopup, setWordPopup] = useState(false);
-    const [resourceType, setResourceType] = useState('posts');
+    const [isVisible, setIsVisible] = useState(false);
+    const [choosenWord, setChoosenWord] = useState('');
+
+    const handleWordClick = (event) => {
+        setIsVisible(!isVisible);
+        console.log(event.target.innerHTML);
+        setChoosenWord(event.target.innerHTML);
+    };
+
+    const onClose = () => {
+        setIsVisible(false);
+    };
     useEffect(() => {
 
         /**
          * splits the story, paragraph, into each span.
          * This span onClick finds the clicked "word" calls popup function.
          */
-        let txt = $('.story-text').text().split(' ')
-        let len = txt.length,
-            result = [];
-        for (let i = 0; i < len; i++) {
-            result[i] = '<span class="' + "targetWord" + '">' + txt[i] + '</span>';
-        }
-        $('.story-text').html(result.join(' '));
-        let trigger = $('SPAN').click(
-            function () {
-                triggeredWord = $(this).text().toLowerCase().replace(/[^a-z0-9\s]/gi, '');
-                console.log(triggeredWord);
-                //word trigger?
-                //popup trigger
-                setWordPopup(true);
-                let changeWord = $("#hidden_trigger").text(triggeredWord);
-            }
-        );
+        // let txt = $('.story-text').text().split(' ')
+        // let len = txt.length,
+        //     result = [];
+        // for (let i = 0; i < len; i++) {
+        //     result[i] = '<span class="' + "targetWord" + '">' + txt[i] + '</span>';
+        // }
+        // $('.story-text').html(result.join(' '));
+        // let trigger = $('SPAN').click(
+        //     function () {
+        //         triggeredWord = $(this).text().toLowerCase().replace(/[^a-z0-9\s]/gi, '');
+        //         console.log(triggeredWord);
+        //         //word trigger?
+        //         handleWordClick();
+        //         //popup trigger
+        //         let changeWord = $("#hidden_trigger").text(triggeredWord);
+        //     }
+        // );
 
         /**
          * Plays audio.
@@ -89,7 +99,7 @@ function Story() {
                         <div className="left-page-middle">
                             <div className="story-text-div">
                                 <div className="story-top">
-                                    <h1 id="title" className="story-title">LITTLE RED RIDING HOOD</h1>
+                                    <h1 id="title" className="story-title">LITTLE RED <span onClick={handleWordClick}>RIDING</span> HOOD</h1>
                                     <audio id="story" controls autoPlay controlslist="nodownload noplaybackrate">
                                         <source src="audio/LR1_cut.mp3" type="audio/mpeg" />
                                     </audio>
@@ -98,7 +108,7 @@ function Story() {
                                 <div id="story-scroll" className="story-mid">
                                     {/* <div class="story-mid"> */}
                                     <p className="story-text">
-                                        Once upon a time there was a sweet little girl who was loved by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’
+                                        <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’
                                     </p>
                                 </div>
                             </div>
@@ -109,7 +119,9 @@ function Story() {
                     </div>
                 </div>
             </section>
-            <Popup id="popup" trigger={buttonPopup} setWordClicked={triggeredWord} setTrigger={setWordPopup}>
+            <Popup id="popup" isVisible={isVisible}
+                onClose={onClose}
+                choosenWord={choosenWord}>
                 <h3 id="hidden_trigger">hidden</h3>
             </Popup>
         </div >
