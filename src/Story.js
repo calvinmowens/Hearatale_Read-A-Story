@@ -6,6 +6,8 @@ import $ from 'jquery';
 
 
 function Story() {
+    const story = "Once upon a time there was a sweet little girl who was loved by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.";
+    
     let triggeredWord;
 
     const [isVisible, setIsVisible] = useState(false);
@@ -108,7 +110,8 @@ function Story() {
                                 <div id="story-scroll" className="story-mid">
                                     {/* <div class="story-mid"> */}
                                     <p className="story-text">
-                                        <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’
+                                        { story.split(" ").map((ele, index) => ( <span className="targetWord" onClick={handleWordClick}>{ele}</span> ) )}
+                                        {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
                                     </p>
                                 </div>
                             </div>
