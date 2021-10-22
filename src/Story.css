@@ -253,6 +253,7 @@ span {
 
 .targetWord {
     margin-right: 3px;
+    display: inline-block;
 }
 
 #title {
