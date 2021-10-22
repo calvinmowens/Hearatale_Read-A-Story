@@ -4,31 +4,9 @@ import Story from '../Story.js';
 import PostData from '../data/targetwords.json';
 import $ from 'jquery';
 
-const dataSet = [
-    {
-        id: 1,
-        word: 'Once',
-        variation: null,
-        pronounciation: '/wəns/',
-        definition: 'on one occasion or for one time only.',
-    },
-    {
-        id: 2,
-        word: 'Loved',
-        variation: 'love, loved, loving',
-        pronounciation: '/ləv/',
-        definition: 'feel deep affection for (someone).',
-    },
-    {
-        id: 2,
-        word: 'Riding',
-        variation: 'love, loved, loving',
-        pronounciation: '/ləv/',
-        definition: 'feel deep affection for (someone).',
-    }
-];
+
 const Popup = ({ isVisible, onClose, choosenWord }) => {
-    const word = dataSet.filter(
+    const word = PostData.filter(
         (post) => post.word?.toLowerCase() === choosenWord?.toLowerCase()
     )[0];
 
