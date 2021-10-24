@@ -179,7 +179,13 @@ p{
 }
 
 .story-mid::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
+}
+
+/* TODO dynamic sizing, IDK HOW TO DO THIS */
+#story-infinite-scroll {
+    height: calc(100% + 800px);
+
 }
 
 .volume-control {
@@ -258,6 +264,7 @@ span {
 #title {
     text-align: left;
 }
+
 
 #hidden_trigger{
     display: none;
