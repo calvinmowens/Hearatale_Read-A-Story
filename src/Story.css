@@ -222,13 +222,12 @@ p{
 
 .highlight-line {
     background-color: rgb(255, 217, 0);
-    width: 450px;
+    width: 80%;
     height: 55px;
     margin-left: 10%;
     padding-left: 10%;
     padding-right: 10%;
     overflow: auto;
-    
 }
 
 .story-mid, .highlight-line {
@@ -258,13 +257,6 @@ span {
 
 #title {
     text-align: left;
-}
-
-.highlight-line {
-    background-color: rgb(255, 217, 0);
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
 }
 
 #hidden_trigger{
