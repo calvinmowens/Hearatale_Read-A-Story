@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import './Popup.css';
-import Story from '../Story.js';
+import './Quiz.css';
 import PostData from '../data/targetwords.json';
-// import $ from 'jquery';
 
 
-const Popup = ({ isVisible, onClose, choosenWord }) => {
+const TargetQuiz = ({ isVisible, onClose, choosenWord }) => {
     const word = PostData.filter(
         (post) => post.word?.toLowerCase() === choosenWord?.toLowerCase()
     )[0];
@@ -34,4 +32,4 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
     ) : null;
 };
 
-export default Popup;
+export default TargetQuiz;
