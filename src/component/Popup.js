@@ -10,13 +10,12 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
         (post) => post.word?.toLowerCase() === choosenWord?.toLowerCase()
     )[0];
     const [targetWord, setTargetWord] = useState('');
-    let quizWord = "text";
     
     const [isQuizVisible, setIsQuizVisible] = useState(false);
     const handleTargetQuiz = (event) => {
         setIsQuizVisible(!isQuizVisible);
-        console.log(quizWord);
-        setTargetWord(quizWord);
+        console.log(event.target.innerHTML);
+        setTargetWord(event.target.innerHTML);
     };
 
     const closeQuiz = () => {
@@ -36,7 +35,10 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
                             <h4>{word.pronounciation}</h4>
                             <p>{word.definition}</p>
                         </div>
-                        <button className="quizBtnDesign" id="quizBtn">Quiz</button>
+                        <button onClick={handleTargetQuiz} value="hello" className="quizBtnDesign" id="quizBtn"></button>
+                        {/* <form>
+                            <input onClick={handleTargetQuiz} className="quizBtnDesign" type="submit" id="quizBtn"> hello</input>
+                        </form> */}
                     </div>
                     <div className="popupContainerRight">
                         <div className="wordImg"></div>
@@ -45,7 +47,7 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
                 <a id="closeBtn" className="close close-btn" onClick={onClose}></a>
             </div>
             </div>
-            <TargetQuiz id="targetQuiz" isQuizVisible={isVisible}
+            <TargetQuiz id="targetQuiz" isQuizVisible={isQuizVisible}
                 closeQuiz={closeQuiz}
                 targetWord={targetWord}>
             </TargetQuiz>

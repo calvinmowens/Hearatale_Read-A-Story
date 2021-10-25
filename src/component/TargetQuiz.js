@@ -11,7 +11,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord }) => {
             <div className="popup-inner">
                 <div className="popupContainer quizContainer">
                 <form>
-                    <h1 className="question">What is the definition of "WORD" ?</h1>
+                    <h1 className="question">What is the definition of {targetWord} ?</h1>
                     <div className ="answerChoices">
                         <div className="answerInput"><input id="answer" type="radio" name="group1" defaultValue="wrong" /> I am wrong answer.<br /></div>
                         <div className="answerInput"><input id="answer" type="radio" name="group1" defaultValue="wrong" /> Also wrong answer<br /></div>
