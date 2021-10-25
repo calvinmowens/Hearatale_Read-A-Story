@@ -164,7 +164,7 @@ function Story() {
                                 <div className="story-top">
                                     <h1 id="title" className="story-title">LITTLE RED <span onClick={handleWordClick}>RIDING</span> HOOD</h1>
                                     <audio id="story" controls autoPlay controlslist="nodownload noplaybackrate">
-                                        <source src="audio/LR1_cut.mp3" type="audio/mpeg" />
+                                        <source src="LR1_cut.mp3" type="audio/mpeg" />
                                     </audio>
                                 </div>
                                 <div className="highlight-line" id="highlight-line"></div>
