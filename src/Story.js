@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import './Story.css';
 import Popup from "./component/Popup";
 import PostData from './data/targetwords.json'
-import $ from 'jquery';
+// import $ from 'jquery';
 
 
 function Story() {

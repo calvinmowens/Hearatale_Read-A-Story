@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import './Popup.css';
 import Story from '../Story.js';
 import PostData from '../data/targetwords.json';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 
 const Popup = ({ isVisible, onClose, choosenWord }) => {
