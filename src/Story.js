@@ -6,7 +6,7 @@ import $ from 'jquery';
 
 
 function Story() {
-    const story = "Once upon a time there was a sweet little girl who was loved by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.";
+    const story = "Once upon a time there was a sweet little girl who was loved by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was always called 'Little Red Riding Hood.";
     
     let triggeredWord;
 
@@ -24,6 +24,7 @@ function Story() {
     };
     useEffect(() => {
 
+        // TODO do we still need this??
         /**
          * splits the story, paragraph, into each span.
          * This span onClick finds the clicked "word" calls popup function.
@@ -69,8 +70,69 @@ function Story() {
 
         }
 
+        // -----
+        // AUTOSCROLL AND HIGHLIGHTING
+        // -----
+        let ScrollRate = 1;
+        // TODO set this as a factor of story-scroll.width
+        let EndWord = (document.getElementById("story-scroll").offsetWidth) * 1.5;
+        console.log(EndWord);
+
+        let DivElmnt;
+        let scrollInterval;
+        let currentScrollPlace = 0;
+
+        setTimeout(scrollDiv_init, 7000);
+
+        function scrollDiv_init() {
+            console.log("start scroll")
+            DivElmnt = document.getElementById('story-scroll');
+            DivElmnt.scrollTop = 0;
+            DivElmnt.word = 0;
+
+            // scrollInterval = setInterval('scrollDiv()', ScrollRate);
+            scrollInterval = setInterval(()=>{
+
+                // SELENA'S ORIGINAL CODE
+                // if (!reachedMaxScroll) {
+                //     if (DivElmnt.word >= EndWord) {
+                //         if (!sound.paused) {
+                //             DivElmnt.scrollTop += 60;
+                //             DivElmnt.word = 0;
+                //         }
+                //         reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
+                //     }
+                //     // AFTER PAUSE NOT WORKING
+                //     else if (sound.paused) {
+                //         DivElmnt.word = EndWord - DivElmnt.word;
+                //     }
+                //     DivElmnt.word++;
+                // } else {
+                //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
+                // }
 
 
+                DivElmnt.addEventListener('wheel', function(e) {
+                    console.log("scroll triggered");
+                    document.getElementById('highlight-line').style.opacity = 0;
+                });
+
+                if (!sound.paused) {
+                    if (DivElmnt.word >= EndWord) {
+                        console.log("scroll condition reached: " + DivElmnt.word);
+                        document.getElementById('highlight-line').style.opacity = 100;
+                        currentScrollPlace += 60;
+                        DivElmnt.scrollTop = currentScrollPlace;
+                        DivElmnt.word = 0;
+                    } else {
+                        DivElmnt.word++;
+                    }
+                } else {
+                    console.log("Story Paused, Curr Word: " + DivElmnt.word);
+                }
+
+                }, ScrollRate);
+        }
     })
 
     return (
@@ -109,10 +171,12 @@ function Story() {
                                 <div className="highlight-line" id="highlight-line"></div>
                                 <div id="story-scroll" className="story-mid">
                                     {/* <div class="story-mid"> */}
-                                    <p className="story-text">
-                                        { story.split(" ").map((ele, index) => ( <span className="targetWord" onClick={handleWordClick}>{ele}</span> ) )}
-                                        {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
-                                    </p>
+                                    <div id="story-infinite-scroll">
+                                        <p className="story-text">
+                                            { story.split(" ").map((ele, index) => ( <span className="targetWord" onClick={handleWordClick}>{ele}</span> ) )}
+                                            {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
