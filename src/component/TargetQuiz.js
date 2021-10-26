@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import './Popup.css';
 import './Quiz.css';
-// import PostData from '../data/targetwords.json';
+import PostData from '../data/targetwords.json';
 
 
-const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord }) => {
+const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
+
+    console.log(quizzedWord);
+    const wordToFindInJson = PostData.filter(
+        (post) => post.word?.toLowerCase() === quizzedWord?.toLowerCase()
+    )[0];
+    console.log(wordToFindInJson);
 
     return (isQuizVisible) ? (
         <div className="popup">

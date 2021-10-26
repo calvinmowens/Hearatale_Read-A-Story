@@ -6,23 +6,34 @@ import TargetQuiz from "./TargetQuiz.js";
 
 
 const Popup = ({ isVisible, onClose, choosenWord }) => {
+
     const word = PostData.filter(
         (post) => post.word?.toLowerCase() === choosenWord?.toLowerCase()
     )[0];
     const [targetWord, setTargetWord] = useState('');
+    const [quizzedWord, setQuizzedWord] = useState('');
+    let quizWord = JSON.stringify(choosenWord);
+    
+    function titleCase(string){
+        return '"'+string[1].toUpperCase() + string.slice(2).toLowerCase();
+      }
+
+    let quizWordCap = titleCase(quizWord);
+
+    console.log(quizWordCap);
     
     const [isQuizVisible, setIsQuizVisible] = useState(false);
     const handleTargetQuiz = (event) => {
         setIsQuizVisible(!isQuizVisible);
-        console.log(event.target.innerHTML);
-        setTargetWord(event.target.innerHTML);
+        setQuizzedWord(choosenWord);
+        console.log(quizWordCap);
+        setTargetWord(quizWordCap);
     };
 
     const closeQuiz = () => {
         setIsQuizVisible(false);
     };
 
-    console.log(word);
     return (isVisible) ? (
         <div>
             <div className="popup">
@@ -35,10 +46,7 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
                             <h4>{word.pronounciation}</h4>
                             <p>{word.definition}</p>
                         </div>
-                        <button onClick={handleTargetQuiz} value="hello" className="quizBtnDesign" id="quizBtn"></button>
-                        {/* <form>
-                            <input onClick={handleTargetQuiz} className="quizBtnDesign" type="submit" id="quizBtn"> hello</input>
-                        </form> */}
+                        <button onClick={handleTargetQuiz} value="hello" className="quizBtnDesign" id="quizBtn">Quiz</button>
                     </div>
                     <div className="popupContainerRight">
                         <div className="wordImg"></div>
@@ -49,7 +57,8 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
             </div>
             <TargetQuiz id="targetQuiz" isQuizVisible={isQuizVisible}
                 closeQuiz={closeQuiz}
-                targetWord={targetWord}>
+                targetWord={targetWord}
+                quizzedWord={quizzedWord}>
             </TargetQuiz>
         </div>
     ) : null;
