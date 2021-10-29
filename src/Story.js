@@ -173,7 +173,7 @@ function Story() {
                                     {/* <div class="story-mid"> */}
                                     <div id="story-infinite-scroll">
                                         <p className="story-text">
-                                            { story.split(" ").map((ele, index) => ({ele} == "\n") ? <br></br> : <span className="targetWord" onClick={handleWordClick}>{ele}</span>) }
+                                            { story.split(" ").map((ele, index) => (<span className="targetWord" onClick={handleWordClick}>{ele}</span>))}
                                             {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
                                         </p>
                                     </div>
