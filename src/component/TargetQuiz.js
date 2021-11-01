@@ -16,13 +16,14 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         <div className="popup">
             <div className="popup-inner">
                 <div className="popupContainer quizContainer">
+                <h3 className="coinHolder"><span className="iconM">💰</span><span id="coin">200</span></h3>
                     <form>
                         <h1 className="question">What is the definition of {targetWord} ?</h1>
                         <div className="answerChoices">
-                            <div className="answerInput"><input id="answer" type="radio" name="group1" defaultValue="wrong" />{wordToFindInJson.qone}<br /></div>
-                            <div className="answerInput"><input id="answer" type="radio" name="group1" defaultValue="wrong" />{wordToFindInJson.qtwo}<br /></div>
-                            <div className="answerInput"><input id="answer" type="radio" name="group1" defaultValue="correct" />{wordToFindInJson.qthree}</div>
-                            <input className="turnin" type="submit" value="Turn In" ></input>
+                            <div className="answerInput"><input id="answer" className="radio" type="radio" name="group1" defaultValue="wrong" /><p>{wordToFindInJson.qone}</p></div>
+                            <div className="answerInput"><input id="answer" className="radio" type="radio" name="group1" defaultValue="wrong" /><p>{wordToFindInJson.qtwo}<br /></p></div>
+                            <div className="answerInput"><input id="answer" className="radio" type="radio" name="group1" defaultValue="correct" /><p>{wordToFindInJson.qthree}</p></div>
+                            <input className="turnin" type="submit" value="Submit" ></input>
                         </div>
                     </form>
                 </div>
