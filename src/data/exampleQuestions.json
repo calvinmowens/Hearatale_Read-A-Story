@@ -1,8 +1,8 @@
 [
     {
         "word": "Once",
-        "qone": "sad sad sad",
-        "qtwo": "happy happy happy",
-        "qthree": "on one occasion or for one time only."
+        "wrongone": "sad sad sad",
+        "wrongtwo": "happy happy happy",
+        "correct": "on one occasion or for one time only."
     }
 ]
