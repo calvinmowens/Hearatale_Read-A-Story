@@ -7,7 +7,7 @@ import PostData from './data/targetwords.json'
 
 function Story() {
     const story = "Once upon a time a little red hen was scratching for food in the farmyard and she happened to find a fine fat grain of wheat.  At first she thought she would eat it, but then she had a better idea. She thought, ‘I will plant this grain of wheat and grow more wheat and then mill it and bake it and make a fine loaf of bread.’ \n She showed the grain of wheat to the other animals in the farmyard and asked , “Who will help me plant this grain of wheat?” \n “Not I,” said the duck.  “I’d rather go swimming.” \n “Not I,” said the cat.  “I’d rather tease the mouse.” \n “Not I,” said the dog.  “It’s time for my nap.” \n “Very well then,” said the little red hen.  “I’ll plant it myself.”  And she did. \n After a while the grain of wheat grew into a tall green stalk, then it turned yellow, with many, many fat golden grains of wheat at the tip-top. \n “Who will help me harvest this wheat?” asked the little red hen. \n “Not I,” said the duck.  “I’d rather go splash in the pond.” \n “Not I,” said the cat.  “I’d rather tease the sparrows.” \n “Not I,” said the dog.  “It’s time for my nap.” \n “Very well then,” said the little red hen.  “I’ll harvest it myself.” \n And she did, and gathered a large basket full of wheat. \n “Who will help me take this wheat to the mill to be ground into flour?” asked the little red hen. \n “Not I,” said the duck.  “I’d rather play tag with the tadpoles.” \n “Not I,” said the cat.  “I’d rather tease the rat.” \n “Not I,” said the dog.  “I’m sleepy.  It’s time for my nap.” \n “Very well then,” said the little red hen. \n “I’ll take it to the mill myself.”  And she did. \n After the mill ground the wheat into smooth white flour, the little red hen asked, “Who will help me bake this flour into a fine loaf of bread?” \n “Not I,” said the duck.  “I’d rather play hide and seek with the geese.” \n “Not I,” said the cat.  “I’d rather tease the sparrows.” \n “Not I,” said the dog.  “I do believe it’s my nap time.” \n “Very well then,” said the little red hen.  “I’ll bake it myself.” \n And she did. \n After the loaf came out of the oven it was a beautiful golden brown color and smelled wonderfully warm and delicious.  The little red hen sliced a large piece and put it on her plate, then she said, “Who will eat this bread?” \n “I will!” said the duck. \n “I will!” said the cat. \n “I will!” said the dog. \n “No,” said the little red hen.  “No one helped me plant the grain.  No one helped me take it to the mill.  No one helped me bake it.  I will eat the bread all by myself!” \n And she did.";
-    
+
     let triggeredWord;
 
     const [isVisible, setIsVisible] = useState(false);
@@ -23,29 +23,6 @@ function Story() {
         setIsVisible(false);
     };
     useEffect(() => {
-
-        // TODO do we still need this??
-        /**
-         * splits the story, paragraph, into each span.
-         * This span onClick finds the clicked "word" calls popup function.
-         */
-        // let txt = $('.story-text').text().split(' ')
-        // let len = txt.length,
-        //     result = [];
-        // for (let i = 0; i < len; i++) {
-        //     result[i] = '<span class="' + "targetWord" + '">' + txt[i] + '</span>';
-        // }
-        // $('.story-text').html(result.join(' '));
-        // let trigger = $('SPAN').click(
-        //     function () {
-        //         triggeredWord = $(this).text().toLowerCase().replace(/[^a-z0-9\s]/gi, '');
-        //         console.log(triggeredWord);
-        //         //word trigger?
-        //         handleWordClick();
-        //         //popup trigger
-        //         let changeWord = $("#hidden_trigger").text(triggeredWord);
-        //     }
-        // );
 
         /**
          * Plays audio.
@@ -64,7 +41,21 @@ function Story() {
         };
 
         sound.onplay = function () {
+            let storyDuration = Math.round(Math.floor(sound.duration));
+            sound.ontimeupdate = function () { storyImgChange() };
 
+            function storyImgChange() {
+                let counter = Math.round(Math.floor(sound.currentTime));
+                switch (counter) {
+                    case 1:
+                        document.getElementById("picHolder").style = "background: url(../img/exampleImg2.jpg); background-size: contain; background-position: center; background-repeat: no-repeat";
+                        break;
+                    case 8:
+                        console.log("reached " + counter);
+                        break;
+                    //continue and add more cases...
+                }
+            }
         }
         sound.onpause = function () {
 
@@ -91,7 +82,7 @@ function Story() {
             DivElmnt.word = 0;
 
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
-            scrollInterval = setInterval(()=>{
+            scrollInterval = setInterval(() => {
 
                 // SELENA'S ORIGINAL CODE
                 // if (!reachedMaxScroll) {
@@ -112,7 +103,7 @@ function Story() {
                 // }
 
 
-                DivElmnt.addEventListener('wheel', function(e) {
+                DivElmnt.addEventListener('wheel', function (e) {
                     console.log("scroll triggered");
                     document.getElementById('highlight-line').style.opacity = 0;
                 });
@@ -131,7 +122,7 @@ function Story() {
                     console.log("Story Paused, Curr Word: " + DivElmnt.word);
                 }
 
-                }, ScrollRate);
+            }, ScrollRate);
         }
     })
 
@@ -140,10 +131,10 @@ function Story() {
 
             <div className="nav">
                 <div className="back-to-bookshelf">
-                    <a href="bookshelf.html">
+                    <a href="/bookshelf">
                         <div className="arrow" />
                     </a>
-                    <a href="bookshelf.html">
+                    <a href="/bookshelf">
                         <p>BOOKSHELF</p>
                     </a>
                 </div>
@@ -173,7 +164,7 @@ function Story() {
                                     {/* <div class="story-mid"> */}
                                     <div id="story-infinite-scroll">
                                         <p className="story-text">
-                                            { story.split(" ").map((ele, index) => (getTag(ele, handleWordClick)))}
+                                            {story.split(" ").map((ele, index) => (getTag(ele, handleWordClick)))}
                                             {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
                                         </p>
                                     </div>
