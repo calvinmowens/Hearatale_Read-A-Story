@@ -120,50 +120,50 @@ function Bookshelf() {
                 {/* Why are we doing this like this? Why not button? */}
                 <div className="bookshelf_container_header_logout">
                     <form action="index.html">
-                        <input type="submit" name id defaultValue="log out" />
+                        <input type="submit" name id value="log out" />
                     </form>
                 </div>
             </div>
             <div className="bookshelf-grid-container">
                 <a href="/story" id="pigeon" className="grid-item book-1">
                     <div id="pigeon-overlay" />
-                    <h2 className="book-title" id="pigeon-title">Little Red <br />Riding Hood</h2>
+                    <h2 className="book-title" id="pigeon-title">Goldilocks and The Three Bears</h2>
                 </a>
-                <a href="#" id="nightBefore" className="grid-item book-2">
+                <a href="/RedHen" id="nightBefore" className="grid-item book-2">
                     <div id="night-overlay" />
-                    <h2 className="book-title" id="night-title">The Night Before Kindergarten</h2>
+                    <h2 className="book-title" id="night-title">Little Red Hen</h2>
                 </a>
-                <a href="#" id="crayon" className="grid-item book-3">
+                <a href="/peterrabbit" id="crayon" className="grid-item book-3">
                     <div id="crayon-overlay" />
-                    <h2 className="book-title" id="crayon-title">The Day the Crayons Quit</h2>
+                    <h2 className="book-title" id="crayon-title">Peter Rabbit</h2>
                 </a>
-                <a href="#" id="bindergarten" className="grid-item book-4">
+                <a href="/rumplestiltskin" id="bindergarten" className="grid-item book-4">
                     <div id="bindergarten-overlay" />
-                    <h2 className="book-title" id="bindergarten-title">Miss Bindergarten Gets Ready for Kindergarten</h2>
+                    <h2 className="book-title" id="bindergarten-title">Rumplestiltskin</h2>
                 </a>
-                <a href="#" id="king" className="grid-item book-5">
+                <a href="/TheBoyWhoCriedWolf" id="king" className="grid-item book-5">
                     <div id="king-overlay" />
-                    <h2 className="book-title" id="king-title">The King of Kindergarten</h2>
+                    <h2 className="book-title" id="king-title">The Boy Who Cried Wolf</h2>
                 </a>
-                <a href="#" id="chicka" className="grid-item book-6">
+                <a href="/Gingerbread" id="chicka" className="grid-item book-6">
                     <div id="chicka-overlay" />
-                    <h2 className="book-title" id="chicka-title">Chicka Chicka Boom Boom</h2>
+                    <h2 className="book-title" id="chicka-title">The Gingerbread Man</h2>
                 </a>
-                <a href="#" id="hungry" className="grid-item book-7">
+                <a href="/LionandMouse" id="hungry" className="grid-item book-7">
                     <div id="hungry-overlay" />
-                    <h2 className="book-title" id="hungry-title">The Very Hungry Caterpillar</h2>
+                    <h2 className="book-title" id="hungry-title">The Lion and The Mouse</h2>
                 </a>
-                <a href="#" id="classmate" className="grid-item book-8">
+                <a href="/Engine" id="classmate" className="grid-item book-8">
                     <div id="classmate-overlay" />
-                    <h2 className="book-title" id="classmate-title">We Don't Eat Our Classmates</h2>
+                    <h2 className="book-title" id="classmate-title">The Little Engine That Could</h2>
                 </a>
-                <a href="#" id="dragons" className="grid-item book-9">
+                <a href="/Goats" id="dragons" className="grid-item book-9">
                     <div id="dragons-overlay" />
-                    <h2 className="book-title" id="dragons-title">Dragons Love Tacos</h2>
+                    <h2 className="book-title" id="dragons-title">The Three Billy Goats Gruff</h2>
                 </a>
-                <a href="#" id="clifford" className="grid-item book-10">
+                <a href="/TurtleRabbit" id="clifford" className="grid-item book-10">
                     <div id="clifford-overlay" />
-                    <h2 className="book-title" id="clifford-title">Clifford Goes to Kindergarten</h2>
+                    <h2 className="book-title" id="clifford-title">The Turtle and The Rabbit</h2>
                 </a>
             </div>
         </section>

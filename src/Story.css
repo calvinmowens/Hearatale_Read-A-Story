@@ -222,7 +222,7 @@ p{
     margin-bottom: 100px;
     width: 80%;
     height: 50%;
-    background: url(/src/img/LR_cover.jpeg);
+    background-color: white;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

@@ -119,53 +119,83 @@
 }
 
 .book-1 {
-    background: url(./img/LR_cover.jpeg);
-    background-size: cover;
+    background: url(../src/stories/goldilocks_and_the_three_bears/cover.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-2 {
-    background: url(./img/nightbefore.jpg);
-    background-size: cover;
+    background: url(../src/stories/little_red_hen/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-3 {
-    background: url(./img/crayon.jpg);
-    background-size: cover;
+    background: url(../src/stories/peter_rabbit/cover.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-4 {
-    background: url(./img/miss-bindergarten-takes-a-field-trip-with-kindergarten.jpg);
-    background-size: cover;
+    background: url(../src/stories/rumplestiltskin/cover.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-5 {
-    background: url(./img/king.jfif);
-    background-size: cover;
+    background: url(../src/stories/the_boy_who_cried_wolf/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-6 {
-    background: url(./img/hicka.jpg);
-    background-size: cover;
+    background: url(../src/stories/the_gingerbread_man/cover.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-7 {
-    background: url(./img/hungry.jpg);
-    background-size: cover;
+    background: url(../src/stories/the_lion_and_the_mouse/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-8 {
-    background: url(./img/noeat.jpeg);
-    background-size: cover;
+    background: url(../src/stories/the_little_engine_that_could/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-9 {
-    background: url(./img/taco.jpg);
-    background-size: cover;
+    background: url(../src/stories/the_three_billy_goats_gruff/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .book-10 {
-    background: url(./img/cliff.jpg);
-    background-size: cover;
+    background: url(../src/stories/the_turtle_and_the_rabbit/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .grid-item > h2 {
