@@ -1,4 +1,3 @@
-import logo, { ReactComponent } from './logo.svg';
 import './App.css';
 import React from 'react';
 import Home from './Home'

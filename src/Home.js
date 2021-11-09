@@ -4,7 +4,7 @@ import './Home.css';
 function Home() {
     return (
         <section onLoad={window['test']} className="home_wrapper">
-            <img src={"img/WelcomeScreen.png"} className="home_backgroundImage" alt=""></img>
+            {/* <img src={"img/WelcomeScreen.png"} className="home_backgroundImage" alt=""></img> */}
             <div className="home_header">
                 <div className="home_nav">
                     <ul className="nav-area">
