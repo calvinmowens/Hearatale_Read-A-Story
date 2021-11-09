@@ -4,7 +4,7 @@
     padding:0;
 }
 
-/* home */
+/* home
 .home_wrapper {
     background-image: url(WelcomeScreen.png);
     background-size: cover;
@@ -87,7 +87,7 @@ a{
     text-decoration: underline;
     padding: 25px;
     font-family: 'Rubik', sans-serif;
-}
+} */
 
 /* Student Login */
 .studentlogin_header {
@@ -183,4 +183,25 @@ a{
     margin-top: 15%;
     margin-bottom: 15%;
     font-family: 'Archivo Narrow', sans-serif;
+}
+
+/*Responsive Design
+for iphone X, Xs, XR and 11
+w - 414 px
+h - 896 px
+*/
+@media only screen and (max-width: 600px) {
+    .studentlogin_title {
+        font-family: 'Alatsi', sans-serif;
+        font-size: 48px;
+        text-transform: uppercase;
+        color: red;
+    }
+    
+    .studentlogin_grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 13px;
+    }
+    
 }
