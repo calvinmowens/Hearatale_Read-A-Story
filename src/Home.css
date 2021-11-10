@@ -71,10 +71,26 @@ a{
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 15px 30px;
+  border: #FFB703 solid 3px;
   border-radius: 52px;
   background: #FFB703;
   margin-top: 15%;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Alatsi', sans-serif;
+  transition: all 300ms;
+}
+
+.btn-student:hover {
+  cursor: pointer;
+  font-size: 18px;
+  color: #FFB703;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: #FFB703 solid 3px;
+  border-radius: 52px;
+  background: #ffb80300;
+  margin-top: 15%;
+  font-family: 'Alatsi', sans-serif;
 }
 
 .btn-parent-teacher {
@@ -116,7 +132,7 @@ h - 896 px
     border-radius: 52px;
     background: #FFB703;
     margin-top: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Alatsi', sans-serif;
   }
 
   .btn-parent-teacher {
