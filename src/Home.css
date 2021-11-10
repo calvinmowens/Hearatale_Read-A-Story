@@ -130,7 +130,7 @@ h - 896 px
     text-transform: uppercase;
     padding: 18px 33px;
     border-radius: 52px;
-    background: #FFB703;
+    background: #FFB703 solid 3px;
     margin-top: 0;
     font-family: 'Alatsi', sans-serif;
   }
@@ -148,5 +148,17 @@ h - 896 px
 
   .nav-area{
     display: none;
+  }
+
+  .btn-student:hover {
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 18px 33px;
+    border-radius: 52px;
+    background: #FFB703 solid 3px;
+    margin-top: 0;
+    font-family: 'Alatsi', sans-serif;
   }
 }
