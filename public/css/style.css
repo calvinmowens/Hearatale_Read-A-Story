@@ -137,13 +137,15 @@ a{
 .studentlogin_code-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
 }
 .studentlogin_code {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 13px;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 .grid-item-code {
     display: flex;
@@ -155,6 +157,7 @@ a{
     padding: 10px;
     font-family: 'Alatsi', sans-serif;
     font-size: 36px;
+    width: 80px;
     color: #000;
 }
 .btn-login {
@@ -164,11 +167,29 @@ a{
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 12px 25px;
-    border-radius: 10px;
+    border: #FFB703 solid 3px;
+    border-radius: 30px;
     background: #FFB703;
     margin-top: 15%;
     margin-bottom: 15%;
-    font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Alatsi', sans-serif;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    color: #FFB703;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    border: #FFB703 solid 3px;
+    border-radius: 30px;
+    background: #ffffff;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    font-family: 'Alatsi', sans-serif;
 }
 /*TESTSSSS*/
 .btn-keyboard {
@@ -185,23 +206,46 @@ a{
     font-family: 'Archivo Narrow', sans-serif;
 }
 
+
 /*Responsive Design
 for iphone X, Xs, XR and 11
 w - 414 px
 h - 896 px
 */
 @media only screen and (max-width: 600px) {
-    .studentlogin_title {
-        font-family: 'Alatsi', sans-serif;
-        font-size: 48px;
-        text-transform: uppercase;
-        color: red;
-    }
-    
     .studentlogin_grid {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 13px;
     }
-    
+
+    .studentlogin_code-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    .studentlogin_code {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 13px;
+    }
+
+    .grid-item-code {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 70px;
+        border: 5px solid #000;
+        border-radius: 20px;
+        padding: 10px;
+        font-family: 'Alatsi', sans-serif;
+        font-size: 36px;
+        color: #000;
+    }
+
+    .loginButtonHolder{
+        margin-top: 10px;
+    }
+
 }
