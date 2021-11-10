@@ -211,24 +211,45 @@ h - 896 px
 */
 @media only screen and (max-width: 600px) {
 
+
     .bookshelf_container {
         width: 100vw;
-        height: 200vh;
+        height: 130vh;
         background-image: linear-gradient(45deg,#FFEFD8, #FFE8F8);
+        overflow-y: scroll;
     }
 
     .bookshelf-grid-container {
-        width: 100vw;
-        height: 70%;
-        margin-top: 0px;
         display: grid;
-        grid-template-rows: 5;
-        grid-template-columns: repeat(2, 50% 50%);
-        grid-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 1rem;
+        margin-top: 0px;
+        margin-bottom: 300px;
+    }
+
+    .grid-item {
+        width: 100%;
+        height: 300px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .storyContain{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .bookshelf_container_header_menu_container {
-        width: 20%;
+        width: 100%;
         height: 100%;
         margin-left: 50px;
         display: flex;
