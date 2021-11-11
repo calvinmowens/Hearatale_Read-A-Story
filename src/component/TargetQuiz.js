@@ -4,7 +4,38 @@ import './Quiz.css';
 import QuizData from '../data/exampleQuestions.json';
 import $ from 'jquery';
 
+
+
+// window.document.onLoad = function() {
+//     console.log("wise words");
+//     //document.getElementById("showcode").innerHTML = "hi";        
+// }  
+
+
+
 const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
+
+// window.document.onload = function() {
+//     console.log("wise words");
+//     //document.getElementById("showcode").innerHTML = "hi";        
+// }    
+
+// const wise_words = (event) => {
+//     console.log("wise words2");
+//     //var idek = "hi";
+//     return "hi";
+// }
+
+
+
+    // const wise_words () {
+    //     console.log("wise words")
+    //     var idek = "hi";
+    //     return idek;
+    // }
+
+    //document.getElementById("showcode").value = "b is equal to 50";
+
 
     useEffect(() => {
         //randomize answer choices.
@@ -21,6 +52,20 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         (post) => post.word?.toLowerCase() === quizzedWord?.toLowerCase()
     )[0];
     console.log(wordToFindInJson);
+
+
+
+
+
+    // function wise_wordss() {
+    //     console.log("testingggg");
+    //     document.getElementById("showcode").innerHTML = 'test';
+
+    // }
+
+
+
+
 
     const submitQuiz = (event) => {
         console.log('testbykush');
@@ -59,7 +104,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
                     <form>
                         <h1 className="question">What is the definition of {targetWord} ?</h1>
                         <div className="answerChoices">
-                            <div id="choice1" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong1" /><p>{wordToFindInJson.wrongone}</p></div>
+                            <div id="choice1" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong1" /><p id="showcode" onLoad={wise_wordss()}>"."</p></div>
                             <div id="choice2" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong2" /><p>{wordToFindInJson.wrongtwo}<br /></p></div>
                             <div id="choice3" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="correct" /><p>{wordToFindInJson.correct}</p></div>
 
@@ -71,6 +116,10 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
             </div>
         </div>
     ) : null;
+
+
+
+
 };
 
 export default TargetQuiz;
