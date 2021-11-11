@@ -119,7 +119,7 @@
 }
 
 .book-1 {
-    background: url(../src/stories/goldilocks_and_the_three_bears/cover.png);
+    background: url(../src/stories/goldilocks-and-the-three-bears/cover.png);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
@@ -127,7 +127,7 @@
 }
 
 .book-2 {
-    background: url(../src/stories/little_red_hen/cover.jpeg);
+    background: url(../src/stories/little-red-hen/cover.jpeg);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@
 }
 
 .book-3 {
-    background: url(../src/stories/peter_rabbit/cover.png);
+    background: url(../src/stories/peter-rabbit/cover.png);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@
 }
 
 .book-5 {
-    background: url(../src/stories/the_boy_who_cried_wolf/cover.jpeg);
+    background: url(../src/stories/the-boy-who-cried-wolf/cover.jpeg);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
@@ -159,7 +159,7 @@
 }
 
 .book-6 {
-    background: url(../src/stories/the_gingerbread_man/cover.png);
+    background: url(../src/stories/the-gingerbread-man/cover.png);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
@@ -167,7 +167,7 @@
 }
 
 .book-7 {
-    background: url(../src/stories/the_lion_and_the_mouse/cover.jpeg);
+    background: url(../src/stories/the-lion-and-the-mouse/cover.jpeg);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
@@ -175,7 +175,7 @@
 }
 
 .book-8 {
-    background: url(../src/stories/the_little_engine_that_could/cover.jpeg);
+    background: url(../src/stories/the-little-engine-that-could/cover.jpeg);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
@@ -183,7 +183,7 @@
 }
 
 .book-9 {
-    background: url(../src/stories/the_three_billy_goats_gruff/cover.jpeg);
+    background: url(../src/stories/the-three-billy-goats-gruff/cover.jpeg);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
@@ -191,7 +191,7 @@
 }
 
 .book-10 {
-    background: url(../src/stories/the_turtle_and_the_rabbit/cover.jpeg);
+    background: url(../src/stories/the-turtle-and-the-rabbit/cover.jpeg);
     background-size: contain;
     background-color: white;
     background-repeat: no-repeat;
