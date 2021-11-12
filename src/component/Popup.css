@@ -123,3 +123,51 @@ p {
   .post{
       text-align: left;
   }
+
+  /*Responsive Design
+for iphone X, Xs, XR and 11
+w - 414 px
+h - 896 px
+*/
+@media only screen and (max-width: 600px) {
+    .popup-inner {
+        width: 80%;
+        height: 600px;
+    }
+
+    .popupContainer{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .popupContainerRight {
+        width: 100%;
+        height: 100%;
+        float: right;
+        order: 1;
+    }
+
+    .popupContainerLeft {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        order: 2;
+    }
+
+    .quizBtnDesign{
+        cursor: pointer;
+        color: white;
+        font-size: 21px;
+        text-transform: uppercase;
+        margin-top: 40px;
+        padding: 12px 50px;
+        border-radius: 30px;
+        border: solid;
+        border-color: #FFB703;
+        border-width: 4px;
+        background: #FFB703;
+        transition: 300ms;
+        font-weight: 600;
+    }
+
+}
