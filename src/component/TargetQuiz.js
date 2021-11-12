@@ -19,14 +19,25 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         }
     })
 
-    function randomIntFromInterval(min, max) { // min and max included 
-        return Math.floor(Math.random() * (max - min + 1) + min)
+    function randomIntFromInterval(min, max, otherkey) { // min and max included 
+        var rnum = Math.floor(Math.random() * (max - min + 1) + min);
+
+
+        while(rnum == otherkey) {
+            console.log("inside while");
+            rnum = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        return rnum;
     }
 
     //CREATE RANDOM KEY1 TO ACCESS FROM JSON
-    const randomValues = randomIntFromInterval(5, 1)
+    const randomValues = randomIntFromInterval(1, 5, null);
+    const randomValues2 = randomIntFromInterval(1, 5, randomValues);
     console.log(randomValues);
     let n = randomValues.toString();
+    let m = randomValues2.toString();
+
 
     //GET RANDOM ANSWER OBJECT FROM JSON1
     const randomAnswers = RandomAnswer.filter(
@@ -34,8 +45,8 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
     console.log(randomAnswers);
 
     //GET RANDOM ANSWER OBJECT FROM JSON2
-    const randomAnswer2 = RandomAnswer2.filter(
-        (post) => post.id === n)[0];
+    const randomAnswer2 = RandomAnswer.filter(
+        (post) => post.id === m)[0];
     console.log(randomAnswer2);
 
     //GET CORRECT ANSWER FROM JSON
@@ -84,7 +95,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
                         <h1 className="question">What is the definition of {targetWord} ?</h1>
                         <div className="answerChoices">
                             <div id="choice1" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong1" />
-                                <p id="showcode">{randomAnswers.answer}</p>
+                                <p>{randomAnswers.answer}</p>
                             </div>
                             <div id="choice2" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong2" />
                                 <p>{randomAnswer2.answer}<br /></p>
