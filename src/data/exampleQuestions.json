@@ -1,9 +1,6 @@
 [
     {
         "word": "Once",
-        "wrongone": "sad sad sad",
-        "wrongtwo": "happy happy happy",
-        "correct": "on one occasion or for one time only.",
-        "other": "testing"
+        "correct": "on one occasion or for one time only."
     }
 ]

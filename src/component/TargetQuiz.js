@@ -3,6 +3,7 @@ import './Popup.css';
 import './Quiz.css';
 import QuizData from '../data/exampleQuestions.json';
 import RandomAnswer from '../data/randomAnswers.json';
+import PostData from '../data/targetwords.json';
 import $ from 'jquery';
 
 
@@ -49,12 +50,9 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
     console.log(randomAnswer2);
 
     //GET CORRECT ANSWER FROM JSON
-    console.log(quizzedWord);
-    const wordToFindInJson = QuizData.filter(
+    const word = PostData.filter(
         (post) => post.word?.toLowerCase() === quizzedWord?.toLowerCase()
     )[0];
-    console.log(wordToFindInJson);
-
 
     const submitQuiz = (event) => {
         console.log('testbykush');
@@ -100,7 +98,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
                                 <p>{randomAnswer2.answer}<br /></p>
                             </div>
                             <div id="choice3" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="correct" />
-                                <p>{wordToFindInJson.correct}</p>
+                                <p>{word.definition}</p>
                             </div>
 
                         </div>
