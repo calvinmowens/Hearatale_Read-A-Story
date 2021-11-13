@@ -4,14 +4,14 @@ import './Quiz.css';
 import QuizData from '../data/exampleQuestions.json';
 import RandomAnswer from '../data/randomAnswers.json';
 import PostData from '../data/targetwords.json';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 
 const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
 
     useEffect(() => {
         //randomize answer choices.
-        let choices = $(".answerInput");
+        let choices = document.getElementsByClassName(".answerInput");
         for (let i = 0; i < choices.length; i++) {
             let target = Math.floor(Math.random() * choices.length - 1) + 1;
             let target2 = Math.floor(Math.random() * choices.length - 1) + 1;

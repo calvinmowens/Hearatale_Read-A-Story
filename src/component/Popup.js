@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import './Popup.css';
 import PostData from '../data/targetwords.json';
 import TargetQuiz from "./TargetQuiz.js";
-import $ from 'jquery';
+// import $ from 'jquery';
 
 
 const Popup = ({ isVisible, onClose, choosenWord }) => {
