@@ -1,0 +1,173 @@
+h4 {
+    text-align: left;
+    margin-top: 10px;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.568);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 900px;
+    height: 500px;
+    background-color: white;
+
+}
+
+.popup-inner .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.popupContainer{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+.popupContainerLeft {
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.quizBtnDesign{
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    padding: 12px 40px;
+    border-radius: 30px;
+    border: solid;
+    border-color: #FFB703;
+    border-width: 4px;
+    background: #FFB703;
+    transition: 300ms;
+    font-weight: 600;
+}
+
+.quizBtnDesign:hover{
+    color: #FFB703;
+    border: solid;
+    border-color: #FFB703;
+    border-width: 4px;
+    background-color: white;
+}
+
+.popupContainerRight {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+.wordImg {
+    background: url("https://source.unsplash.com/zOUM8k036yQ");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    opacity: .5;
+    transition: 300ms;
+  }
+  .close:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: rgb(0, 0, 0);
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
+  .post{
+      text-align: left;
+  }
+
+  /*Responsive Design
+for iphone X, Xs, XR and 11
+w - 414 px
+h - 896 px
+*/
+@media only screen and (max-width: 600px) {
+    .popup-inner {
+        width: 80%;
+        height: 600px;
+    }
+
+    .popupContainer{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .popupContainerRight {
+        width: 100%;
+        height: 100%;
+        float: right;
+        order: 1;
+    }
+
+    .popupContainerLeft {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        order: 2;
+    }
+
+    .quizBtnDesign{
+        cursor: pointer;
+        color: white;
+        font-size: 21px;
+        text-transform: uppercase;
+        margin-top: 40px;
+        padding: 12px 50px;
+        border-radius: 30px;
+        border: solid;
+        border-color: #FFB703;
+        border-width: 4px;
+        background: #FFB703;
+        transition: 300ms;
+        font-weight: 600;
+    }
+
+}

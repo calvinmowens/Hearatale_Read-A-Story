@@ -1,0 +1,78 @@
+.quizContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.answerChoices {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.answerInput{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.turnin{
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    padding: 12px 40px;
+    border-radius: 30px;
+    border: solid;
+    border-color: #FFB703;
+    border-width: 4px;
+    background: #FFB703;
+    transition: 300ms;
+    font-weight: 600;
+}
+
+.turnin:hover{
+    color: #FFB703;
+    border: solid;
+    border-color: #FFB703;
+    border-width: 4px;
+    background-color: white;
+}
+
+.coinHolder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.iconM{
+    font-size: 40px;
+}
+
+.radio {
+    margin-right: 10px;
+    border: 0px;
+    width: 20px;
+    height: 2em;
+}
+
+
+#coin {
+    font-size: 25px;
+}
+
+p {
+    font-weight: 400;
+}

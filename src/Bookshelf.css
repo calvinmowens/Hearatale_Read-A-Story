@@ -1,0 +1,296 @@
+#night-overlay, #pigeon-overlay, #crayon-overlay, #clifford-overlay, #bindergarten-overlay, #king-overlay, #chicka-overlay, #hungry-overlay, #classmate-overlay, #dragons-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    z-index: 200;
+}
+/*Start Header*/
+
+.bookshelf_container {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(45deg,#FFEFD8, #FFE8F8);
+}
+
+.bookshelf_container_header {
+    width: 100%;
+    height: 14%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookshelf_container_header_menu_container {
+    width: 20%;
+    height: 100%;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+
+.bookshelf_container_header_menu_container_img {
+    position: absolute;
+    z-index: 300;
+    width: 35%;
+    height: 80%;
+    background-image: url(./img/Ellipse\ 2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.bookshelf_container_header_menu_container_info {
+    z-index: 200;
+    width: 90%;
+    height: 63%;
+    left: 5px;
+    bottom: 12px;
+    border-radius: 300px;
+    background-color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.bookshelf_container_header_menu_container_info > p {
+    padding-left: 110px;
+    font-family: 'Alatsi', sans-serif;
+    font-size: 19px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.bookshelf_container_header_logout > form > input {
+    width: 9vw;
+    height: 5vh;
+    border-radius: 300px;
+    border: solid #FCB910 1px;
+    margin-right: 100px;
+    background-color: #FCB910;
+    font-family: 'Alatsi', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.bookshelf_container_header_logout > form > input:hover {
+    width: 9vw;
+    height: 5vh;
+    border-radius: 300px;
+    border: solid #FCB910 3px;
+    margin-right: 100px;
+    background-color: transparent;
+    font-family: 'Alatsi', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #FCB910;
+}
+
+/*End Header*/
+
+.bookshelf-grid-container {
+    height: 60vh;
+    margin-top: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+}
+
+.grid-item {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.book-title{
+    position: relative;
+    z-index: 400;
+}
+
+.book-1 {
+    background: url(../src/stories/goldilocks-and-the-three-bears/cover.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-2 {
+    background: url(../src/stories/little-red-hen/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-3 {
+    background: url(../src/stories/peter-rabbit/cover.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-4 {
+    background: url(../src/stories/rumplestiltskin/cover.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-5 {
+    background: url(../src/stories/the-boy-who-cried-wolf/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-6 {
+    background: url(../src/stories/the-gingerbread-man/cover.png);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-7 {
+    background: url(../src/stories/the-lion-and-the-mouse/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-8 {
+    background: url(../src/stories/the-little-engine-that-could/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-9 {
+    background: url(../src/stories/the-three-billy-goats-gruff/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.book-10 {
+    background: url(../src/stories/the-turtle-and-the-rabbit/cover.jpeg);
+    background-size: contain;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item > h2 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: transparent;
+}
+
+/*Responsive Design
+for iphone X, Xs, XR and 11
+w - 414 px
+h - 896 px
+*/
+@media only screen and (max-width: 600px) {
+
+
+    .bookshelf_container {
+        width: 100vw;
+        height: 130vh;
+        background-image: linear-gradient(45deg,#FFEFD8, #FFE8F8);
+        overflow-y: scroll;
+    }
+
+    .bookshelf-grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 1rem;
+        margin-top: 0px;
+        margin-bottom: 300px;
+    }
+
+    .grid-item {
+        width: 100%;
+        height: 300px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .storyContain{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bookshelf_container_header_menu_container {
+        width: 100%;
+        height: 100%;
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        position: relative;
+    }
+
+    .bookshelf_container_header_menu_container_info {
+        display: none;
+    }
+
+    .bookshelf_container_header_menu_container_img {
+        position: absolute;
+        z-index: 300;
+        width: 90px;
+        background-image: url(./img/Ellipse\ 2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    .bookshelf_container_header_logout > form > input {
+        width: 150px;
+        border-radius: 300px;
+        border: solid #FCB910 1px;
+        margin-right: 50px;
+        margin-top: 50px;
+        background-color: #FCB910;
+        font-family: 'Alatsi', sans-serif;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 200ms;
+    }
+    
+    .bookshelf_container_header {
+        width: 100%;
+        height: 14%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+}

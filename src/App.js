@@ -1,30 +1,39 @@
-import logo, { ReactComponent } from './logo.svg';
 import './App.css';
 import React from 'react';
+import Home from './Home'
+import Story from './Story';
+import { Route, Link } from 'react-router-dom';
+import Bookshelf from './Bookshelf';
 
+//story imports
+import RedHen from './stories/RedHen';
+import PeterRabbit from './stories/PeterRabbit';
+import Rumplestiltskin from './stories/Rumplestilskin';
+import TheBoyWhoCriedWolf from './stories/TheBoyWhoCriedWolf';
+import Gingerbread from './stories/Gingerbread';
+import LionandMouse from './stories/LionandMouse';
+import Engine from './stories/Engine';
+import Goats from './stories/Goats';
+import TurtleRabbit from './stories/TurtleRabbit'
+import Goldilocks from './stories/Goldilocks'
 
 class App extends React.Component {
-  render (){
+  render() {
     return (
       <div className="App">
-        <section className="home_wrapper">
-        <img src={"img/WelcomeScreen.png"} className="home_backgroundImage" alt=""></img>
-            <div className="home_header">
-                <div className = "home_nav">
-                    <ul className="nav-area">
-                        <li className="flex1">{<a href="#">Read-A-Story</a>}}</li>
-                        <li className="flex2">{<a href="#">Brainy Phonics</a>}</li>
-                        <li className="flex3">{<a href="#">Brainy Sight Words</a>}</li>
-                        <li className="flex4">{<a href="#">Brainy Words 2000 </a>}</li>
-                        <li className="flex5">{<a href="#">Rhyme A Zoo</a>}</li>
-                    </ul>
-                </div>
-            </div>
-            <div className="home_article">
-                <a href="student-login.html" className="btn-student">Student Login</a>
-                <a href="#" className="btn-parent-teacher">Parent & Teacher Login</a>
-            </div>
-        </section>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/bookshelf" component={Bookshelf} />
+        <Route exact path="/story" component={Story} />
+        <Route exact path="/redhen" component={RedHen} />
+        <Route exact path="/peterrabbit" component={PeterRabbit} />
+        <Route exact path="/rumplestiltskin" component={Rumplestiltskin} />
+        <Route exact path="/TheBoyWhoCriedWolf" component={TheBoyWhoCriedWolf} />
+        <Route exact path="/Gingerbread" component={Gingerbread} />
+        <Route exact path="/Goldilocks" component={Goldilocks} />
+        <Route exact path="/LionandMouse" component={LionandMouse} />
+        <Route exact path="/Engine" component={Engine} />
+        <Route exact path="/Goats" component={Goats} />
+        <Route exact path="/TurtleRabbit" component={TurtleRabbit} />
       </div>
     );
   }
