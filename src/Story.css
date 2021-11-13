@@ -182,15 +182,6 @@ p{
     display: none;
 }
 
-/* TODO dynamic sizing, IDK HOW TO DO THIS */
-#story-infinite-scroll {
-    height: calc(100% + 1500px);
-}
-
-#story-infinite-scroll::-webkit-scrollbar {
-    display: none;
-}
-
 .volume-control {
     padding: 10px 30px;
     border-radius: 100px;
@@ -216,6 +207,7 @@ p{
 
 .story-text {
     line-height: 60px;
+    overflow-y: scroll;
 }
 
 .story-pic {
@@ -251,6 +243,12 @@ audio {
 
 #story-scroll {
     text-align: left;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+#story-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 
