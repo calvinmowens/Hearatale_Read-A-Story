@@ -259,6 +259,21 @@ function Goldilocks() {
 
             }, ScrollRate);
         }
+         //remove highlights and onClick from words that is not contained in the JSON file.
+        let rawWordToRemoveFunction = document.getElementsByClassName('targetWord');
+        const wordToRemoveFunction = [];
+        for(var i = 0; i < rawWordToRemoveFunction.length; i++) {
+            wordToRemoveFunction[i] = rawWordToRemoveFunction[i].textContent.replace(/[^\w\s]/gi, '').toLowerCase();
+            console.log(wordToRemoveFunction[i]);
+            //THIS "ONCE" NEEDS TO BE CHANGED TO A DYNAMIC CONDITION FROM JSON FILE.
+            if (wordToRemoveFunction[i] == "once") {
+                rawWordToRemoveFunction[i].removeAttribute("class");
+                //how to have the popup NOT show up?
+                rawWordToRemoveFunction[i].onclick = function() {  
+                    alert("he");
+                };  
+            }
+        }
     })
 
     return (
