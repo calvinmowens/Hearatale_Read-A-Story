@@ -44,9 +44,25 @@ function Goldilocks() {
     const [choosenWord, setChoosenWord] = useState('');
 
     const handleWordClick = (event) => {
-        setIsVisible(!isVisible);
-        console.log(event.target.innerHTML);
-        setChoosenWord(event.target.innerHTML);
+        var word = PostData.filter(
+            (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
+        )[0];
+        if (word == null) {
+            console.log("before thingy1");
+            setIsVisible(isVisible);
+            setChoosenWord(null);
+        } else {
+            setIsVisible(!isVisible);
+            console.log("inside thingy1");
+            console.log(word);
+            console.log(event.target.innerHTML);
+            console.log("inside thingy2");
+            setChoosenWord(event.target.innerHTML);
+        }
+        // if (word.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()) {
+        //     console.log("before thingy1");
+        // }
+
     };
 
     const onClose = () => {
