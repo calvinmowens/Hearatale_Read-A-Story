@@ -4,9 +4,27 @@ import Popup from "../component/Popup";
 //will need to change to a new json file.
 import PostData from '../data/targetwords.json'
 import sound from "./little-red-hen/audio.mp3"
+import image1 from "./little-red-hen/art/1.png"
+import image2 from "./little-red-hen/art/2.png"
+import image3 from "./little-red-hen/art/3.png"
+import image4 from "./little-red-hen/art/4.png"
+import image5 from "./little-red-hen/art/5.png"
+import image6 from "./little-red-hen/art/6.png"
+import image7 from "./little-red-hen/art/7.png"
+import image8 from "./little-red-hen/art/8.png"
 
 function RedHen() {
-    const story = "Once upon a time a little red hen was scratching for food in the farmyard and she happened to find a fine fat grain of wheat.  At first she thought she would eat it, but then she had a better idea. She thought, ‘I will plant this grain of wheat and grow more wheat and then mill it and bake it and make a fine loaf of bread.’ \n She showed the grain of wheat to the other animals in the farmyard and asked , “Who will help me plant this grain of wheat?” \n “Not I,” said the duck.  “I’d rather go swimming.” \n “Not I,” said the cat.  “I’d rather tease the mouse.” \n “Not I,” said the dog.  “It’s time for my nap.” \n “Very well then,” said the little red hen.  “I’ll plant it myself.”  And she did. \n After a while the grain of wheat grew into a tall green stalk, then it turned yellow, with many, many fat golden grains of wheat at the tip-top. \n “Who will help me harvest this wheat?” asked the little red hen. \n “Not I,” said the duck.  “I’d rather go splash in the pond.” \n “Not I,” said the cat.  “I’d rather tease the sparrows.” \n “Not I,” said the dog.  “It’s time for my nap.” \n “Very well then,” said the little red hen.  “I’ll harvest it myself.” \n And she did, and gathered a large basket full of wheat. \n “Who will help me take this wheat to the mill to be ground into flour?” asked the little red hen. \n “Not I,” said the duck.  “I’d rather play tag with the tadpoles.” \n “Not I,” said the cat.  “I’d rather tease the rat.” \n “Not I,” said the dog.  “I’m sleepy.  It’s time for my nap.” \n “Very well then,” said the little red hen. \n “I’ll take it to the mill myself.”  And she did. \n After the mill ground the wheat into smooth white flour, the little red hen asked, “Who will help me bake this flour into a fine loaf of bread?” \n “Not I,” said the duck.  “I’d rather play hide and seek with the geese.” \n “Not I,” said the cat.  “I’d rather tease the sparrows.” \n “Not I,” said the dog.  “I do believe it’s my nap time.” \n “Very well then,” said the little red hen.  “I’ll bake it myself.” \n And she did. \n After the loaf came out of the oven it was a beautiful golden brown color and smelled wonderfully warm and delicious.  The little red hen sliced a large piece and put it on her plate, then she said, “Who will eat this bread?” \n “I will!” said the duck. \n “I will!” said the cat. \n “I will!” said the dog. \n “No,” said the little red hen.  “No one helped me plant the grain.  No one helped me take it to the mill.  No one helped me bake it.  I will eat the bread all by myself!” \n And she did.";
+    const story = "Once upon a time a little red hen was scratching for food in the farmyard and she happened to find a fine fat grain of wheat.  At first she thought she would eat it, but then she had a better idea. She thought, ‘I will plant this grain of wheat and grow more wheat and then mill it and bake it and make a fine loaf of bread.’   She showed the grain of wheat to the other animals in the farmyard and asked , “Who will help me plant this grain of wheat?”   “Not I,” said the duck.  “I’d rather go swimming.”   “Not I,” said the cat.  “I’d rather tease the mouse.”   “Not I,” said the dog.  “It’s time for my nap.”   “Very well then,” said the little red hen.  “I’ll plant it myself.”  And she did.   After a while the grain of wheat grew into a tall green stalk, then it turned yellow, with many, many fat golden grains of wheat at the tip-top.   “Who will help me harvest this wheat?” asked the little red hen.   “Not I,” said the duck.  “I’d rather go splash in the pond.”   “Not I,” said the cat.  “I’d rather tease the sparrows.”   “Not I,” said the dog.  “It’s time for my nap.”   “Very well then,” said the little red hen.  “I’ll harvest it myself.”   And she did, and gathered a large basket full of wheat.   “Who will help me take this wheat to the mill to be ground into flour?” asked the little red hen.   “Not I,” said the duck.  “I’d rather play tag with the tadpoles.”   “Not I,” said the cat.  “I’d rather tease the rat.”   “Not I,” said the dog.  “I’m sleepy.  It’s time for my nap.”   “Very well then,” said the little red hen.   “I’ll take it to the mill myself.”  And she did.   After the mill ground the wheat into smooth white flour, the little red hen asked, “Who will help me bake this flour into a fine loaf of bread?”   “Not I,” said the duck.  “I’d rather play hide and seek with the geese.”   “Not I,” said the cat.  “I’d rather tease the sparrows.”   “Not I,” said the dog.  “I do believe it’s my nap time.”   “Very well then,” said the little red hen.  “I’ll bake it myself.”   And she did.   After the loaf came out of the oven it was a beautiful golden brown color and smelled wonderfully warm and delicious.  The little red hen sliced a large piece and put it on her plate, then she said, “Who will eat this bread?”   “I will!” said the duck.   “I will!” said the cat.   “I will!” said the dog.   “No,” said the little red hen.  “No one helped me plant the grain.  No one helped me take it to the mill.  No one helped me bake it.  I will eat the bread all by myself!”   And she did.";
+    const storyPicStyle = {
+        // background: "#FFFFFF",
+        background: "url(" + image1 + ")",
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "95%",
+        height: "50%",
+        boxShadow: "0px 0px 40px rgba(184, 184, 184, 0.25)"
+    }
 
     let triggeredWord;
 
@@ -46,12 +64,50 @@ function RedHen() {
 
             function storyImgChange() {
                 let counter = Math.round(Math.floor(sound.currentTime));
+                let picHolder = document.getElementById("picHolder")
                 switch (counter) {
-                    case 0:
-                        document.getElementById("picHolder").style = "background: url(../stories/little-red-hen/art/1.png); background-size: contain; background-position: center; background-repeat: no-repeat";
-                        break;
+                    // switch starts at image 2
                     case 8:
-                        console.log("reached " + counter);
+                        picHolder.style.background = "url(" + image2 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 10:
+                        picHolder.style.background = "url(" + image3 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 12:
+                        picHolder.style.background = "url(" + image4 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 14:
+                        picHolder.style.background = "url(" + image5 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 16:
+                        picHolder.style.background = "url(" + image6 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 18:
+                        picHolder.style.background = "url(" + image7 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 20:
+                        picHolder.style.background = "url(" + image8 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
                     default:
                         break;
@@ -105,13 +161,11 @@ function RedHen() {
 
 
                 DivElmnt.addEventListener('wheel', function (e) {
-                    console.log("scroll triggered");
                     document.getElementById('highlight-line').style.opacity = 0;
                 });
 
                 if (!sound.paused) {
                     if (DivElmnt.word >= EndWord) {
-                        console.log("scroll condition reached: " + DivElmnt.word);
                         document.getElementById('highlight-line').style.opacity = 100;
                         currentScrollPlace += 60;
                         DivElmnt.scrollTop = currentScrollPlace;
@@ -174,7 +228,7 @@ function RedHen() {
                         </div>
                     </div>
                     <div className="right-page">
-                        <div id="picHolder" className="story-pic" />
+                        <div id="picHolder" className="story-pic" style={storyPicStyle}/>
                     </div>
                 </div>
             </section>

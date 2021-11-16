@@ -125,7 +125,7 @@ function Bookshelf() {
             </div>
             <div className="storyContain">
                 <div className="bookshelf-grid-container">
-                    <a href="/story" id="pigeon" className="grid-item book-1">
+                    <a href="/Goldilocks" id="pigeon" className="grid-item book-1">
                         <div id="pigeon-overlay" />
                         <h2 className="book-title" id="pigeon-title">Goldilocks and The Three Bears</h2>
                     </a>

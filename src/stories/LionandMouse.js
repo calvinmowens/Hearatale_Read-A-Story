@@ -3,11 +3,28 @@ import '../Story.css';
 import Popup from "../component/Popup";
 //will need to change to a new json file.
 import PostData from '../data/targetwords.json'
+import sound from "./the-lion-and-the-mouse/audio.mp3"
+import image1 from "./the-lion-and-the-mouse/art/1.png"
+import image2 from "./the-lion-and-the-mouse/art/2.png"
+import image3 from "./the-lion-and-the-mouse/art/3.png"
+import image4 from "./the-lion-and-the-mouse/art/4.png"
+import image5 from "./the-lion-and-the-mouse/art/5.png"
+import image6 from "./the-lion-and-the-mouse/art/6.png"
 
 
 
 function LionandMouse() {
-    const story = 'Lazy and drowsy after a big meal, a Lion was napping under a shady palm tree when a Mouse scampered across his nose and woke him up.  The Lion went “Roarrrr!” leapt up, and with his paw he pinned the mouse’s tail. \n “You ruined my nap!” said the Lion. “So now you get to be my dessert.” \n The Mouse trembled with fear when the huge Lion’s eyes glared at him and the Lion flicked his long tongue across his teeth. \n “Please, sir,” said the Mouse, “if you will spare my life, you can be sure that I’ll repay your kindness and do you a favor when you need one.” \n “Hah!” said the Lion.  “How could a tiny little nobody like you ever do a favor for the great King of Beasts?”The Mouse couldn’t answer, because he didn’t know. \n The Lion just sniffed and said, “You’re too small even for a good snack.” Then he lifted his claw off the mouse’s tail, and away the mouse scampered. \n The very next day some hunters captured the lion in a big net and hung him from the palm tree.  The Lion heaved and thrashed and growled and roared but the net held him tight and there was no way he could escape. \n The Mouse heard him roar, scampered up, and saw the Lion hanging in the net.  Quick as a wink he hopped from a big rock onto the net. \n “I hope you didn’t come to make fun of me,” said the Lion. \n “No,” said the Mouse.  “I came to help you, just like I promised.” \n The Mouse hopped to the top of the Lion’s head, found a good place right between the Lion’s big furry ears, and nipped at the rope, and chewed and gnawed, biting through a few of the threads that made the rope, then a few more, and then a few more until finally the rope snapped and the net tumbled to the ground.  The Lion quickly squeezed free and raced off, the Mouse still clinging tight between the Lion’s ears. \n When they came to a safe place the Lion stopped and said, “Thank you.  I’m sorry I teased you and made fun of the idea that somebody as little as you could ever help anybody as big as me.  I know now that even a tiny mouse can help a mighty lion.”';
+    const story = "Lazy and drowsy after a big meal, a Lion was napping under a shady palm tree when a Mouse scampered across his nose and woke him up.  The Lion went “Roarrrr!” leapt up, and with his paw he pinned the mouse’s tail. \n “You ruined my nap!” said the Lion. “So now you get to be my dessert.” \n The Mouse trembled with fear when the huge Lion’s eyes glared at him and the Lion flicked his long tongue across his teeth. \n “Please, sir,” said the Mouse, “if you will spare my life, you can be sure that I’ll repay your kindness and do you a favor when you need one.” \n “Hah!” said the Lion.  “How could a tiny little nobody like you ever do a favor for the great King of Beasts?”The Mouse couldn’t answer, because he didn’t know. \n The Lion just sniffed and said, “You’re too small even for a good snack.” Then he lifted his claw off the mouse’s tail, and away the mouse scampered. \n The very next day some hunters captured the lion in a big net and hung him from the palm tree.  The Lion heaved and thrashed and growled and roared but the net held him tight and there was no way he could escape. \n The Mouse heard him roar, scampered up, and saw the Lion hanging in the net.  Quick as a wink he hopped from a big rock onto the net. \n “I hope you didn’t come to make fun of me,” said the Lion. \n “No,” said the Mouse.  “I came to help you, just like I promised.” \n The Mouse hopped to the top of the Lion’s head, found a good place right between the Lion’s big furry ears, and nipped at the rope, and chewed and gnawed, biting through a few of the threads that made the rope, then a few more, and then a few more until finally the rope snapped and the net tumbled to the ground.  The Lion quickly squeezed free and raced off, the Mouse still clinging tight between the Lion’s ears. \n When they came to a safe place the Lion stopped and said, “Thank you.  I’m sorry I teased you and made fun of the idea that somebody as little as you could ever help anybody as big as me.  I know now that even a tiny mouse can help a mighty lion.”";
+    const storyPicStyle = {
+        // background: "#FFFFFF",
+        background: "url(" + image1 + ")",
+        backgroundSize: "contain",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "95%",
+        height: "50%",
+        boxShadow: "0px 0px 40px rgba(184, 184, 184, 0.25)"
+    }
 
     let triggeredWord;
 
@@ -47,14 +64,41 @@ function LionandMouse() {
 
             function storyImgChange() {
                 let counter = Math.round(Math.floor(sound.currentTime));
+                let picHolder = document.getElementById("picHolder")
                 switch (counter) {
-                    case 0:
-                        document.getElementById("picHolder").style = "background: url(../img/exampleImg2.jpg); background-size: contain; background-position: center; background-repeat: no-repeat";
-                        break;
+                    // switch starts at image 2
                     case 8:
-                        console.log("reached " + counter);
+                        picHolder.style.background = "url(" + image2 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    //continue and add more cases...
+                    case 10:
+                        picHolder.style.background = "url(" + image3 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 12:
+                        picHolder.style.background = "url(" + image4 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 14:
+                        picHolder.style.background = "url(" + image5 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    case 16:
+                        picHolder.style.background = "url(" + image6 + ")"
+                        document.getElementById("picHolder").style.backgroundSize = "contain"
+                        document.getElementById("picHolder").style.backgroundPosition = "center"
+                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
+                        break;
+                    default:
+                        break;
                 }
             }
         }
@@ -157,7 +201,7 @@ function LionandMouse() {
                                 <div className="story-top">
                                     <h1 id="title" className="story-title">The Lion and The Mouse</h1>
                                     <audio id="story" controls autoPlay controlslist="nodownload noplaybackrate">
-                                        <source src="audio/LR1_cut.mp3" type="audio/mpeg" />
+                                        <source src={sound} type="audio/mp3" />
                                     </audio>
                                 </div>
                                 <div className="highlight-line" id="highlight-line"></div>
@@ -174,7 +218,7 @@ function LionandMouse() {
                         </div>
                     </div>
                     <div className="right-page">
-                        <div id="picHolder" className="story-pic" />
+                        <div id="picHolder" className="story-pic" style={storyPicStyle}/>
                     </div>
                 </div>
             </section>

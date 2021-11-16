@@ -3,15 +3,15 @@ import './Popup.css';
 import './Quiz.css';
 import QuizData from '../data/exampleQuestions.json';
 import RandomAnswer from '../data/randomAnswers.json';
-import RandomAnswer2 from '../data/randomAnswer2.json'
-import $ from 'jquery';
+import PostData from '../data/targetwords.json';
+// import $ from 'jquery';
 
 
 const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
 
     useEffect(() => {
         //randomize answer choices.
-        let choices = $(".answerInput");
+        let choices = document.getElementsByClassName(".answerInput");
         for (let i = 0; i < choices.length; i++) {
             let target = Math.floor(Math.random() * choices.length - 1) + 1;
             let target2 = Math.floor(Math.random() * choices.length - 1) + 1;
@@ -23,7 +23,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         var rnum = Math.floor(Math.random() * (max - min + 1) + min);
 
 
-        while(rnum == otherkey) {
+        while (rnum == otherkey) {
             console.log("inside while");
             rnum = Math.floor(Math.random() * (max - min + 1) + min);
         }
@@ -50,12 +50,9 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
     console.log(randomAnswer2);
 
     //GET CORRECT ANSWER FROM JSON
-    console.log(quizzedWord);
-    const wordToFindInJson = QuizData.filter(
+    const word = PostData.filter(
         (post) => post.word?.toLowerCase() === quizzedWord?.toLowerCase()
     )[0];
-    console.log(wordToFindInJson);
-
 
     const submitQuiz = (event) => {
         console.log('testbykush');
@@ -101,7 +98,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
                                 <p>{randomAnswer2.answer}<br /></p>
                             </div>
                             <div id="choice3" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="correct" />
-                                <p>{wordToFindInJson.correct}</p>
+                                <p>{word.definition}</p>
                             </div>
 
                         </div>

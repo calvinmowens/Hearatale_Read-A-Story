@@ -3,37 +3,30 @@ import '../Story.css';
 import Popup from "../component/Popup";
 //will need to change to a new json file.
 import PostData from '../data/targetwords.json'
-import sound from "./peter-rabbit/audio.mp3"
-import image1 from "./peter-rabbit/art/1.png"
-import image2 from "./peter-rabbit/art/2.png"
-import image3 from "./peter-rabbit/art/3.png"
-import image4 from "./peter-rabbit/art/4.png"
-import image5 from "./peter-rabbit/art/5.png"
-import image6 from "./peter-rabbit/art/6.png"
-import image7 from "./peter-rabbit/art/7.png"
-import image8 from "./peter-rabbit/art/8.png"
-import image9 from "./peter-rabbit/art/9.png"
-import image10 from "./peter-rabbit/art/10.png"
-import image11 from "./peter-rabbit/art/11.png"
-import image12 from "./peter-rabbit/art/12.png"
-import image13 from "./peter-rabbit/art/13.png"
-import image14 from "./peter-rabbit/art/14.png"
-import image15 from "./peter-rabbit/art/15.png"
-import image16 from "./peter-rabbit/art/16.png"
-import image17 from "./peter-rabbit/art/17.png"
-import image18 from "./peter-rabbit/art/18.png"
-import image19 from "./peter-rabbit/art/19.png"
-import image20 from "./peter-rabbit/art/20.png"
-import image21 from "./peter-rabbit/art/21.png"
-import image22 from "./peter-rabbit/art/22.png"
-import image23 from "./peter-rabbit/art/23.png"
-import image24 from "./peter-rabbit/art/24.png"
-import image25 from "./peter-rabbit/art/25.png"
+import sound from "./goldilocks-and-the-three-bears/audio.mp3"
+import image1 from "./goldilocks-and-the-three-bears/art/1.png"
+import image2 from "./goldilocks-and-the-three-bears/art/2.png"
+import image3 from "./goldilocks-and-the-three-bears/art/3.png"
+import image4 from "./goldilocks-and-the-three-bears/art/4.png"
+import image5 from "./goldilocks-and-the-three-bears/art/5.png"
+import image6 from "./goldilocks-and-the-three-bears/art/6.png"
+import image7 from "./goldilocks-and-the-three-bears/art/7.png"
+import image8 from "./goldilocks-and-the-three-bears/art/8.png"
+import image9 from "./goldilocks-and-the-three-bears/art/9.png"
+import image10 from "./goldilocks-and-the-three-bears/art/10.png"
+import image11 from "./goldilocks-and-the-three-bears/art/11.png"
+import image12 from "./goldilocks-and-the-three-bears/art/12.png"
+import image13 from "./goldilocks-and-the-three-bears/art/13.png"
+import image14 from "./goldilocks-and-the-three-bears/art/14.png"
+import image15 from "./goldilocks-and-the-three-bears/art/15.png"
+import image16 from "./goldilocks-and-the-three-bears/art/16.png"
+import image17 from "./goldilocks-and-the-three-bears/art/17.png"
+import image18 from "./goldilocks-and-the-three-bears/art/18.png"
+import image19 from "./goldilocks-and-the-three-bears/art/19.png"
 
 
-
-function PeterRabbit() {
-    const story = 'Once upon a time there were four little rabbits, and their names were Flopsy, Mopsy, Cotton-tail, and Peter.  They lived with their mother in a sand-bank, underneath the root of a very big fir tree. \n "Now, my dears," said old Mrs. Rabbit one morning, "You may go into the fields or down the lane, but don\'t go into Mr. McGregor\'s garden. Your father had an accident there; he was put in a pie by Mrs. McGregor.  Now run along and don\'t get into mischief. I am going out." \n Then old Mrs. Rabbit took a basket and her umbrella and went through the wood to the baker\'s.  She bought a loaf of brown bread and five currant buns. \n Flopsy, Mopsy and Cotton-tail who were good little bunnies went down the lane together to gather blackberries. \n But Peter who was very naughty, ran straight away to Mr. McGregor\'s garden and squeezed under the gate! \n First he ate some lettuces and some French beans, and then \n He. Ate. Some. Radishes. \n And then, feeling rather sick, he went to look for some parsley. \n But round the end of a cucumber frame, whom should he meet but Mr. McGregor! \n Mr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out "Stop thief!" \n Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate.  He lost one shoe among the cabbages, and the other amongst the potatoes. \n After losing them, he ran on four legs and went faster so that I think he might have got away altogether if he had not unfortunately run into a gooseberry net and got caught by the large buttons on his jacket.  It was a blue jacket with brass buttons, quite new. \n Peter gave himself up for lost and shed big tears; but his sobs were overheard by some friendly sparrows who flew to him in great excitement and implored him to exert himself. \n Mr. McGregor came up with a sieve which he intended to pop on the top of Peter, but Peter wriggled out just in time. \n Leaving his jacket behind him, he rushed into the tool-shed and— jumped into a can.  It would have been a beautiful thing to hide in, if it had not had so much water in it. \n Mr. McGregor was quite sure that Peter was somewhere in the tool-shed, perhaps hidden underneath a flower-pot.  He began to turn them over carefully, looking under each. \n Presently Peter sneezed "Kertyschoo!"  Mr. McGregor was after him in no time, and tried to put his foot upon Peter, who jumped out of a window, upsetting three plants. \n Peter sat down to rest; he was out of breath and trembling with fright, and he had not the least idea which way to go. Also he was very damp with sitting in that can. \n After a time he began to wander about, going \n lippity— \n lippity— \n not very fast and looking all around. \n He found a door in a wall; but it was locked and there was no room for a fat little rabbit to squeeze underneath.  An old mouse was running in and out over the stone doorstep, carrying peas and beans to her family in the wood. Peter asked her the way to the gate but she had such a large pea in her mouth she could not answer. She only shook her head at him.  Peter began to cry. \n Then he tried to find his way straight across the garden, but he became more and more puzzled. Presently he came to a pond where Mr. McGregor filled his water-cans. A white cat was staring at some gold-fish; she sat very, very still, but now and then the tip of her tail twitched as if it were alive. Peter thought it best to go away without speaking to her.  He had heard about cats from his cousin, little Benjamin Bunny. \n He went back towards the tool-shed, but suddenly, quite close to him, he heard the noise of a hoe—scr-r-ritch, scratch, scratch, scritch.  Peter scuttered underneath the bushes, but presently as nothing happened, he came out and climbed upon a wheelbarrow, and peeped over.  The first thing he saw was Mr. McGregor hoeing onions. His back was turned towards Peter and beyond him was the gate! \n Peter got down very quietly off the wheel-barrow and started running as fast as he could go, along a straight walk behind some blackcurrant bushes. \n Mr. McGregor caught sight of him at the corner, but Peter did not care. He slipped underneath the gate and was safe at last in the wood outside the garden. \n Mr. McGregor hung up the little jacket and the shoes for a scare-crow to frighten the blackbirds. \n Peter never stopped running or looked behind him till he got home to the big fir-tree. \n He was so tired that he flopped down upon the nice soft sand on the floor of the rabbit hole, and shut his eyes. \n His mother was busy cooking; she wondered what he had done with his clothes.  It was the second little jacket and pair of shoes that Peter had lost in a fortnight! \n I am sorry to say that Peter was not very well during the evening. His mother put him to bed and made some camomile tea; and she gave a dose of it to Peter! "One teaspoonful to be taken at bedtime." \n But... Flopsy, Mopsy and Cottontail had bread and milk and blackberries for supper. \n ';
+function Goldilocks() {
+    const story = "Once upon a time a family of bears lived together in a house of their own in a wood. First there was Baby Bear who was the smallest, and next Momma Bear who was medium sized, and last came Poppa Bear, who was the biggest.  They had each a bowl for their porridge, a little bowl for Baby Bear, and a middle-sized bowl for Momma Bear, and a great big bowl for Poppa Bear. And they had each a chair to sit in, a little chair for Baby Bear; and a middle-sized chair for Momma Bear; and a great big chair for Poppa Bear. And they had each a bed to sleep in, a little bed for Baby Bear; and a middle-sized bed for Momma Bear; and a great big bed for Poppa Bear. \n One day, after Momma Bear had made the hot porridge for their breakfast, and poured it into their porridge bowls, they walked out into the wood while the porridge was cooling, so that they wouldn’t burn their mouths by beginning too soon to eat it. \n And while they were walking, Goldilocks came to the house, but there was no one to be seen.  First, she looked in at the window, and then she peeped in at the keyhole, and, seeing nobody in the house, she opened the door. The door was not locked because the bears were good bears, who did nobody any harm, and never suspected that anybody would bother them. So Goldilocks opened the door and went in, and was very well pleased when she saw the porridge on the table. Goldilocks should have waited till the bears came home, and then, perhaps, they would have invited her to breakfast; for they were good bears—perhaps a little rough, as the way of bears is, but still very good-natured and hospitable. But Goldilocks was an impatient little girl, and not as polite as she should have been, and she set about helping herself. \n So first she tasted the porridge of Poppa Bear, and that was too hot for her.  And then she tasted the porridge of Momma Bear; and that was too cold for her.  And finally she went to Baby Bear’s porridge, and tasted that, and that was just right.  And Goldilocks liked it so well, that she ate it all up and left the bowl empty. \n Then Goldilocks sat down in Poppa Bear’s chair, and that was too hard for her. And then she sat down in Momma Bear’s chair, and that was too soft for her.  And then she sat down in Baby Bear’s chair, and that was just right, so there she sat till the bottom of the chair came out, and down came she, plump upon the ground. \n Then Goldilocks went up stairs into the bedroom in which the three bears slept. And first she lay down upon Poppa Bear’s bed, but there were too many covers.  And next she lay down upon Momma Bear’s bed, but there weren’t enough covers. And then she lay down upon Baby Bear’s bed, and that was just right. So she covered herself up comfortably, and lay there till she fell fast asleep. \n By this time the three bears thought their porridge would be cool enough, so they came home to breakfast. Now Goldilocks had left Poppa Bear’s wooden spoon standing in his porridge, and when he saw it he said his great gruff voice, “SOMEBODY HAS BEEN EATING MY PORRIDGE!” \n And when Momma Bear looked at hers, she saw that her silver spoon was standing in it too, and in her sweet voice she said, “Somebody has been eating my porridge!” \n Then Baby Bear looked at his, and there was the little spoon in the porridge bowl, but the porridge was all gone, and in his little, small, wee voice Baby Bear said, “Somebody has been eating my porridge, and has eaten it all up!” \n When they noticed all this the three bears realized that someone had come into their house and bothered their things and they began to look all around them.  Now Goldilocks had not put the hard cushion straight when she got up from Poppa Bear’s chair, and in his great gruff voice he said, “SOMEBODY HAS BEEN SITTING IN MY CHAIR!” \n And Goldilocks had squatted down Momma Bear’s soft cushion and in her sweet voice she said, “Somebody has been sitting in my chair!” \n And you know what Goldilocks had done to the third chair, and in his little, small, wee voice Baby Bear said, “Somebody has been sitting in my chair, and has broken it all to pieces!” \n Then the three bears thought they needed to make a careful search, so they went up stairs into their bedroom.  Now Goldilocks had pulled the pillow of Poppa Bear out of its place, and when he saw that Poppa Bear said in his great gruff voice, “SOMEBODY HAS BEEN LYING IN MY BED!” \n And Goldilocks had left a hollow empty place in Momma Bear’s bed, and in her sweet voice she said, “Somebody has been lying in my bed!” \n And when Baby Bear came to look at his bed, there wasn’t a hollow empty place but a round high place under the cover, and there was the pillow in its place but it wasn’t empty, for there upon the pillow was Goldilocks’s face covered by her golden hair, and in his little, small, wee voice Baby Bear said, “Somebody has been lying in my bed, there she is!” \n Goldilocks had heard in her sleep the great, rough, gruff voice of Poppa Bear, but she was so fast asleep that it was no more to her than the roaring of wind or the rumbling of thunder. And she had heard the sweet voice of Momma Bear, but it was only as if she had heard birds singing in a dream. But when she heard the little, small, wee voice of Baby Bear, it was so surprising that it awakened her at once. Up she popped, and when she saw the three bears on one side of the bed, she tumbled herself out at the other side, and ran to the window.  Now the window was open, because the bears, like good, tidy bears as they were, always opened their bedroom window when they got up in the morning. Out Goldilocks jumped and she ran away as fast as her legs would carry her, and the three little bears never ever saw again even one little golden hair of her golden locks.";
     const storyPicStyle = {
         // background: "#FFFFFF",
         background: "url(" + image1 + ")",
@@ -194,42 +187,6 @@ function PeterRabbit() {
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 44:
-                        picHolder.style.background = "url(" + image20 + ")"
-                        document.getElementById("picHolder").style.backgroundSize = "contain"
-                        document.getElementById("picHolder").style.backgroundPosition = "center"
-                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
-                        break;
-                    case 46:
-                        picHolder.style.background = "url(" + image21 + ")"
-                        document.getElementById("picHolder").style.backgroundSize = "contain"
-                        document.getElementById("picHolder").style.backgroundPosition = "center"
-                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
-                        break;
-                    case 48:
-                        picHolder.style.background = "url(" + image22 + ")"
-                        document.getElementById("picHolder").style.backgroundSize = "contain"
-                        document.getElementById("picHolder").style.backgroundPosition = "center"
-                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
-                        break;
-                    case 50:
-                        picHolder.style.background = "url(" + image23 + ")"
-                        document.getElementById("picHolder").style.backgroundSize = "contain"
-                        document.getElementById("picHolder").style.backgroundPosition = "center"
-                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
-                        break;
-                    case 52:
-                        picHolder.style.background = "url(" + image24 + ")"
-                        document.getElementById("picHolder").style.backgroundSize = "contain"
-                        document.getElementById("picHolder").style.backgroundPosition = "center"
-                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
-                        break;
-                    case 54:
-                        picHolder.style.background = "url(" + image25 + ")"
-                        document.getElementById("picHolder").style.backgroundSize = "contain"
-                        document.getElementById("picHolder").style.backgroundPosition = "center"
-                        document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
-                        break;
                     default:
                         break;
                 }
@@ -302,6 +259,21 @@ function PeterRabbit() {
 
             }, ScrollRate);
         }
+         //remove highlights and onClick from words that is not contained in the JSON file.
+        let rawWordToRemoveFunction = document.getElementsByClassName('targetWord');
+        const wordToRemoveFunction = [];
+        for(var i = 0; i < rawWordToRemoveFunction.length; i++) {
+            wordToRemoveFunction[i] = rawWordToRemoveFunction[i].textContent.replace(/[^\w\s]/gi, '').toLowerCase();
+            console.log(wordToRemoveFunction[i]);
+            //THIS "ONCE" NEEDS TO BE CHANGED TO A DYNAMIC CONDITION FROM JSON FILE.
+            if (wordToRemoveFunction[i] == "once") {
+                rawWordToRemoveFunction[i].removeAttribute("class");
+                //how to have the popup NOT show up?
+                rawWordToRemoveFunction[i].onclick = function() {  
+                    alert("he");
+                };  
+            }
+        }
     })
 
     return (
@@ -332,7 +304,7 @@ function PeterRabbit() {
                         <div className="left-page-middle">
                             <div className="story-text-div">
                                 <div className="story-top">
-                                    <h1 id="title" className="story-title">Peter Rabbit</h1>
+                                    <h1 id="title" className="story-title">Goldilocks and The Three Bears</h1>
                                     <audio id="story" controls autoPlay controlslist="nodownload noplaybackrate">
                                         <source src={sound} type="audio/mp3" />
                                     </audio>
@@ -373,4 +345,4 @@ function getTag(element, handleWordClick) {
     }
 }
 
-export default PeterRabbit;
+export default Goldilocks;

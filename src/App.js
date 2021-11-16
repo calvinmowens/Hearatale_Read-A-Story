@@ -15,7 +15,7 @@ import LionandMouse from './stories/LionandMouse';
 import Engine from './stories/Engine';
 import Goats from './stories/Goats';
 import TurtleRabbit from './stories/TurtleRabbit'
-
+import Goldilocks from './stories/Goldilocks'
 
 class App extends React.Component {
   render() {
@@ -29,6 +29,7 @@ class App extends React.Component {
         <Route exact path="/rumplestiltskin" component={Rumplestiltskin} />
         <Route exact path="/TheBoyWhoCriedWolf" component={TheBoyWhoCriedWolf} />
         <Route exact path="/Gingerbread" component={Gingerbread} />
+        <Route exact path="/Goldilocks" component={Goldilocks} />
         <Route exact path="/LionandMouse" component={LionandMouse} />
         <Route exact path="/Engine" component={Engine} />
         <Route exact path="/Goats" component={Goats} />
