@@ -44,9 +44,21 @@ function Goldilocks() {
     const [choosenWord, setChoosenWord] = useState('');
 
     const handleWordClick = (event) => {
-        setIsVisible(!isVisible);
-        console.log(event.target.innerHTML);
-        setChoosenWord(event.target.innerHTML);
+        var word = PostData.filter(
+            (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
+        )[0];
+        if (word == null) {
+            console.log("before thingy1");
+            setIsVisible(isVisible);
+            setChoosenWord(null);
+        } else {
+            setIsVisible(!isVisible);
+            console.log("inside thingy1");
+            console.log(word);
+            console.log(event.target.innerHTML);
+            console.log("inside thingy2");
+            setChoosenWord(event.target.innerHTML);
+        }
     };
 
     const onClose = () => {
@@ -259,21 +271,17 @@ function Goldilocks() {
 
             }, ScrollRate);
         }
-         //remove highlights and onClick from words that is not contained in the JSON file.
-        let rawWordToRemoveFunction = document.getElementsByClassName('targetWord');
-        const wordToRemoveFunction = [];
-        for(var i = 0; i < rawWordToRemoveFunction.length; i++) {
-            wordToRemoveFunction[i] = rawWordToRemoveFunction[i].textContent.replace(/[^\w\s]/gi, '').toLowerCase();
-            console.log(wordToRemoveFunction[i]);
-            //THIS "ONCE" NEEDS TO BE CHANGED TO A DYNAMIC CONDITION FROM JSON FILE.
-            if (wordToRemoveFunction[i] == "once") {
-                rawWordToRemoveFunction[i].removeAttribute("class");
-                //how to have the popup NOT show up?
-                rawWordToRemoveFunction[i].onclick = function() {  
-                    alert("he");
-                };  
-            }
-        }
+        // let rawWordToRemoveFunction = document.getElementsByClassName('targetWord');
+        // const wordToRemoveFunction = [];
+        // for(var i = 0; i < rawWordToRemoveFunction.length; i++) {
+        //     wordToRemoveFunction[i] = rawWordToRemoveFunction[i].textContent.replace(/[^\w\s]/gi, '').toLowerCase();
+        //     console.log(wordToRemoveFunction[i]);
+        //     //THIS "ONCE" NEEDS TO BE CHANGED TO A DYNAMIC CONDITION FROM JSON FILE.
+        //     if (wordToRemoveFunction[i] == "once") {
+        //         rawWordToRemoveFunction[i].removeAttribute("class");
+        //     }
+            
+        // }
     })
 
     return (
