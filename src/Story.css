@@ -254,6 +254,7 @@ audio {
 
 span {
     margin-right: 3px;
+    display: inline-block;
 }
 
 .targetWord {
