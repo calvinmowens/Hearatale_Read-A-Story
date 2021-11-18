@@ -22,7 +22,7 @@ function LionandMouse() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         width: "95%",
-        height: "50%",
+        height: "75%",
         boxShadow: "0px 0px 40px rgba(184, 184, 184, 0.25)"
     }
 
