@@ -43,6 +43,15 @@ function Goldilocks() {
     const [isVisible, setIsVisible] = useState(false);
     const [choosenWord, setChoosenWord] = useState('');
 
+    const removeHighlight = (event) => {
+        var word = PostData.filter(
+            (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
+        )[0];
+        if (word == null) {
+            event.target.removeAttribute("class");
+        }
+    }
+
     const handleWordClick = (event) => {
         var word = PostData.filter(
             (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
@@ -59,11 +68,8 @@ function Goldilocks() {
             console.log("inside thingy2");
             setChoosenWord(event.target.innerHTML);
         }
-        // if (word.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()) {
-        //     console.log("before thingy1");
-        // }
-
     };
+
 
     const onClose = () => {
         setIsVisible(false);
@@ -275,21 +281,17 @@ function Goldilocks() {
 
             }, ScrollRate);
         }
-         //remove highlights and onClick from words that is not contained in the JSON file.
-        let rawWordToRemoveFunction = document.getElementsByClassName('targetWord');
-        const wordToRemoveFunction = [];
-        for(var i = 0; i < rawWordToRemoveFunction.length; i++) {
-            wordToRemoveFunction[i] = rawWordToRemoveFunction[i].textContent.replace(/[^\w\s]/gi, '').toLowerCase();
-            console.log(wordToRemoveFunction[i]);
-            //THIS "ONCE" NEEDS TO BE CHANGED TO A DYNAMIC CONDITION FROM JSON FILE.
-            if (wordToRemoveFunction[i] == "once") {
-                rawWordToRemoveFunction[i].removeAttribute("class");
-                //how to have the popup NOT show up?
-                rawWordToRemoveFunction[i].onclick = function() {  
-                    alert("he");
-                };  
-            }
-        }
+        // let rawWordToRemoveFunction = document.getElementsByClassName('targetWord');
+        // const wordToRemoveFunction = [];
+        // for(var i = 0; i < rawWordToRemoveFunction.length; i++) {
+        //     wordToRemoveFunction[i] = rawWordToRemoveFunction[i].textContent.replace(/[^\w\s]/gi, '').toLowerCase();
+        //     console.log(wordToRemoveFunction[i]);
+        //     //THIS "ONCE" NEEDS TO BE CHANGED TO A DYNAMIC CONDITION FROM JSON FILE.
+        //     if (wordToRemoveFunction[i] == "once") {
+        //         rawWordToRemoveFunction[i].removeAttribute("class");
+        //     }
+            
+        // }
     })
 
     return (
@@ -330,7 +332,7 @@ function Goldilocks() {
                                     {/* <div class="story-mid"> */}
                                     <div id="story-infinite-scroll">
                                         <p className="story-text">
-                                            {story.split(" ").map((ele, index) => (getTag(ele, handleWordClick)))}
+                                            {story.split(" ").map((ele, index2, index) => (getTag(ele, removeHighlight, handleWordClick)))}
                                             {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
                                         </p>
                                     </div>
@@ -353,11 +355,11 @@ function Goldilocks() {
     );
 }
 
-function getTag(element, handleWordClick) {
+function getTag(element, removeHighlight, handleWordClick) {
     if (element === '\n') {
         return (<br></br>)
     } else {
-        return (<span className="targetWord" onClick={handleWordClick}>{element}</span>)
+        return (<span className="targetWord" onMouseEnter={removeHighlight} onClick={handleWordClick}>{element}</span>)
     }
 }
 
