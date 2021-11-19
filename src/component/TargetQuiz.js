@@ -12,10 +12,14 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
     useEffect(() => {
         //randomize answer choices.
         let choices = document.getElementsByClassName(".answerInput");
+        console.log("print1");
+        console.log(choices.length);
         for (let i = 0; i < choices.length; i++) {
+            console.log("print2");
             let target = Math.floor(Math.random() * choices.length - 1) + 1;
             let target2 = Math.floor(Math.random() * choices.length - 1) + 1;
             choices.eq(target).before(choices.eq(target2));
+            console.log(choices.length);
         }
     })
 
@@ -39,12 +43,12 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
     let m = randomValues2.toString();
 
 
-    //GET RANDOM ANSWER OBJECT FROM JSON1
+    //GET RANDOM ANSWER OBJECT FOR CHOICE 1
     const randomAnswers = RandomAnswer.filter(
         (post) => post.id === n)[0];
     console.log(randomAnswers);
 
-    //GET RANDOM ANSWER OBJECT FROM JSON2
+    //GET RANDOM ANSWER OBJECT FOR CHOICE 2
     const randomAnswer2 = RandomAnswer.filter(
         (post) => post.id === m)[0];
     console.log(randomAnswer2);
@@ -71,6 +75,8 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         if (value == "correct") {
             console.log('works???');
             document.getElementById("choice3").style.color = "green";
+            //if correct then give reward
+            giveReward();
         } else if (value == "wrong1") {
             console.log('doesnt works???');
             console.log(value);
@@ -83,11 +89,20 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
 
     };
 
+    var userReward = 200;
+
+    function giveReward() {
+        userReward = userReward + 1;
+        console.log(userReward);
+        console.log("give reward");
+    };
+
+
     return (isQuizVisible) ? (
         <div className="popup">
             <div className="popup-inner">
                 <div className="popupContainer quizContainer">
-                    <h3 className="coinHolder"><span className="iconM">💰</span><span id="coin">200</span></h3>
+                    <h3 className="coinHolder"><span className="iconM">💰</span><span id="coin">{userReward}</span></h3>
                     <form>
                         <h1 className="question">What is the definition of {targetWord} ?</h1>
                         <div className="answerChoices">
