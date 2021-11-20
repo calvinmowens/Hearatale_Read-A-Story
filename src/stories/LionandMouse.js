@@ -67,31 +67,31 @@ function LionandMouse() {
                 let picHolder = document.getElementById("picHolder")
                 switch (counter) {
                     // switch starts at image 2
-                    case 8:
+                    case 33:
                         picHolder.style.background = "url(" + image2 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 10:
+                    case 51:
                         picHolder.style.background = "url(" + image3 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 12:
+                    case 76:
                         picHolder.style.background = "url(" + image4 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 14:
+                    case 117:
                         picHolder.style.background = "url(" + image5 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 16:
+                    case 151:
                         picHolder.style.background = "url(" + image6 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"

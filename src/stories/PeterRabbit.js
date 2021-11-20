@@ -86,145 +86,145 @@ function PeterRabbit() {
                 let picHolder = document.getElementById("picHolder")
                 switch (counter) {
                     // switch starts at image 2
-                    case 8:
+                    case 19:
                         picHolder.style.background = "url(" + image2 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 10:
+                    case 42:
                         picHolder.style.background = "url(" + image3 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 12:
+                    case 53:
                         picHolder.style.background = "url(" + image4 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 14:
+                    case 62:
                         picHolder.style.background = "url(" + image5 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 16:
+                    case 70:
                         picHolder.style.background = "url(" + image6 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 18:
+                    case 81:
                         picHolder.style.background = "url(" + image7 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 20:
+                    case 87:
                         picHolder.style.background = "url(" + image8 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 22:
+                    case 93:
                         picHolder.style.background = "url(" + image9 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 24:
+                    case 105:
                         picHolder.style.background = "url(" + image10 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 26:
+                    case 118:
                         picHolder.style.background = "url(" + image11 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 28:
+                    case 138:
                         picHolder.style.background = "url(" + image12 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 30:
+                    case 152:
                         picHolder.style.background = "url(" + image13 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 32:
+                    case 160:
                         picHolder.style.background = "url(" + image14 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 34:
+                    case 173:
                         picHolder.style.background = "url(" + image15 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 36:
+                    case 185:
                         picHolder.style.background = "url(" + image16 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 38:
+                    case 198:
                         picHolder.style.background = "url(" + image17 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 40:
+                    case 212:
                         picHolder.style.background = "url(" + image18 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 42:
+                    case 250:
                         picHolder.style.background = "url(" + image19 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 44:
+                    case 283:
                         picHolder.style.background = "url(" + image20 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 46:
+                    case 313:
                         picHolder.style.background = "url(" + image21 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 48:
+                    case 335:
                         picHolder.style.background = "url(" + image22 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 50:
+                    case 342:
                         picHolder.style.background = "url(" + image23 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 52:
+                    case 370:
                         picHolder.style.background = "url(" + image24 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 54:
+                    case 385:
                         picHolder.style.background = "url(" + image25 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
