@@ -4,6 +4,17 @@
     padding:0;
 }
 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    margin-right: 3px;
+  }
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
+
 body {
     font-weight: 100;
     font-size: 16px;
@@ -175,11 +186,7 @@ p{
     height:500px;
     padding-left: 10%;
     padding-right: 13%;
-    overflow: scroll;
-}
-
-.story-mid::-webkit-scrollbar {
-    display: none;
+    overflow-y: scroll;
 }
 
 .volume-control {
@@ -245,10 +252,6 @@ audio {
     text-align: left;
     height: 600px;
     overflow-y: scroll;
-}
-
-#story-scroll::-webkit-scrollbar {
-    display: none;
 }
 
 
