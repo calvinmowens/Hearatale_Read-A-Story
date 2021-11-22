@@ -14,8 +14,11 @@ import Gingerbread from './stories/Gingerbread';
 import LionandMouse from './stories/LionandMouse';
 import Engine from './stories/Engine';
 import Goats from './stories/Goats';
-import TurtleRabbit from './stories/TurtleRabbit'
+import TurtleRabbit from './stories/TurtleRabbit';
 import Goldilocks from './stories/Goldilocks'
+
+//story quiz imports
+import GoldilocksStoryQuiz from './stories/goldilocks-and-the-three-bears/GoldilocksStoryQuiz';
 
 class App extends React.Component {
   render() {
@@ -34,6 +37,7 @@ class App extends React.Component {
         <Route exact path="/Engine" component={Engine} />
         <Route exact path="/Goats" component={Goats} />
         <Route exact path="/TurtleRabbit" component={TurtleRabbit} />
+        <Route exact path ="/GoldilocksStoryQuiz" component={GoldilocksStoryQuiz} />
       </div>
     );
   }
