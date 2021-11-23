@@ -4,7 +4,6 @@ import PostData from '../data/targetwords.json';
 import TargetQuiz from "./TargetQuiz.js";
 // import $ from 'jquery';
 
-
 const Popup = ({ isVisible, onClose, choosenWord }) => {
 
     const word = PostData.filter(
@@ -33,6 +32,16 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
     const closeQuiz = () => {
         setIsQuizVisible(false);
     };
+
+
+    // const wordImgStyle = {
+    //     background: "url(" + wordImg + ")",
+    //     width: '100%',
+    //     height: '100%',
+    //     backgroundPosition: 'center',
+    //     backgroundSize: 'contain',
+    //     backgroundRepeat: 'no-repeat'
+    // }
 
     return (isVisible) ? (
         <div>
