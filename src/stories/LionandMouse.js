@@ -111,14 +111,14 @@ function LionandMouse() {
         // -----
         let ScrollRate = 1;
         // TODO set this as a factor of story-scroll.width
-        let EndWord = (document.getElementById("story-scroll").offsetWidth) * 1.5;
+        let EndWord = 1200;
         console.log(EndWord);
 
         let DivElmnt;
         let scrollInterval;
         let currentScrollPlace = 0;
 
-        setTimeout(scrollDiv_init, 7000);
+        setTimeout(scrollDiv_init, 5000);
 
         function scrollDiv_init() {
             console.log("start scroll")

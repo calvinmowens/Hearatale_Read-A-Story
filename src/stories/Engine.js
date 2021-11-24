@@ -96,13 +96,13 @@ function Engine() {
         // -----
         let ScrollRate = 1;
         // TODO set this as a factor of story-scroll.width
-        let EndWord = 900
+        let EndWord = 1000;
 
         let DivElmnt;
         let scrollInterval;
         let currentScrollPlace = 0;
 
-        setTimeout(scrollDiv_init, 7000);
+        setTimeout(scrollDiv_init, 6000);
 
         function scrollDiv_init() {
             console.log("start scroll")
