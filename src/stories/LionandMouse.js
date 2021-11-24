@@ -14,7 +14,7 @@ import image6 from "./the-lion-and-the-mouse/art/6.png"
 
 
 function LionandMouse() {
-    const story = "Lazy and drowsy after a big meal, a Lion was napping under a shady palm tree when a Mouse scampered across his nose and woke him up.  The Lion went “Roarrrr!” leapt up, and with his paw he pinned the mouse’s tail. \n “You ruined my nap!” said the Lion. “So now you get to be my dessert.” \n The Mouse trembled with fear when the huge Lion’s eyes glared at him and the Lion flicked his long tongue across his teeth. \n “Please, sir,” said the Mouse, “if you will spare my life, you can be sure that I’ll repay your kindness and do you a favor when you need one.” \n “Hah!” said the Lion.  “How could a tiny little nobody like you ever do a favor for the great King of Beasts?”The Mouse couldn’t answer, because he didn’t know. \n The Lion just sniffed and said, “You’re too small even for a good snack.” Then he lifted his claw off the mouse’s tail, and away the mouse scampered. \n The very next day some hunters captured the lion in a big net and hung him from the palm tree.  The Lion heaved and thrashed and growled and roared but the net held him tight and there was no way he could escape. \n The Mouse heard him roar, scampered up, and saw the Lion hanging in the net.  Quick as a wink he hopped from a big rock onto the net. \n “I hope you didn’t come to make fun of me,” said the Lion. \n “No,” said the Mouse.  “I came to help you, just like I promised.” \n The Mouse hopped to the top of the Lion’s head, found a good place right between the Lion’s big furry ears, and nipped at the rope, and chewed and gnawed, biting through a few of the threads that made the rope, then a few more, and then a few more until finally the rope snapped and the net tumbled to the ground.  The Lion quickly squeezed free and raced off, the Mouse still clinging tight between the Lion’s ears. \n When they came to a safe place the Lion stopped and said, “Thank you.  I’m sorry I teased you and made fun of the idea that somebody as little as you could ever help anybody as big as me.  I know now that even a tiny mouse can help a mighty lion.”";
+    const story = "Lazy and drowsy after a big meal, a Lion was napping under a shady palm tree when a Mouse scampered across his nose and woke him up.  The Lion went “Roarrrr!” leapt up, and with his paw he pinned the mouse’s tail. “You ruined my nap!” said the Lion. “So now you get to be my dessert.” The Mouse trembled with fear when the huge Lion’s eyes glared at him and the Lion flicked his long tongue across his teeth. “Please, sir,” said the Mouse, “if you will spare my life, you can be sure that I’ll repay your kindness and do you a favor when you need one.” “Hah!” said the Lion.  “How could a tiny little nobody like you ever do a favor for the great King of Beasts?”The Mouse couldn’t answer, because he didn’t know. The Lion just sniffed and said, “You’re too small even for a good snack.” Then he lifted his claw off the mouse’s tail, and away the mouse scampered. The very next day some hunters captured the lion in a big net and hung him from the palm tree.  The Lion heaved and thrashed and growled and roared but the net held him tight and there was no way he could escape. The Mouse heard him roar, scampered up, and saw the Lion hanging in the net.  Quick as a wink he hopped from a big rock onto the net. “I hope you didn’t come to make fun of me,” said the Lion. “No,” said the Mouse.  “I came to help you, just like I promised.” The Mouse hopped to the top of the Lion’s head, found a good place right between the Lion’s big furry ears, and nipped at the rope, and chewed and gnawed, biting through a few of the threads that made the rope, then a few more, and then a few more until finally the rope snapped and the net tumbled to the ground.  The Lion quickly squeezed free and raced off, the Mouse still clinging tight between the Lion’s ears. When they came to a safe place the Lion stopped and said, “Thank you.  I’m sorry I teased you and made fun of the idea that somebody as little as you could ever help anybody as big as me.  I know now that even a tiny mouse can help a mighty lion.”";
     const storyPicStyle = {
         // background: "#FFFFFF",
         background: "url(" + image1 + ")",
@@ -129,25 +129,7 @@ function LionandMouse() {
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
             scrollInterval = setInterval(() => {
 
-                // SELENA'S ORIGINAL CODE
-                // if (!reachedMaxScroll) {
-                //     if (DivElmnt.word >= EndWord) {
-                //         if (!sound.paused) {
-                //             DivElmnt.scrollTop += 60;
-                //             DivElmnt.word = 0;
-                //         }
-                //         reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                //     }
-                //     // AFTER PAUSE NOT WORKING
-                //     else if (sound.paused) {
-                //         DivElmnt.word = EndWord - DivElmnt.word;
-                //     }
-                //     DivElmnt.word++;
-                // } else {
-                //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-                // }
-
-
+                let width = (document.getElementById("story-scroll").offsetWidth);
                 DivElmnt.addEventListener('wheel', function (e) {
                     console.log("scroll triggered");
                     document.getElementById('highlight-line').style.opacity = 0;
@@ -161,7 +143,8 @@ function LionandMouse() {
                         DivElmnt.scrollTop = currentScrollPlace;
                         DivElmnt.word = 0;
                     } else {
-                        DivElmnt.word++;
+                        let increment = 614 / width;
+                        DivElmnt.word += increment;
                     }
                 } else {
                     console.log("Story Paused, Curr Word: " + DivElmnt.word);

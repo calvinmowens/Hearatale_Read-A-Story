@@ -45,6 +45,7 @@ function Goldilocks() {
 
     const handleWordClick = (event) => {
         setIsVisible(!isVisible);
+        // sound.paused = true;
         console.log(event.target.innerHTML);
         setChoosenWord(event.target.innerHTML);
     };
@@ -201,14 +202,16 @@ function Goldilocks() {
         // -----
         let ScrollRate = 1;
         // TODO set this as a factor of story-scroll.width
-        let EndWord = 950;
+        let EndWord = 875;
+        // 614 is my dev width
+
 
         let DivElmnt;
         let scrollInterval;
         let currentScrollPlace = 0;
 
         // * Autoscroll can be removed by removing/commenting out the following line.
-        setTimeout(scrollDiv_init, 5000);
+        setTimeout(scrollDiv_init, 3500);
 
         function scrollDiv_init() {
             console.log("start scroll")
@@ -218,25 +221,7 @@ function Goldilocks() {
 
             scrollInterval = setInterval(() => {
 
-                // SELENA'S ORIGINAL CODE
-                // if (!reachedMaxScroll) {
-                //     if (DivElmnt.word >= EndWord) {
-                //         if (!sound.paused) {
-                //             DivElmnt.scrollTop += 60;
-                //             DivElmnt.word = 0;
-                //         }
-                //         reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                //     }
-                //     // AFTER PAUSE NOT WORKING
-                //     else if (sound.paused) {
-                //         DivElmnt.word = EndWord - DivElmnt.word;
-                //     }
-                //     DivElmnt.word++;
-                // } else {
-                //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-                // }
-
-
+                let width = (document.getElementById("story-scroll").offsetWidth);
                 DivElmnt.addEventListener('wheel', function (e) {
                     console.log("scroll triggered");
                     document.getElementById('highlight-line').style.opacity = 0;
@@ -250,7 +235,8 @@ function Goldilocks() {
                         DivElmnt.scrollTop = currentScrollPlace;
                         DivElmnt.word = 0;
                     } else {
-                        DivElmnt.word++;
+                        let increment = 614 / width;
+                        DivElmnt.word += increment;
                     }
                 } else {
                     console.log("Story Paused, Curr Word: " + DivElmnt.word);

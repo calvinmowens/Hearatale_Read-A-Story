@@ -123,14 +123,14 @@ function RedHen() {
         // -----
         let ScrollRate = 1;
         // TODO set this as a factor of story-scroll.width
-        let EndWord = (document.getElementById("story-scroll").offsetWidth) * 1.5;
+        let EndWord = 900;
         console.log(EndWord);
 
         let DivElmnt;
         let scrollInterval;
         let currentScrollPlace = 0;
 
-        setTimeout(scrollDiv_init, 7000);
+        setTimeout(scrollDiv_init, 3500);
 
         function scrollDiv_init() {
             console.log("start scroll")
@@ -140,26 +140,8 @@ function RedHen() {
 
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
             scrollInterval = setInterval(() => {
-
-                // SELENA'S ORIGINAL CODE
-                // if (!reachedMaxScroll) {
-                //     if (DivElmnt.word >= EndWord) {
-                //         if (!sound.paused) {
-                //             DivElmnt.scrollTop += 60;
-                //             DivElmnt.word = 0;
-                //         }
-                //         reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                //     }
-                //     // AFTER PAUSE NOT WORKING
-                //     else if (sound.paused) {
-                //         DivElmnt.word = EndWord - DivElmnt.word;
-                //     }
-                //     DivElmnt.word++;
-                // } else {
-                //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-                // }
-
-
+                
+                let width = (document.getElementById("story-scroll").offsetWidth);
                 DivElmnt.addEventListener('wheel', function (e) {
                     document.getElementById('highlight-line').style.opacity = 0;
                 });
@@ -171,7 +153,8 @@ function RedHen() {
                         DivElmnt.scrollTop = currentScrollPlace;
                         DivElmnt.word = 0;
                     } else {
-                        DivElmnt.word++;
+                        let increment = 614 / width;
+                        DivElmnt.word += increment;
                     }
                 } else {
                     console.log("Story Paused, Curr Word: " + DivElmnt.word);
