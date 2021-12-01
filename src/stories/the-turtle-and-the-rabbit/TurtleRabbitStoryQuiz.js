@@ -8,11 +8,11 @@ function TurtleRabbitStoryQuiz() {
 
     const questions = [
         {
-            questionText: "Something not supposed to happen",
-            answerOptions: [
-                { answerText: 'Alive ', isCorrect: false },
-                { answerText: 'Accident ', isCorrect: true },
-                { answerText: 'Along ', isCorrect: false },
+            "questionText": "Something not das to happen",
+            "answerOptions": [
+                { "answerText": 'Alive ', "isCorrect": false },
+                { "answerText": 'Accident ', "isCorrect": true },
+                { "answerText": 'Along ', "isCorrect": false },
             ],
             audioPath: "file....1"
         },
