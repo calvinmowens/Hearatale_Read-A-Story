@@ -32,12 +32,12 @@ Installation of actual application: what steps have to be taken after the softwa
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and made with love ♥️ by Team 1111.
 
 TEAM:  
-Sungeun (Harry) Bae
-Selena Do
+Sungeun (Harry) Bae  
+Selena Do  
 Kush Dabhi  
 Robbie McCormick  
-Calvin Owens
-Luke LaScala
+Calvin Owens  
+Luke LaScala  
 
 Here is a link to our current Figma screens:  
 https://www.figma.com/file/4TOYQrMV8yfeuMj9gfahlJ/Prototype?node-id=0%3A1
