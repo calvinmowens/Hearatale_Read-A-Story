@@ -3,9 +3,8 @@ import '../StoryQuiz.css';
 import '../../Story.css'
 import '../../component/Quiz.css'
 import '../../data/targetwords.json'
-import PostData from './GoldilocksStoryQuizJson.json'
 
-function GoldilocksStoryQuiz() {
+function GingerbreadStoryQuiz() {
 
     const questions = [
         {
@@ -56,10 +55,10 @@ function GoldilocksStoryQuiz() {
         <div>
             <div className="nav">
                 <div className="back-to-bookshelf">
-                    <a href="/Goldilocks">
+                    <a href="/Gingerbread">
                         <div className="arrow" />
                     </a>
-                    <a href="/Goldilocks">
+                    <a href="/Gingerbread">
                         <p>BACK TO STORY</p>
                     </a>
                 </div>
@@ -107,4 +106,4 @@ function GoldilocksStoryQuiz() {
 
 
 
-export default GoldilocksStoryQuiz;
+export default GingerbreadStoryQuiz;

@@ -3,17 +3,16 @@ import '../StoryQuiz.css';
 import '../../Story.css'
 import '../../component/Quiz.css'
 import '../../data/targetwords.json'
-import PostData from './GoldilocksStoryQuizJson.json'
 
-function GoldilocksStoryQuiz() {
+function TurtleRabbitStoryQuiz() {
 
     const questions = [
         {
-            questionText: "Something not supposed to happen",
-            answerOptions: [
-                { answerText: 'Alive ', isCorrect: false },
-                { answerText: 'Accident ', isCorrect: true },
-                { answerText: 'Along ', isCorrect: false },
+            "questionText": "Something not das to happen",
+            "answerOptions": [
+                { "answerText": 'Alive ', "isCorrect": false },
+                { "answerText": 'Accident ', "isCorrect": true },
+                { "answerText": 'Along ', "isCorrect": false },
             ],
             audioPath: "file....1"
         },
@@ -56,10 +55,10 @@ function GoldilocksStoryQuiz() {
         <div>
             <div className="nav">
                 <div className="back-to-bookshelf">
-                    <a href="/Goldilocks">
+                    <a href="/TurtleRabbit">
                         <div className="arrow" />
                     </a>
-                    <a href="/Goldilocks">
+                    <a href="/TurtleRabbit">
                         <p>BACK TO STORY</p>
                     </a>
                 </div>
@@ -107,4 +106,4 @@ function GoldilocksStoryQuiz() {
 
 
 
-export default GoldilocksStoryQuiz;
+export default TurtleRabbitStoryQuiz;

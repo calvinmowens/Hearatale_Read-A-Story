@@ -67,7 +67,7 @@ function Rumplestiltskin() {
 
         sound.onplay = function () {
             let storyDuration = Math.round(Math.floor(sound.duration));
-            sound.ontimeupdate = function () { storyImgChange() };             
+            sound.ontimeupdate = function () { storyImgChange() };
 
             function storyImgChange() {
                 let counter = Math.round(Math.floor(sound.currentTime));
@@ -267,7 +267,13 @@ function Rumplestiltskin() {
                         </div>
                     </div>
                     <div className="right-page">
-                        <div id="picHolder" className="story-pic" style={storyPicStyle}/>
+                        {/* ADDS BUTTON FOR STORY QUIZ*/}
+                        <div classname="storyQuizBtnHolder" >
+                            <form action="/RumplestilskinStoryQuiz">
+                                <button className="quizBTN"> Take Quiz </button>
+                            </form>
+                        </div>
+                        <div id="picHolder" className="story-pic" style={storyPicStyle} />
                     </div>
                 </div>
             </section>

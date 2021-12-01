@@ -14,8 +14,20 @@ import Gingerbread from './stories/Gingerbread';
 import LionandMouse from './stories/LionandMouse';
 import Engine from './stories/Engine';
 import Goats from './stories/Goats';
-import TurtleRabbit from './stories/TurtleRabbit'
+import TurtleRabbit from './stories/TurtleRabbit';
 import Goldilocks from './stories/Goldilocks'
+
+//story quiz imports
+import GoldilocksStoryQuiz from './stories/goldilocks-and-the-three-bears/GoldilocksStoryQuiz';
+import RedHenStoryQuiz from './stories/little-red-hen/RedHenStoryQuiz'
+import PeterRabbitStoryQuiz from './stories/peter-rabbit/PeterRabbitStoryQuiz';
+import RumplestilskinStoryQuiz from './stories/rumplestiltskin/RumplestilskinStoryQuiz'
+import TheBoyWhoCriedWolfStoryQuiz from './stories/the-boy-who-cried-wolf/TheBoyWhoCriedWolfStoryQuiz';
+import GingerbreadStoryQuiz from './stories/the-gingerbread-man/GingerbreadStoryQuiz';
+import LionandMouseStoryQuiz from './stories/the-lion-and-the-mouse/LionandMouseStoryQuiz';
+import LittleEngineStoryQuiz from './stories/the-little-engine-that-could/LittleEngineStoryQuiz';
+import GoatsStoryQuiz from './stories/the-three-billy-goats-gruff/GoatsStoryQuiz';
+import TurtleRabbitStoryQuiz from './stories/the-turtle-and-the-rabbit/TurtleRabbitStoryQuiz';
 
 class App extends React.Component {
   render() {
@@ -34,6 +46,17 @@ class App extends React.Component {
         <Route exact path="/Engine" component={Engine} />
         <Route exact path="/Goats" component={Goats} />
         <Route exact path="/TurtleRabbit" component={TurtleRabbit} />
+        <Route exact path ="/GoldilocksStoryQuiz" component={GoldilocksStoryQuiz} />
+        <Route exact path="/RedHenStoryQuiz" component={RedHenStoryQuiz} />
+        <Route exact path="/PeterRabbitStoryQuiz" component={PeterRabbitStoryQuiz} />
+        <Route exact path="/RumplestilskinStoryQuiz" component={RumplestilskinStoryQuiz} />
+        <Route exact path="/TheBoyWhoCriedWolfStoryQuiz" component={TheBoyWhoCriedWolfStoryQuiz} />
+        <Route exact path="/GingerbreadStoryQuiz" component={GingerbreadStoryQuiz} />
+        <Route exact path="/LionandMouseStoryQuiz" component={LionandMouseStoryQuiz} />
+        <Route exact path="/LittleEngineStoryQuiz" component={LittleEngineStoryQuiz} />
+        <Route exact path="/GoatsStoryQuiz" component={GoatsStoryQuiz} />
+        <Route exact path="/TurtleRabbitStoryQuiz" component={TurtleRabbitStoryQuiz} />
+        
       </div>
     );
   }
