@@ -14,7 +14,7 @@ function TurtleRabbitStoryQuiz() {
                 { "answerText": 'Accident ', "isCorrect": true },
                 { "answerText": 'Along ', "isCorrect": false },
             ],
-            audioPath: "file....1"
+            audioPath: "file...1"
         },
         {
             questionText: "Not dead, still living",
