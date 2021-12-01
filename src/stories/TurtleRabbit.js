@@ -56,6 +56,9 @@ function TurtleRabbit() {
         }
 
         function togglePlay() {
+            if (isVisible == false) {
+                return sound.play();
+            }
             return sound.paused ? sound.play() : sound.pause();
         };
 
