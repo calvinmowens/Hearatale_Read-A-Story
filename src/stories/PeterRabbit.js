@@ -353,7 +353,7 @@ function PeterRabbit() {
                     <div className="right-page">
                         {/* ADDS BUTTON FOR STORY QUIZ*/}
                         <div classname="storyQuizBtnHolder" >
-                            <form action="/GoldilocksStoryQuiz">
+                            <form action="/PeterRabbitStoryQuiz">
                                 <button className="quizBTN"> Take Quiz </button>
                             </form>
                         </div>

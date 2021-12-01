@@ -262,7 +262,7 @@ function Gingerbread() {
                     <div className="right-page">
                         {/* ADDS BUTTON FOR STORY QUIZ*/}
                         <div classname="storyQuizBtnHolder" >
-                            <form action="/GoldilocksStoryQuiz">
+                            <form action="/GingerbreadStoryQuiz">
                                 <button className="quizBTN"> Take Quiz </button>
                             </form>
                         </div>

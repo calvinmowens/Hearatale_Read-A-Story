@@ -269,7 +269,7 @@ function Rumplestiltskin() {
                     <div className="right-page">
                         {/* ADDS BUTTON FOR STORY QUIZ*/}
                         <div classname="storyQuizBtnHolder" >
-                            <form action="/GoldilocksStoryQuiz">
+                            <form action="/RumplestilskinStoryQuiz">
                                 <button className="quizBTN"> Take Quiz </button>
                             </form>
                         </div>

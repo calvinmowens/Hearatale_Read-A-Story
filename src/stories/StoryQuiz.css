@@ -60,3 +60,36 @@
     margin-left: 30px;
     margin-bottom: 15px;
 }
+
+ /*Responsive Design
+for iphone X, Xs, XR and 11
+w - 414 px
+h - 896 px
+*/
+@media only screen and (max-width: 600px) {
+    
+    .answerSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .questionSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .back-to-bookshelf{
+        width: 500px;
+    }
+
+    #story{
+        margin-left: 0px;
+
+    }
+}
