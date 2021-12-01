@@ -1,17 +1,6 @@
 # Hearatale_Read-A-Story
 
-This is the repo for the Hearatale Read-A-Story app that is currently in development by Georgia Tech Junior Design Team 1111.  
-
-Here is a link to our current Figma screens:  
-https://www.figma.com/file/4TOYQrMV8yfeuMj9gfahlJ/Prototype?node-id=0%3A1
-
-TEAM:  
-Sungeun (Harry) Bae 🧙  
-Selena Do  
-Kush Dabhi  
-Robbie McCormick  
-Calvin Owens 🤠  
-Luke LaScala
+This is the repository for Hearatale's Read-A-Story Application. This app was built by Georgia Tech Junior Design Team 1111 and completed December 2021.  
 
 ## Release Notes
 v1.0 - The Launch!
@@ -40,7 +29,21 @@ Installation of actual application: what steps have to be taken after the softwa
 **Troubleshooting:**  what are common errors that occur during installation and what is the corrective action?
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and made with love ♥️ by Team 1111.
+
+TEAM:  
+Sungeun (Harry) Bae
+Selena Do
+Kush Dabhi  
+Robbie McCormick  
+Calvin Owens
+Luke LaScala
+
+Here is a link to our current Figma screens:  
+https://www.figma.com/file/4TOYQrMV8yfeuMj9gfahlJ/Prototype?node-id=0%3A1
+
+
+---
 
 ## Usage
 
