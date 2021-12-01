@@ -30,7 +30,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
 
         return rnum;
     }
-
+    /*
     //CREATE RANDOM KEY1 TO ACCESS FROM JSON
     const randomValues = randomIntFromInterval(1, 5, null);
     const randomValues2 = randomIntFromInterval(1, 5, randomValues);
@@ -40,19 +40,42 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
 
 
     //GET RANDOM ANSWER OBJECT FROM JSON1
-    const randomAnswers = RandomAnswer.filter(
+    let randomAnswers = RandomAnswer.filter(
         (post) => post.id === n)[0];
     console.log(randomAnswers);
 
     //GET RANDOM ANSWER OBJECT FROM JSON2
-    const randomAnswer2 = RandomAnswer.filter(
+    let randomAnswer2 = RandomAnswer.filter(
         (post) => post.id === m)[0];
     console.log(randomAnswer2);
+    */
 
     //GET CORRECT ANSWER FROM JSON
     const word = PostData.filter(
         (post) => post.word?.toLowerCase() === quizzedWord?.toLowerCase()
     )[0];
+
+    const allTargets = PostData.filter(
+        (post) => post.word?.toLowerCase().charAt(0) === quizzedWord?.toLowerCase().charAt(0)
+    );
+    
+    /*
+    console.log('Target Test:\n')
+    console.log(targetWord)
+    console.log('Quiz Test')
+    console.log(quizzedWord)
+    */
+    let randomAnswers = 'RA';
+    let randomAnswers2 = 'RA2';
+
+    if (allTargets.length > 0) {
+        console.log(allTargets)
+        console.log(allTargets[2].word)
+        const randomValues = randomIntFromInterval(1, allTargets.length, null);
+        const randomValues2 = randomIntFromInterval(1, allTargets.length, randomValues);
+        randomAnswers = allTargets[randomValues].word;
+        randomAnswers2 = allTargets[randomValues2].word;
+    }
 
     const submitQuiz = (event) => {
         console.log('testbykush');
@@ -89,16 +112,16 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
                 <div className="popupContainer quizContainer">
                     <h3 className="coinHolder"><span className="iconM">💰</span><span id="coin">200</span></h3>
                     <form>
-                        <h1 className="question">What is the definition of {targetWord} ?</h1>
+                        <h1 className="question">Definition: {word.definition}</h1>
                         <div className="answerChoices">
                             <div id="choice1" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong1" />
-                                <p>{randomAnswers.answer}</p>
+                                <p>{randomAnswers}</p>
                             </div>
                             <div id="choice2" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong2" />
-                                <p>{randomAnswer2.answer}<br /></p>
+                                <p>{randomAnswers2}<br /></p>
                             </div>
                             <div id="choice3" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="correct" />
-                                <p>{word.definition}</p>
+                                <p>{targetWord}</p>
                             </div>
 
                         </div>
