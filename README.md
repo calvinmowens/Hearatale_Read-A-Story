@@ -14,8 +14,19 @@ Calvin Owens 🤠
 Luke LaScala
 
 ## Release Notes
-v1.0  
+v1.0 - The Launch!
+Features:
+* Homescreen
+* Login
+* Bookshelf
+* Story Pages for 10 Different Stories
+* Popup for definition on Target Words
+* Quizzes for Target Words
+* Quizzes for Each Story
+* Rewards Linked to User
 
+Known Bugs and Missing Features:
+* TBD
 
 ## Install Guide
 **Pre-requisites:** 
