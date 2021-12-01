@@ -11,7 +11,23 @@ Selena Do
 Kush Dabhi  
 Robbie McCormick  
 Calvin Owens 🤠  
-Luke LaScala  
+Luke LaScala
+
+## Release Notes
+v1.0  
+
+
+## Install Guide
+**Pre-requisites:** 
+what is the required configuration of software and hardware that the customer must have before they can begin the installation process?
+**Dependencies:**
+what third party software must be installed for your software to function?
+**Download instructions:** how will the customer and users get access to the project?
+**Build instructions (if needed):** if you are providing the raw source code rather than a binary build, how will the customer and users create the required executable application?
+Installation of actual application: what steps have to be taken after the software is built? What directories are required for installation?
+**Run instructions:**  what does the user/customer have to do to get the software to execute?
+**Troubleshooting:**  what are common errors that occur during installation and what is the corrective action?
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
