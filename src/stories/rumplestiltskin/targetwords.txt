@@ -14,17 +14,12 @@ behold = look at this, pay attention
 BENJAMIN  = a boy’s name
 bewail = cry and complain that something bad happened
 birth  = being born  [xxx born]
-boast = brag, tell people you’re wonderful, better than others 
-	[xxx boasted, boasting, brag, bragging, bragged]
-boasting = saying someone or something is better than others  
-	[xxx boast, boasted, brag, bragging, bragged]
+boast = brag, tell people you’re wonderful, better than others [xxx boasted, boasting, brag, bragging, bragged]
+boasting = saying someone or something is better than others  [xxx boast, boasted, brag, bragging, bragged]
 BOWLEGS = a pretend name
-brag = say someone or something is better than others  
-	[xxx boast, boasted, boasting, bragging, bragged]
-bragged = said someone or something is better than others
-	[xxx boast, boasted, boasting, brag, bragging]
-bragging = saying someone or something is better than others
-	[xxx boast, boasted, boasting, brag, bragged]
+brag = say someone or something is better than others  [xxx boast, boasted, boasting, bragging, bragged]
+bragged = said someone or something is better than others [xxx boast, boasted, boasting, brag, bragging]
+bragging = saying someone or something is better than others [xxx boast, boasted, boasting, brag, bragged]
 branches = parts of something, like limbs on a tree
 bring = take something someplace  [xxx brought, borrow, borrowed, borrowing]
 burnt = burned [xxx burn, burning]
@@ -41,15 +36,14 @@ dance = to move your body in a pattern, usually to music [xxx danced, dancing, d
 danced = moved your body in a pattern, usually to music [xxx dance, dancing, dancer]
 dancing = moving your body in a pattern, usually to music [xxx dance, danced, dancer]
 daughter = the girl child of a father or mother
-deep  = far down	[xxx deeper, deepest]
+deep  = far down [xxx deeper, deepest]
 deeper = farther down  [xxx deep, deepest]
 deepest = farthest down  [xxx deep, deeper]
 delight = happiness  [xxx delighted]
 delighted = very happy  [xxx delight]
 disappear = go away; or can’t be seen  [xxx disappeared]
 disappeared = when something has gone or can’t be seen  [xxx disappear]
-dream = something a person imagines, or believes happened, or believes is true 
-	[xxx dreamed, dreamt] 
+dream = something a person imagines, or believes happened, or believes is true [xxx dreamed, dreamt]
 droll-looking = seeming funny or silly or odd  
 during = time going by while something happens
 each = all of them, every one  [xxx every, everyone]
@@ -81,12 +75,11 @@ grief = feeling very sad [xxx grieve, grieved]
 grieve = feel very sad [xxx grief, grieved]
 grieved = felt very sad [xxx grief, grieve]
 grind = scratch or mash or push against to make tiny pieces  [xxx ground]
-ground = dirt we walk on; or scratched or mashed or pushed against to make tiny pieces  
-	[xxx grind]
+ground = dirt we walk on; or scratched or mashed or pushed against to make tiny pieces [xxx grind]
 guess = try to think of an answer  [xxx guesses, guessed, guessing]
 guessed = [xxx guess, guesses, guessing]
 guesses = tries to think of an answer  [xxx guess, guessed, guessing]
-guessing = trying to think of an answer [[xxx guess, guesses, guessed]
+guessing = trying to think of an answer [xxx guess, guesses, guessed]
 happily = in a way that feels good   [xxx happy, happiness]
 having = owning something; or after doing something  [xxx have, had, has, held, hold, holding]
 heap = a big pile; or to make a big pile
@@ -168,11 +161,9 @@ song = words someone sings  [xxx sing, singing, sang]
 sorely = in  hard way  [xxx sore, sorest]
 spin = made go around and around  [xxx spinning, spinning-wheel, spinster, spun]
 spinning = going around and around  [xxx spin, spinning-wheel, spinster, spun]
-spinning-wheel = wheel that twists little bit of wool or hair into long strings of thread or yarn
-	[xxx spin, spinning, spinster, spun]
+spinning-wheel = wheel that twists little bit of wool or hair into long strings of thread or yarn [xxx spin, spinning, spinster, spun]
 spinster = a woman who works at a spinning wheel  [xxx spin, spinning, spinning-wheel, spun]
-spun = went around; or made into strings of thread or yarn 
-	[xxx spin, spinning, spinning-wheel, spinster]
+spun = went around; or made into strings of thread or yarn [xxx spin, spinning, spinning-wheel, spinster]
 still = quiet; or unmoving; or yet; or continuing
 stood = got up or was standing  [xxx stand, standing]
 stranger = person someone doesn’t know; or more than strange  [xxx strange, strangest]
