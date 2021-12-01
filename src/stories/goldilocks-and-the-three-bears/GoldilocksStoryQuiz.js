@@ -3,6 +3,7 @@ import '../StoryQuiz.css';
 import '../../Story.css'
 import '../../component/Quiz.css'
 import '../../data/targetwords.json'
+import PostData from './GoldilocksStoryQuizJson.json'
 
 function GoldilocksStoryQuiz() {
 
@@ -81,7 +82,27 @@ function GoldilocksStoryQuiz() {
                             </div>
                         ) : (
                             <>
-                                <div className="questionSection">
+                                {PostData.map((postDetail, index) => {
+                                    return (
+                                        <div className="questionSection">
+                                            <div className="counter">
+                                                <span className="questionNum">Question {currentQuestion + 1} / {PostData.length}</span>
+                                            </div>
+                                            <audio id="story" controls autoPlay controlslist="nodownload noplaybackrate noremoteplayback">
+                                                <source src={PostData[currentQuestion].audioPath} type="audio/mp3" />
+                                            </audio>
+                                            <div className="questionText">{PostData[currentQuestion].questionText}</div>
+                                        </div>
+                                    )
+                                })}
+
+                                <div className="answerSection">
+                                    {PostData[currentQuestion].answerOptions.map((answerOptions) => (
+                                        <button className="ansBTN" onClick={() => handleAnsBTNClick(answerOptions.isCorrect)}>{answerOptions.answerText}</button>
+                                    ))}
+                                </div>
+
+                                {/* <div className="questionSection">
                                     <div className="counter">
                                         <span className="questionNum">Question {currentQuestion + 1} / {questions.length}</span>
                                     </div>
@@ -94,7 +115,7 @@ function GoldilocksStoryQuiz() {
                                     {questions[currentQuestion].answerOptions.map((answerOptions) => (
                                         <button className="ansBTN" onClick={() => handleAnsBTNClick(answerOptions.isCorrect)}>{answerOptions.answerText}</button>
                                     ))}
-                                </div>
+                                </div> */}
                             </>
                         )}
                 </div>
