@@ -87,13 +87,10 @@ function myFunction(e) {
 
 
 function verifyLogin() {
-	if (passwordInput1.value == 'C' && passwordInput2.value == 'C' && passwordInput3.value == 'C'
-		 && passwordInput4.value == 'C' && passwordInput5.value == 'C') {
-
-		console.log("verified");
-		location.href = "bookshelf.html";
-
-	} else {
+	console.log("Password validation");
+	if (passwordInput1.value == '' || passwordInput2.value == '' || passwordInput3.value == '' || passwordInput4.value == '' || passwordInput5.value == '') {
+		// TODO set to empty and return
+		console.log("One box empty!");
 		passwordInput1.value = '';
 		passwordInput2.value = '';
 		passwordInput3.value = '';
@@ -101,8 +98,75 @@ function verifyLogin() {
 		passwordInput5.value = '';
 		count = 0;
 
-		//******************************ADD POPUP FOR WRONG PASSWORD HEREEEE*******************************************
-		alert("Wrong password entered, please enter correct password.");
+		alert("Please enter a 5-digit passcode.");
+	} else {
+		console.log("Passcode is full... attempting POST request.");
+
+		let pass = passwordInput1.value + passwordInput2.value + passwordInput3.value + passwordInput4.value + passwordInput5.value;
+		let data = { password: pass }
+		console.log(pass);
+
+		if (passwordInput1.value == 'C' && passwordInput2.value == 'C' && passwordInput3.value == 'C'
+		 && passwordInput4.value == 'C' && passwordInput5.value == 'C') {
+			location.href = "bookshelf.html";
+		 }
+
+		// fetch('http://localhost:5000/student/login', {
+		// 		method: 'POST', // or 'PUT'
+		// 		headers: {
+		// 			'Content-Type': 'application/json',
+		// 			'Access-Control-Allow-Origin': '*'
+		// 		},
+		// 		body: JSON.stringify(data)
+		// 	})
+		// 	.then(response => response.json())
+		// 	.then(data => {
+		// 		console.log('Success:', data);
+		// 		console.log(data);
+		// 		console.log(data.msg);
+		// 		if (data.msg == "Bad password") {
+		// 			passwordInput1.value = '';
+		// 			passwordInput2.value = '';
+		// 			passwordInput3.value = '';
+		// 			passwordInput4.value = '';
+		// 			passwordInput5.value = '';
+		// 			count = 0;
+
+		// 			alert("User not found.");
+		// 		} else {
+		//			TODO pass in user object here
+		// 			location.href = "bookshelf.html";
+		// 		}
+		// 	})
+		// 	.catch((error) => {
+		// 		console.error('Error:', error);
+		// 		passwordInput1.value = '';
+		// 		passwordInput2.value = '';
+		// 		passwordInput3.value = '';
+		// 		passwordInput4.value = '';
+		// 		passwordInput5.value = '';
+		// 		count = 0;
+
+		// 		alert("API Failure, contact admin.");
+		// 	});
 	}
+
+
+	// if (passwordInput1.value == 'C' && passwordInput2.value == 'C' && passwordInput3.value == 'C'
+	// 	 && passwordInput4.value == 'C' && passwordInput5.value == 'C') {
+
+	// 	console.log("verified");
+
+	// } else {
+	// 	passwordInput1.value = '';
+	// 	passwordInput2.value = '';
+	// 	passwordInput3.value = '';
+	// 	passwordInput4.value = '';
+	// 	passwordInput5.value = '';
+	// 	count = 0;
+
+	// 	//******************************ADD POPUP FOR WRONG PASSWORD HEREEEE*******************************************
+	// 	alert("Wrong password entered, please enter correct password.");
+	// }
 }
 
