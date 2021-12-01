@@ -32,7 +32,7 @@ function Goats() {
         height: "50%",
         boxShadow: "0px 0px 40px rgba(184, 184, 184, 0.25)"
     }
-    
+
     let triggeredWord;
 
     const [isVisible, setIsVisible] = useState(false);
@@ -267,7 +267,13 @@ function Goats() {
                         </div>
                     </div>
                     <div className="right-page">
-                        <div id="picHolder" className="story-pic" style={storyPicStyle}/>
+                        {/* ADDS BUTTON FOR STORY QUIZ*/}
+                        <div classname="storyQuizBtnHolder" >
+                            <form action="/GoldilocksStoryQuiz">
+                                <button className="quizBTN"> Take Quiz </button>
+                            </form>
+                        </div>
+                        <div id="picHolder" className="story-pic" style={storyPicStyle} />
                     </div>
                 </div>
             </section>

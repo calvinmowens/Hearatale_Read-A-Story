@@ -203,7 +203,13 @@ function Engine() {
                         </div>
                     </div>
                     <div className="right-page">
-                        <div id="picHolder" className="story-pic" style={storyPicStyle}/>
+                        {/* ADDS BUTTON FOR STORY QUIZ*/}
+                        <div classname="storyQuizBtnHolder" >
+                            <form action="/GoldilocksStoryQuiz">
+                                <button className="quizBTN"> Take Quiz </button>
+                            </form>
+                        </div>
+                        <div id="picHolder" className="story-pic" style={storyPicStyle} />
                     </div>
                 </div>
             </section>
