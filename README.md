@@ -1,21 +1,51 @@
 # Hearatale_Read-A-Story
 
-This is the repo for the Hearatale Read-A-Story app that is currently in development by Georgia Tech Junior Design Team 1111.  
+This is the repository for Hearatale's Read-A-Story Application. This app was built by Georgia Tech Junior Design Team 1111 and completed December 2021.  
+
+## Release Notes
+v1.0 - The Launch!
+Features:
+* Homescreen
+* Login
+* Bookshelf
+* Story Pages for 10 Different Stories
+* Popup for definition on Target Words
+* Quizzes for Target Words
+* Quizzes for Each Story
+* Rewards Linked to User
+
+Known Bugs and Missing Features:
+* TBD
+
+## Install Guide
+**Pre-requisites:** 
+what is the required configuration of software and hardware that the customer must have before they can begin the installation process?
+**Dependencies:**
+what third party software must be installed for your software to function?
+**Download instructions:** how will the customer and users get access to the project?
+**Build instructions (if needed):** if you are providing the raw source code rather than a binary build, how will the customer and users create the required executable application?
+Installation of actual application: what steps have to be taken after the software is built? What directories are required for installation?
+**Run instructions:**  what does the user/customer have to do to get the software to execute?
+**Troubleshooting:**  what are common errors that occur during installation and what is the corrective action?
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and made with love ♥️ by Team 1111.
+
+TEAM:  
+Sungeun (Harry) Bae  
+Selena Do  
+Kush Dabhi  
+Robbie McCormick  
+Calvin Owens  
+Luke LaScala  
 
 Here is a link to our current Figma screens:  
 https://www.figma.com/file/4TOYQrMV8yfeuMj9gfahlJ/Prototype?node-id=0%3A1
 
-TEAM:  
-Sungeun (Harry) Bae 🧙  
-Selena Do  
-Kush Dabhi  
-Robbie (just Robbie like Rihanna or Beyonce)  
-Calvin Owens 🤠  
-Luke LaScala  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Usage
 
 In the project directory, you can run:
 
@@ -26,6 +56,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+**Testing Login:** CCCCC
+
+## Avaliable Scripts && React Docs
 
 ### `npm test`
 
