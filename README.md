@@ -18,6 +18,21 @@ Known Bugs and Missing Features:
 * TBD
 
 ## Install Guide
+Application
+**Build instructions (if needed):**
+Application:  
+`npm install`  
+`npm start`  
+
+Server: 
+* install mysql
+    mysql -u root -p
+* install pip
+* pip install flask, flask-login, flask-mysqldb, flask-sqlalchemy, bcrypt
+* 
+
+
+
 **Pre-requisites:** 
 what is the required configuration of software and hardware that the customer must have before they can begin the installation process?
 **Dependencies:**
