@@ -11,11 +11,12 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
 
     useEffect(() => {
         //randomize answer choices.
-        let choices = document.getElementsByClassName(".answerInput");
+        let choices = document.getElementsByClassName("answerInput");
         for (let i = 0; i < choices.length; i++) {
             let target = Math.floor(Math.random() * choices.length - 1) + 1;
             let target2 = Math.floor(Math.random() * choices.length - 1) + 1;
-            choices.eq(target).before(choices.eq(target2));
+            //choices.eq(target).before(choices.eq(target2));
+            choices[target].before(choices[target2]);
         }
     })
 
@@ -39,12 +40,12 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
     let m = randomValues2.toString();
 
 
-    //GET RANDOM ANSWER OBJECT FROM JSON1
+    //GET RANDOM ANSWER OBJECT FOR CHOICE 1
     const randomAnswers = RandomAnswer.filter(
         (post) => post.id === n)[0];
     console.log(randomAnswers);
 
-    //GET RANDOM ANSWER OBJECT FROM JSON2
+    //GET RANDOM ANSWER OBJECT FOR CHOICE 2
     const randomAnswer2 = RandomAnswer.filter(
         (post) => post.id === m)[0];
     console.log(randomAnswer2);

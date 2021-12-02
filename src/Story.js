@@ -22,6 +22,7 @@ function Story() {
     const onClose = () => {
         setIsVisible(false);
     };
+
     useEffect(() => {
 
         /**
@@ -124,6 +125,7 @@ function Story() {
 
             }, ScrollRate);
         }
+
     })
 
     return (

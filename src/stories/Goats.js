@@ -32,16 +32,32 @@ function Goats() {
         height: "75%",
         boxShadow: "0px 0px 40px rgba(184, 184, 184, 0.25)"
     }
-    
+
     let triggeredWord;
 
     const [isVisible, setIsVisible] = useState(false);
     const [choosenWord, setChoosenWord] = useState('');
 
+    const removeHighlight = (event) => {
+        var word = PostData.filter(
+            (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
+        )[0];
+        if (word == null) {
+            event.target.removeAttribute("class");
+        }
+    }
+
     const handleWordClick = (event) => {
-        setIsVisible(!isVisible);
-        console.log(event.target.innerHTML);
-        setChoosenWord(event.target.innerHTML);
+        var word = PostData.filter(
+            (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
+        )[0];
+        if (word == null) {
+            setIsVisible(isVisible);
+            setChoosenWord(null);
+        } else {
+            setIsVisible(!isVisible);
+            setChoosenWord(event.target.innerHTML);
+        }
     };
 
     const onClose = () => {
@@ -62,6 +78,9 @@ function Goats() {
         }
 
         function togglePlay() {
+            if (isVisible == false) {
+                return sound.play();
+            }
             return sound.paused ? sound.play() : sound.pause();
         };
 
@@ -241,7 +260,7 @@ function Goats() {
                                     {/* <div class="story-mid"> */}
                                     <div id="story-infinite-scroll">
                                         <p className="story-text">
-                                            {story.split(" ").map((ele, index) => (getTag(ele, handleWordClick)))}
+                                            {story.split(" ").map((ele, index2, index) => (getTag(ele, removeHighlight, handleWordClick)))}
                                             {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
                                         </p>
                                         <p id="story-spacer">
@@ -253,7 +272,13 @@ function Goats() {
                         </div>
                     </div>
                     <div className="right-page">
-                        <div id="picHolder" className="story-pic" style={storyPicStyle}/>
+                        {/* ADDS BUTTON FOR STORY QUIZ*/}
+                        <div classname="storyQuizBtnHolder" >
+                            <form action="/GoatsStoryQuiz">
+                                <button className="quizBTN"> Take Quiz </button>
+                            </form>
+                        </div>
+                        <div id="picHolder" className="story-pic" style={storyPicStyle} />
                     </div>
                 </div>
             </section>
@@ -267,11 +292,11 @@ function Goats() {
     );
 }
 
-function getTag(element, handleWordClick) {
+function getTag(element, removeHighlight, handleWordClick) {
     if (element === '\n') {
         return (<br></br>)
     } else {
-        return (<span className="targetWord" onClick={handleWordClick}>{element}</span>)
+        return (<span className="targetWord" onMouseEnter={removeHighlight} onClick={handleWordClick}>{element}</span>)
     }
 }
 
