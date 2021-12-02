@@ -28,10 +28,26 @@ function Engine() {
     const [isVisible, setIsVisible] = useState(false);
     const [choosenWord, setChoosenWord] = useState('');
 
+    const removeHighlight = (event) => {
+        var word = PostData.filter(
+            (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
+        )[0];
+        if (word == null) {
+            event.target.removeAttribute("class");
+        }
+    }
+
     const handleWordClick = (event) => {
-        setIsVisible(!isVisible);
-        console.log(event.target.innerHTML);
-        setChoosenWord(event.target.innerHTML);
+        var word = PostData.filter(
+            (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
+        )[0];
+        if (word == null) {
+            setIsVisible(isVisible);
+            setChoosenWord(null);
+        } else {
+            setIsVisible(!isVisible);
+            setChoosenWord(event.target.innerHTML);
+        }
     };
 
     const onClose = () => {
@@ -197,7 +213,7 @@ function Engine() {
                                     {/* <div class="story-mid"> */}
                                     <div id="story-infinite-scroll">
                                         <p className="story-text">
-                                            {story.split(" ").map((ele, index) => (getTag(ele, handleWordClick)))}
+                                            {story.split(" ").map((ele, index2, index) => (getTag(ele, removeHighlight, handleWordClick)))}
                                             {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
                                         </p>
                                     </div>
@@ -226,11 +242,11 @@ function Engine() {
     );
 }
 
-function getTag(element, handleWordClick) {
+function getTag(element, removeHighlight, handleWordClick) {
     if (element === '\n') {
         return (<br></br>)
     } else {
-        return (<span className="targetWord" onClick={handleWordClick}>{element}</span>)
+        return (<span className="targetWord" onMouseEnter={removeHighlight} onClick={handleWordClick}>{element}</span>)
     }
 }
 

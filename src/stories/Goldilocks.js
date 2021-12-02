@@ -57,19 +57,13 @@ function Goldilocks() {
             (post) => post.word?.toLowerCase() === event.target.innerHTML?.toLowerCase()
         )[0];
         if (word == null) {
-            console.log("before thingy1");
             setIsVisible(isVisible);
             setChoosenWord(null);
         } else {
             setIsVisible(!isVisible);
-            console.log("inside thingy1");
-            console.log(word);
-            console.log(event.target.innerHTML);
-            console.log("inside thingy2");
             setChoosenWord(event.target.innerHTML);
         }
     };
-
 
     const onClose = () => {
         setIsVisible(false);
