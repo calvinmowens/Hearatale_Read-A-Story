@@ -55,6 +55,11 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         (post) => post.word?.toLowerCase() === quizzedWord?.toLowerCase()
     )[0];
 
+
+    //Use state for coins 
+    const [coins, incrementCoins] = useState(0);
+
+
     const submitQuiz = (event) => {
         console.log('testbykush');
         //const userAnswer = (answerContainer.querySelector(selector) || {}).value;
@@ -72,6 +77,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         if (value == "correct") {
             console.log('works???');
             document.getElementById("choice3").style.color = "green";
+            incrementCoins(coins + 1);
         } else if (value == "wrong1") {
             console.log('doesnt works???');
             console.log(value);
@@ -88,7 +94,7 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         <div className="popup">
             <div className="popup-inner">
                 <div className="popupContainer quizContainer">
-                    <h3 className="coinHolder"><span className="iconM">💰</span><span id="coin">200</span></h3>
+                    <h3 className="coinHolder"><span className="iconM">💰</span><span id="coin">{coins}</span></h3>
                     <form>
                         <h1 className="question">What is the definition of {targetWord} ?</h1>
                         <div className="answerChoices">
