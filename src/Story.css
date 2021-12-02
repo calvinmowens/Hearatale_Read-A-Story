@@ -239,7 +239,6 @@ p{
 
 .story-text {
     line-height: 60px;
-    overflow-y: scroll;
 }
 
 .story-pic {
@@ -275,10 +274,18 @@ audio {
 
 #story-scroll {
     text-align: left;
-    height: 600px;
+    height: 62.5%;
     overflow-y: scroll;
 }
 
+
+#story-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+#story-spacer {
+    line-height: 500px;
+}
 
 span {
     margin-right: 3px;
@@ -297,6 +304,10 @@ span {
 
 #hidden_trigger{
     display: none;
+}
+
+#end_line_break {
+    line-height: 500px;
 }
 
 /*Responsive Design
@@ -393,11 +404,6 @@ h - 896 px
     .highlight-line {
         margin: 5%;
         width: 90%;
-    }
-
-    #story-scroll {
-        text-align: left;
-        height: 55%;
     }
 
     .back-to-bookshelf {

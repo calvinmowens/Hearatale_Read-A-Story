@@ -9,7 +9,9 @@
         "word": "Once",
         "variation": null,
         "pronounciation": "/wəns/",
-        "definition": "on one occasion or for one time only."
+        "definition": "on one occasion or for one time only.",
+        "image": "../img/hungry.jpg",
+        "audio": "../audio/exampleAudio.mp3"
     },
     {
         "word": "Loved",
@@ -22,5 +24,15 @@
         "variation": "love, loved, loving",
         "pronounciation": "/ləv/",
         "definition": "feel deep affection for (someone)."
+        "image": "../img/hungry.jpg",
+        "audio": "../stories/goldilocks-and-the-three-bears/audio.mp3"
+    },
+    {
+        "word": "Bears",
+        "variation": "bears",
+        "pronounciation": "/bare/",
+        "definition": "an animal that will rip your face off",
+        "image": "../img/crayon.jpg",
+        "audio": "../stories/goldilocks-and-the-three-bears/audio.mp3"
     }
 ]

@@ -14,7 +14,7 @@ import image6 from "./the-lion-and-the-mouse/art/6.png"
 
 
 function LionandMouse() {
-    const story = "Lazy and drowsy after a big meal, a Lion was napping under a shady palm tree when a Mouse scampered across his nose and woke him up.  The Lion went “Roarrrr!” leapt up, and with his paw he pinned the mouse’s tail. \n “You ruined my nap!” said the Lion. “So now you get to be my dessert.” \n The Mouse trembled with fear when the huge Lion’s eyes glared at him and the Lion flicked his long tongue across his teeth. \n “Please, sir,” said the Mouse, “if you will spare my life, you can be sure that I’ll repay your kindness and do you a favor when you need one.” \n “Hah!” said the Lion.  “How could a tiny little nobody like you ever do a favor for the great King of Beasts?”The Mouse couldn’t answer, because he didn’t know. \n The Lion just sniffed and said, “You’re too small even for a good snack.” Then he lifted his claw off the mouse’s tail, and away the mouse scampered. \n The very next day some hunters captured the lion in a big net and hung him from the palm tree.  The Lion heaved and thrashed and growled and roared but the net held him tight and there was no way he could escape. \n The Mouse heard him roar, scampered up, and saw the Lion hanging in the net.  Quick as a wink he hopped from a big rock onto the net. \n “I hope you didn’t come to make fun of me,” said the Lion. \n “No,” said the Mouse.  “I came to help you, just like I promised.” \n The Mouse hopped to the top of the Lion’s head, found a good place right between the Lion’s big furry ears, and nipped at the rope, and chewed and gnawed, biting through a few of the threads that made the rope, then a few more, and then a few more until finally the rope snapped and the net tumbled to the ground.  The Lion quickly squeezed free and raced off, the Mouse still clinging tight between the Lion’s ears. \n When they came to a safe place the Lion stopped and said, “Thank you.  I’m sorry I teased you and made fun of the idea that somebody as little as you could ever help anybody as big as me.  I know now that even a tiny mouse can help a mighty lion.”";
+    const story = "Lazy and drowsy after a big meal, a Lion was napping under a shady palm tree when a Mouse scampered across his nose and woke him up.  The Lion went “Roarrrr!” leapt up, and with his paw he pinned the mouse’s tail. “You ruined my nap!” said the Lion. “So now you get to be my dessert.” The Mouse trembled with fear when the huge Lion’s eyes glared at him and the Lion flicked his long tongue across his teeth. “Please, sir,” said the Mouse, “if you will spare my life, you can be sure that I’ll repay your kindness and do you a favor when you need one.” “Hah!” said the Lion.  “How could a tiny little nobody like you ever do a favor for the great King of Beasts?”The Mouse couldn’t answer, because he didn’t know. The Lion just sniffed and said, “You’re too small even for a good snack.” Then he lifted his claw off the mouse’s tail, and away the mouse scampered. The very next day some hunters captured the lion in a big net and hung him from the palm tree.  The Lion heaved and thrashed and growled and roared but the net held him tight and there was no way he could escape. The Mouse heard him roar, scampered up, and saw the Lion hanging in the net.  Quick as a wink he hopped from a big rock onto the net. “I hope you didn’t come to make fun of me,” said the Lion. “No,” said the Mouse.  “I came to help you, just like I promised.” The Mouse hopped to the top of the Lion’s head, found a good place right between the Lion’s big furry ears, and nipped at the rope, and chewed and gnawed, biting through a few of the threads that made the rope, then a few more, and then a few more until finally the rope snapped and the net tumbled to the ground.  The Lion quickly squeezed free and raced off, the Mouse still clinging tight between the Lion’s ears. When they came to a safe place the Lion stopped and said, “Thank you.  I’m sorry I teased you and made fun of the idea that somebody as little as you could ever help anybody as big as me.  I know now that even a tiny mouse can help a mighty lion.”";
     const storyPicStyle = {
         // background: "#FFFFFF",
         background: "url(" + image1 + ")",
@@ -22,7 +22,7 @@ function LionandMouse() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         width: "95%",
-        height: "50%",
+        height: "75%",
         boxShadow: "0px 0px 40px rgba(184, 184, 184, 0.25)"
     }
 
@@ -86,31 +86,31 @@ function LionandMouse() {
                 let picHolder = document.getElementById("picHolder")
                 switch (counter) {
                     // switch starts at image 2
-                    case 8:
+                    case 33:
                         picHolder.style.background = "url(" + image2 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 10:
+                    case 51:
                         picHolder.style.background = "url(" + image3 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 12:
+                    case 76:
                         picHolder.style.background = "url(" + image4 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 14:
+                    case 117:
                         picHolder.style.background = "url(" + image5 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 16:
+                    case 151:
                         picHolder.style.background = "url(" + image6 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
@@ -130,14 +130,14 @@ function LionandMouse() {
         // -----
         let ScrollRate = 1;
         // TODO set this as a factor of story-scroll.width
-        let EndWord = (document.getElementById("story-scroll").offsetWidth) * 1.5;
+        let EndWord = 1200;
         console.log(EndWord);
 
         let DivElmnt;
         let scrollInterval;
         let currentScrollPlace = 0;
 
-        setTimeout(scrollDiv_init, 7000);
+        setTimeout(scrollDiv_init, 5000);
 
         function scrollDiv_init() {
             console.log("start scroll")
@@ -148,25 +148,7 @@ function LionandMouse() {
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
             scrollInterval = setInterval(() => {
 
-                // SELENA'S ORIGINAL CODE
-                // if (!reachedMaxScroll) {
-                //     if (DivElmnt.word >= EndWord) {
-                //         if (!sound.paused) {
-                //             DivElmnt.scrollTop += 60;
-                //             DivElmnt.word = 0;
-                //         }
-                //         reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                //     }
-                //     // AFTER PAUSE NOT WORKING
-                //     else if (sound.paused) {
-                //         DivElmnt.word = EndWord - DivElmnt.word;
-                //     }
-                //     DivElmnt.word++;
-                // } else {
-                //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-                // }
-
-
+                let width = (document.getElementById("story-scroll").offsetWidth);
                 DivElmnt.addEventListener('wheel', function (e) {
                     console.log("scroll triggered");
                     document.getElementById('highlight-line').style.opacity = 0;
@@ -180,7 +162,8 @@ function LionandMouse() {
                         DivElmnt.scrollTop = currentScrollPlace;
                         DivElmnt.word = 0;
                     } else {
-                        DivElmnt.word++;
+                        let increment = 614 / width;
+                        DivElmnt.word += increment;
                     }
                 } else {
                     console.log("Story Paused, Curr Word: " + DivElmnt.word);
@@ -230,6 +213,9 @@ function LionandMouse() {
                                         <p className="story-text">
                                             {story.split(" ").map((ele, index2, index) => (getTag(ele, removeHighlight, handleWordClick)))}
                                             {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
+                                        </p>
+                                        <p id="story-spacer">
+                                            <br></br>
                                         </p>
                                     </div>
                                 </div>

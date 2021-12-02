@@ -20,7 +20,7 @@ import image12 from "./the-gingerbread-man/art/12.png"
 
 
 function Gingerbread() {
-    const story = 'Once upon a time a grandmother had baked a cake and some cupcakes and cookies and had just a little dough left over and decided to sprinkle it with ginger spice to bake a gingerbread man.  She shaped him on her baking pan, with two arms and two legs, two nice big raisins for eyes, and a stripe of pink icing for a mouth, and sprinkled him all over with ginger spice, but she didn’t know a mischievous pixie had sprinkled some magic pixie dust in her ginger sprinkling can. \n The grandmother slid the pan into the oven, and let it bake, but when opened the oven door, she had hardly set the pan on the table when the gingerbread man hopped up, winked a raisin eye, and said, “Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” \n He hopped off the table, skipped over the cat’s food dish, and squeezed out where the door had just barely cracked open as the grandfather was walking in. \n “Stop!” shouted the grandfather.  “Please let me have a nibble!” \n “Never!” laughed the gingerbread man as he raced away.  “I ran away from your wife and I’ll run away from you.  Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” \n The grandfather chased after him, with the grandmother just behind.   The cat swatted at him as he ran past, and meowed, “Please stop!  I only want one quick lick!” \n “No icky lick for you, whisker face,” called the gingerbread man.  “I’m faster than your master and faster than your mistress and most of all I’m faster than you.  Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” \n A few steps farther and the gingerbread man could have jumped over the sleeping dog’s tale, but instead he leapt up high and landed square in the middle of it.  “Rowwrrrr!” the dog growled, starting up in surprise. \n “Gotcha, you flea-bitten sack of bones,” called the gingerbread man. \n “I’ll snatch a bite out of you,” barked the dog. \n “Says you,” and the gingerbread man made a rude sound blubbering air between his tongue and his lips.  “You’re too slow!  You’re slow like your master and your mistress and even slower than the cat!  Run, run, fast as you can!  You can’t catch me, I’m the gingerbread man!” \n The dog chased after him, ahead of the cat and the grandpa and the grandma, but the gingerbread man sped easily ahead of them all, down past the barn where a cow was drowsing away, slowly chewing its cud.  Just as he whisked by the cow glanced up and mooed, “Stop, please let me have a nibble!” \n “Forget about it!” The gingerbread man laughed and stuck out his tongue. “Your master can’t catch me, nor your mistress, nor the cat, nor dog, nor you!” \n “Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” \n The cow trotted after him, with the dog and cat and grandfather and grandmother following, and away the gingerbread man fled, past a horse grazing on clover and alfalfa grass in the pasture. \n “You smell delicious,” neighed the horse.  “May I please take just a tiny nip?” \n “No way, hay breath!” shouted the gingerbread man, laughing.  “I can outrun your master and mistress and the cat and dog and cow, and I can outrun you.  Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” \n The horse cantered after him, with the cow trotting behind, and the dog and cat following, and grandfather and grandmother huffing and puffing trying to keep up. \n A shepherd boy out watching over the sheep was feeling very hungry, wishing it were dinner time, when the gingerbread man flashed past him.  “Stop!” shouted the boy.  “Please stop!  I must have just one bite!” \n “In your dreams!” called the gingerbread man, and he hopped backward a few steps to make a funny face as the boy raced to catch him. \n “Nobody can catch me—grandad, grandma, cat, dog, cow, horse—and not some goofy-looking, flat-footed shepherd boy!  Run, run, fast as you can!  You can’t catch me, I’m the gingerbread man!” \n On he raced, grinning and cocky, until he came to a river, and then he halted, for he knew he couldn’t swim in the water. \n Then over by a blackberry bush he spotted a red fox curled with its fluffy tail brushing its nose.  The gingerbread man thought about racing down the river side to look for a bridge. \n “Don’t even think about it, fox!” he said.  “You’re too slow for me.  Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” \n But the fox said calmly, “Don’t worry, gingerbread man.   I’ve just dined on a fine fat rabbit, so why would I need to eat you?” \n Then he stood and took a step forward.  “Do you need a way across the river?” \n “Maybe I do,” said the gingerbread man, “and maybe I don’t.” \n “Well,” said the fox, taking another step forward, “just hop on my tail.  I can lift you above the water as I swim across.” \n The gingerbread man thought a minute, and listened to the sounds of the shepherd boy and horse and cow and dog and cat and grandfather and grandmother racing to catch him. \n “Okay,” he said.  “But no tricks!” \n He hopped on the fox’s bushy tail and the fox swam out a little way into the river. \n “My tail’s getting wet and sinking in the river,” said the fox. “Hop up on my back and stay dry.”  So the gingerbread man hopped on the fox’s back. \n Then, when they’d gone halfway across, the fox said, “The river water is splashing on my back.  Hop up on my head so you don’t get wet.”  So the gingerbread man hopped up between the fox’s ears. \n They were nearly to the shore when the fox said, “I’m tired and can’t keep my whole head up any longer.  Hop on the tip of my nose to stay dry.”  The gingerbread man hopped on the tip of the fox’s nose.  But just as soon as they reached the other side of the river the fox flipped his nose up in the air, tossed gingerbread man high, caught him, and swallowed him whole. \n The gingerbread man had been faster than the grandmother and grandfather, the cat, the dog, the cow, the horse, and even the shepherd boy—he was quicker than them all, but the fox was quicker still.';
+    const story = 'Once upon a time a grandmother had baked a cake and some cupcakes and cookies and had just a little dough left over and decided to sprinkle it with ginger spice to bake a gingerbread man.  She shaped him on her baking pan, with two arms and two legs, two nice big raisins for eyes, and a stripe of pink icing for a mouth, and sprinkled him all over with ginger spice, but she didn’t know a mischievous pixie had sprinkled some magic pixie dust in her ginger sprinkling can. The grandmother slid the pan into the oven, and let it bake, but when opened the oven door, she had hardly set the pan on the table when the gingerbread man hopped up, winked a raisin eye, and said, “Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” He hopped off the table, skipped over the cat’s food dish, and squeezed out where the door had just barely cracked open as the grandfather was walking in. “Stop!” shouted the grandfather.  “Please let me have a nibble!” “Never!” laughed the gingerbread man as he raced away.  “I ran away from your wife and I’ll run away from you.  Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” The grandfather chased after him, with the grandmother just behind.   The cat swatted at him as he ran past, and meowed, “Please stop!  I only want one quick lick!” “No icky lick for you, whisker face,” called the gingerbread man.  “I’m faster than your master and faster than your mistress and most of all I’m faster than you.  Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” A few steps farther and the gingerbread man could have jumped over the sleeping dog’s tale, but instead he leapt up high and landed square in the middle of it.  “Rowwrrrr!” the dog growled, starting up in surprise. “Gotcha, you flea-bitten sack of bones,” called the gingerbread man. “I’ll snatch a bite out of you,” barked the dog. “Says you,” and the gingerbread man made a rude sound blubbering air between his tongue and his lips.  “You’re too slow!  You’re slow like your master and your mistress and even slower than the cat!  Run, run, fast as you can!  You can’t catch me, I’m the gingerbread man!” The dog chased after him, ahead of the cat and the grandpa and the grandma, but the gingerbread man sped easily ahead of them all, down past the barn where a cow was drowsing away, slowly chewing its cud.  Just as he whisked by the cow glanced up and mooed, “Stop, please let me have a nibble!” “Forget about it!” The gingerbread man laughed and stuck out his tongue. “Your master can’t catch me, nor your mistress, nor the cat, nor dog, nor you!” “Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” The cow trotted after him, with the dog and cat and grandfather and grandmother following, and away the gingerbread man fled, past a horse grazing on clover and alfalfa grass in the pasture. “You smell delicious,” neighed the horse.  “May I please take just a tiny nip?” “No way, hay breath!” shouted the gingerbread man, laughing.  “I can outrun your master and mistress and the cat and dog and cow, and I can outrun you.  Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” The horse cantered after him, with the cow trotting behind, and the dog and cat following, and grandfather and grandmother huffing and puffing trying to keep up. A shepherd boy out watching over the sheep was feeling very hungry, wishing it were dinner time, when the gingerbread man flashed past him.  “Stop!” shouted the boy.  “Please stop!  I must have just one bite!” “In your dreams!” called the gingerbread man, and he hopped backward a few steps to make a funny face as the boy raced to catch him. “Nobody can catch me—grandad, grandma, cat, dog, cow, horse—and not some goofy-looking, flat-footed shepherd boy!  Run, run, fast as you can!  You can’t catch me, I’m the gingerbread man!” On he raced, grinning and cocky, until he came to a river, and then he halted, for he knew he couldn’t swim in the water. Then over by a blackberry bush he spotted a red fox curled with its fluffy tail brushing its nose.  The gingerbread man thought about racing down the river side to look for a bridge. “Don’t even think about it, fox!” he said.  “You’re too slow for me.  Run, run, fast as you can.  You can’t catch me, I’m the gingerbread man!” But the fox said calmly, “Don’t worry, gingerbread man.   I’ve just dined on a fine fat rabbit, so why would I need to eat you?” Then he stood and took a step forward.  “Do you need a way across the river?” “Maybe I do,” said the gingerbread man, “and maybe I don’t.” “Well,” said the fox, taking another step forward, “just hop on my tail.  I can lift you above the water as I swim across.” The gingerbread man thought a minute, and listened to the sounds of the shepherd boy and horse and cow and dog and cat and grandfather and grandmother racing to catch him. “Okay,” he said.  “But no tricks!” He hopped on the fox’s bushy tail and the fox swam out a little way into the river. “My tail’s getting wet and sinking in the river,” said the fox. “Hop up on my back and stay dry.”  So the gingerbread man hopped on the fox’s back. Then, when they’d gone halfway across, the fox said, “The river water is splashing on my back.  Hop up on my head so you don’t get wet.”  So the gingerbread man hopped up between the fox’s ears. They were nearly to the shore when the fox said, “I’m tired and can’t keep my whole head up any longer.  Hop on the tip of my nose to stay dry.”  The gingerbread man hopped on the tip of the fox’s nose.  But just as soon as they reached the other side of the river the fox flipped his nose up in the air, tossed gingerbread man high, caught him, and swallowed him whole. The gingerbread man had been faster than the grandmother and grandfather, the cat, the dog, the cow, the horse, and even the shepherd boy—he was quicker than them all, but the fox was quicker still.';
     const storyPicStyle = {
         // background: "#FFFFFF",
         background: "url(" + image1 + ")",
@@ -28,7 +28,7 @@ function Gingerbread() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         width: "95%",
-        height: "50%",
+        height: "75%",
         boxShadow: "0px 0px 40px rgba(184, 184, 184, 0.25)"
     }
 
@@ -92,67 +92,67 @@ function Gingerbread() {
                 let picHolder = document.getElementById("picHolder")
                 switch (counter) {
                     // switch starts at image 2
-                    case 8:
+                    case 45:
                         picHolder.style.background = "url(" + image2 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 10:
+                    case 94:
                         picHolder.style.background = "url(" + image3 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 12:
+                    case 121:
                         picHolder.style.background = "url(" + image4 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 14:
+                    case 165:
                         picHolder.style.background = "url(" + image5 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 16:
+                    case 220:
                         picHolder.style.background = "url(" + image6 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 18:
+                    case 243:
                         picHolder.style.background = "url(" + image7 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 20:
+                    case 254:
                         picHolder.style.background = "url(" + image8 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 22:
+                    case 304:
                         picHolder.style.background = "url(" + image9 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 24:
+                    case 340:
                         picHolder.style.background = "url(" + image10 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 26:
+                    case 378:
                         picHolder.style.background = "url(" + image11 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 28:
+                    case 435:
                         picHolder.style.background = "url(" + image12 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
@@ -171,15 +171,13 @@ function Gingerbread() {
         // AUTOSCROLL AND HIGHLIGHTING
         // -----
         let ScrollRate = 1;
-        // TODO set this as a factor of story-scroll.width
-        let EndWord = (document.getElementById("story-scroll").offsetWidth) * 1.5;
-        console.log(EndWord);
+        let EndWord = 1150;
 
         let DivElmnt;
         let scrollInterval;
         let currentScrollPlace = 0;
 
-        setTimeout(scrollDiv_init, 7000);
+        setTimeout(scrollDiv_init, 4250);
 
         function scrollDiv_init() {
             console.log("start scroll")
@@ -190,25 +188,7 @@ function Gingerbread() {
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
             scrollInterval = setInterval(() => {
 
-                // SELENA'S ORIGINAL CODE
-                // if (!reachedMaxScroll) {
-                //     if (DivElmnt.word >= EndWord) {
-                //         if (!sound.paused) {
-                //             DivElmnt.scrollTop += 60;
-                //             DivElmnt.word = 0;
-                //         }
-                //         reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                //     }
-                //     // AFTER PAUSE NOT WORKING
-                //     else if (sound.paused) {
-                //         DivElmnt.word = EndWord - DivElmnt.word;
-                //     }
-                //     DivElmnt.word++;
-                // } else {
-                //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-                // }
-
-
+                let width = (document.getElementById("story-scroll").offsetWidth);
                 DivElmnt.addEventListener('wheel', function (e) {
                     console.log("scroll triggered");
                     document.getElementById('highlight-line').style.opacity = 0;
@@ -222,7 +202,8 @@ function Gingerbread() {
                         DivElmnt.scrollTop = currentScrollPlace;
                         DivElmnt.word = 0;
                     } else {
-                        DivElmnt.word++;
+                        let increment = 614 / width;
+                        DivElmnt.word += increment;
                     }
                 } else {
                     console.log("Story Paused, Curr Word: " + DivElmnt.word);
@@ -272,6 +253,9 @@ function Gingerbread() {
                                         <p className="story-text">
                                             {story.split(" ").map((ele, index2, index) => (getTag(ele, removeHighlight, handleWordClick)))}
                                             {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
+                                        </p>
+                                        <p id="story-spacer">
+                                            <br></br>
                                         </p>
                                     </div>
                                 </div>

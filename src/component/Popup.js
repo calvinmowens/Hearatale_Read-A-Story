@@ -4,12 +4,13 @@ import PostData from '../data/targetwords.json';
 import TargetQuiz from "./TargetQuiz.js";
 // import $ from 'jquery';
 
-
 const Popup = ({ isVisible, onClose, choosenWord }) => {
 
+    // TODO add variation detection
     const word = PostData.filter(
         (post) => post.word?.toLowerCase() === choosenWord?.toLowerCase()
     )[0];
+    // console.log(word.word);
     const [targetWord, setTargetWord] = useState('');
     const [quizzedWord, setQuizzedWord] = useState('');
     let quizWord = JSON.stringify(choosenWord);
@@ -42,14 +43,19 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
                         <div className="popupContainerLeft">
                             <div className="post" id="content-holder">
                                 <h1 id="word">{word.word}</h1>
+                                <audio id="story" controls autoPlay controlslist="nodownload noplaybackrate">
+                                        <source src={word.audio} type="audio/mp3" />
+                                    </audio>
                                 <h4>{word.variation}</h4>
                                 <h4>{word.pronounciation}</h4>
                                 <p>{word.definition}</p>
+                                <p hidden id="wordImage">{word.image}</p>
                             </div>
                             <button onClick={handleTargetQuiz} value="hello" className="quizBtnDesign" id="quizBtn">Quiz</button>
                         </div>
                         <div className="popupContainerRight">
-                            <div className="wordImg"></div>
+                            {/* <div className="wordImg"> */}
+                            <img className="wordImg" src={word.image} alt="picture for word"></img>
                         </div>
                     </div>
                     <a id="closeBtn" className="close close-btn" onClick={onClose}></a>
