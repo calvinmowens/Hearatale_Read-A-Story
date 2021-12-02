@@ -21,7 +21,7 @@ import image13 from "./the-three-billy-goats-gruff/art/13.png"
 
 
 function Goats() {
-    const story = 'Once upon a time three Billy Goats Gruff lived on a high hill in a pasture full of fine alfalfa grass.  The eldest brother was Big Billy Goat Gruff, the second was Middle-sized Billy Goat Gruff, and the youngest was Little Billy Goat Gruff.  Every day they grazed and browsed and munched to their hearts’ content, but they were hungry Billy Goats Gruff and before long they had eaten almost all the alfalfa on their hill. \n On another hill across the way they could see fine meadow fields with red and white blossoms among delicious green clover, but the path to the other hill led down to a bridge and below the bridge lurked a mischievous troll. \n One day Little Billy Goat Gruff tired of searching for grass to eat and went down the path to the bridge.  He looked around and didn’t see the troll, so he started across the bridge with his little hoofs going clip-clop, clip-clop, clip-clop.  But when he reached the middle of the bridge he saw a crooked, bumpy finger with a pointy, broken fingernail curl up over the side of the bridge, and then another and another, until a whole dirty hand-paw slapped on the bridge and then another, and then a long greenish hairy nose like a lizard slid onto the bridge, and then reddish eyes and a wrinkly forehead and long-dirty hair, and up came the head until the chin rested on the bridge and big floppy lips and dirty black teeth that smelled terribly foul. \n “And who are you clip-clopping across my bridge?” growled the troll. \n “It is only I, Little Billy Goat Gruff,” said the little goat. \n “Well, you’re tromping across my bridge and I’m going to eat you up!” said the troll, and his green and yellow tongue licked across the broken teeth. \n “Please don’t eat me up,” said Little Billy Goat Gruff.  “I’m just a small little goat, barely enough for a snack.  If you let me go eat the clover on the other hill, I’ll get bigger and bigger.  You should wait for my brother Middle-sized Billy Goat Gruff—he’s much bigger, and will make a much finer meal.” \n “Well,” growled the troll, “all right.  Go along with you now and get bigger and I’ll eat you later.” \n So Little Billy Goat Gruff continued on to the hill with the fresh clover. \n A little while later Middle-size Billy Goat Gruff came down the path and started across the bridge going Clip-Clop, Clip-Clop, Clip-Clop.  About halfway across the bridge he saw pointy fingers like snakes creep up on the bridge, and a bumpy hand, and another, and a gruesome, ugly face appeared, with a long green nose with a pink wart that had a three long black hairs growing out of it, and big, floppy ears that waved in the breeze and made a shadow on the bridge. \n “And who are you Clip-Clopping across my bridge?” growled the troll. \n “It is only I, Middle-size Billy Goat Gruff,” said the middle brother. \n “Well, you’re tromping across my bridge and I’m going to eat you up!” said the troll, and he slobbered slimy slobs of spit on the bridge. \n “Please don’t eat me up,” said Middle-sized Billy Goat Gruff.  “I’m just a middle-sized goat, enough for a nice snack, but not enough for a good meal.  If you let me go eat the clover on the other hill, I’ll get bigger and bigger.  You should wait for my brother Big Billy Goat Gruff—he’s much bigger, and will make a much finer supper.” \n “Well,” growled the troll, “all right.  Go along with you now and get bigger and I’ll eat you later." \n So Middle-sized Billy Goat Gruff continued on to the hill and joined his little brother grazing and munching on the fresh clover. \n A little while later Big Billy Goat Gruff came down the path and started across the bridge going CLIP-CLOP, CLIP-CLOP, CLIP-CLOP.  About the midpoint of the bridge he saw some muddy, scratchy fingers curl up over the edge of the bridge, and a horrible green face with red eyes popped up, and the troll said, “Who are you CLIP-CLOPPING across my bridge?” \n “It is I,” replied the eldest brother, “Big Billy Goat Gruff.” \n “Well,” said the troll.  “You’re a nice, big goat and I intend to eat you up.”  With that he swung the rest of his ugly body up on the bridge and there he stood, the ugliest troll in the kingdom, with dirty long black hair stuck to the mud all over his body, and hairy warts all over this chest, and ugly scabs on his arms and legs, and nasty weeds growing from the dirt deep in his tummy-button, and toenails that curled in circles till they made a sharp point and scratched lines in the bridge whenever he moved his foot. \n “And after I eat you up,” growled the troll, “I intend to gobble up both your brothers.” \n Big Billy Goat Gruff didn’t say a word.  He just lowered his head with the two great big curvy horns and ran as fast as he could at that ugly troll—CLIPCLOPCLIPCLOPCLIPCLOP—and charged into him so hard, so fast that he blasted that troll to smithereens! \n And Big Billy Goat Gruff continued across the bridge and joined his brothers in the clover and they all three lived happily ever after.';
+    const story = 'Once upon a time three Billy Goats Gruff lived on a high hill in a pasture full of fine alfalfa grass.  The eldest brother was Big Billy Goat Gruff, the second was Middle-sized Billy Goat Gruff, and the youngest was Little Billy Goat Gruff.  Every day they grazed and browsed and munched to their hearts’ content, but they were hungry Billy Goats Gruff and before long they had eaten almost all the alfalfa on their hill. On another hill across the way they could see fine meadow fields with red and white blossoms among delicious green clover, but the path to the other hill led down to a bridge and below the bridge lurked a mischievous troll. One day Little Billy Goat Gruff tired of searching for grass to eat and went down the path to the bridge.  He looked around and didn’t see the troll, so he started across the bridge with his little hoofs going clip-clop, clip-clop, clip-clop.  But when he reached the middle of the bridge he saw a crooked, bumpy finger with a pointy, broken fingernail curl up over the side of the bridge, and then another and another, until a whole dirty hand-paw slapped on the bridge and then another, and then a long greenish hairy nose like a lizard slid onto the bridge, and then reddish eyes and a wrinkly forehead and long-dirty hair, and up came the head until the chin rested on the bridge and big floppy lips and dirty black teeth that smelled terribly foul. “And who are you clip-clopping across my bridge?” growled the troll. “It is only I, Little Billy Goat Gruff,” said the little goat. “Well, you’re tromping across my bridge and I’m going to eat you up!” said the troll, and his green and yellow tongue licked across the broken teeth. “Please don’t eat me up,” said Little Billy Goat Gruff.  “I’m just a small little goat, barely enough for a snack.  If you let me go eat the clover on the other hill, I’ll get bigger and bigger.  You should wait for my brother Middle-sized Billy Goat Gruff—he’s much bigger, and will make a much finer meal.” “Well,” growled the troll, “all right.  Go along with you now and get bigger and I’ll eat you later.” So Little Billy Goat Gruff continued on to the hill with the fresh clover. A little while later Middle-size Billy Goat Gruff came down the path and started across the bridge going Clip-Clop, Clip-Clop, Clip-Clop.  About halfway across the bridge he saw pointy fingers like snakes creep up on the bridge, and a bumpy hand, and another, and a gruesome, ugly face appeared, with a long green nose with a pink wart that had a three long black hairs growing out of it, and big, floppy ears that waved in the breeze and made a shadow on the bridge. “And who are you Clip-Clopping across my bridge?” growled the troll. “It is only I, Middle-size Billy Goat Gruff,” said the middle brother. “Well, you’re tromping across my bridge and I’m going to eat you up!” said the troll, and he slobbered slimy slobs of spit on the bridge. “Please don’t eat me up,” said Middle-sized Billy Goat Gruff.  “I’m just a middle-sized goat, enough for a nice snack, but not enough for a good meal.  If you let me go eat the clover on the other hill, I’ll get bigger and bigger.  You should wait for my brother Big Billy Goat Gruff—he’s much bigger, and will make a much finer supper.” “Well,” growled the troll, “all right.  Go along with you now and get bigger and I’ll eat you later." So Middle-sized Billy Goat Gruff continued on to the hill and joined his little brother grazing and munching on the fresh clover. A little while later Big Billy Goat Gruff came down the path and started across the bridge going CLIP-CLOP, CLIP-CLOP, CLIP-CLOP.  About the midpoint of the bridge he saw some muddy, scratchy fingers curl up over the edge of the bridge, and a horrible green face with red eyes popped up, and the troll said, “Who are you CLIP-CLOPPING across my bridge?” “It is I,” replied the eldest brother, “Big Billy Goat Gruff.” “Well,” said the troll.  “You’re a nice, big goat and I intend to eat you up.”  With that he swung the rest of his ugly body up on the bridge and there he stood, the ugliest troll in the kingdom, with dirty long black hair stuck to the mud all over his body, and hairy warts all over this chest, and ugly scabs on his arms and legs, and nasty weeds growing from the dirt deep in his tummy-button, and toenails that curled in circles till they made a sharp point and scratched lines in the bridge whenever he moved his foot. “And after I eat you up,” growled the troll, “I intend to gobble up both your brothers.” Big Billy Goat Gruff didn’t say a word.  He just lowered his head with the two great big curvy horns and ran as fast as he could at that ugly troll—CLIPCLOPCLIPCLOPCLIPCLOP—and charged into him so hard, so fast that he blasted that troll to smithereens! And Big Billy Goat Gruff continued across the bridge and joined his brothers in the clover and they all three lived happily ever after.';
     const storyPicStyle = {
         // background: "#FFFFFF",
         background: "url(" + image1 + ")",
@@ -29,7 +29,7 @@ function Goats() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         width: "95%",
-        height: "50%",
+        height: "75%",
         boxShadow: "0px 0px 40px rgba(184, 184, 184, 0.25)"
     }
 
@@ -93,73 +93,73 @@ function Goats() {
                 let picHolder = document.getElementById("picHolder")
                 switch (counter) {
                     // switch starts at image 2
-                    case 8:
+                    case 37:
                         picHolder.style.background = "url(" + image2 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 10:
+                    case 56:
                         picHolder.style.background = "url(" + image3 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 12:
+                    case 78:
                         picHolder.style.background = "url(" + image4 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 14:
+                    case 97:
                         picHolder.style.background = "url(" + image5 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 16:
+                    case 118:
                         picHolder.style.background = "url(" + image6 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 18:
+                    case 178:
                         picHolder.style.background = "url(" + image7 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 20:
+                    case 214:
                         picHolder.style.background = "url(" + image8 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 22:
+                    case 262:
                         picHolder.style.background = "url(" + image9 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 24:
+                    case 281:
                         picHolder.style.background = "url(" + image10 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 26:
+                    case 315:
                         picHolder.style.background = "url(" + image11 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 28:
+                    case 366:
                         picHolder.style.background = "url(" + image12 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
                         document.getElementById("picHolder").style.backgroundRepeat = "no-repeat"
                         break;
-                    case 30:
+                    case 389:
                         picHolder.style.background = "url(" + image13 + ")"
                         document.getElementById("picHolder").style.backgroundSize = "contain"
                         document.getElementById("picHolder").style.backgroundPosition = "center"
@@ -179,14 +179,14 @@ function Goats() {
         // -----
         let ScrollRate = 1;
         // TODO set this as a factor of story-scroll.width
-        let EndWord = (document.getElementById("story-scroll").offsetWidth) * 1.5;
+        let EndWord = 1150;
         console.log(EndWord);
 
         let DivElmnt;
         let scrollInterval;
         let currentScrollPlace = 0;
 
-        setTimeout(scrollDiv_init, 7000);
+        setTimeout(scrollDiv_init, 4500);
 
         function scrollDiv_init() {
             console.log("start scroll")
@@ -197,25 +197,7 @@ function Goats() {
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
             scrollInterval = setInterval(() => {
 
-                // SELENA'S ORIGINAL CODE
-                // if (!reachedMaxScroll) {
-                //     if (DivElmnt.word >= EndWord) {
-                //         if (!sound.paused) {
-                //             DivElmnt.scrollTop += 60;
-                //             DivElmnt.word = 0;
-                //         }
-                //         reachedMaxScroll = DivElmnt.scrollTop >= DivElmnt.scrollHeight;
-                //     }
-                //     // AFTER PAUSE NOT WORKING
-                //     else if (sound.paused) {
-                //         DivElmnt.word = EndWord - DivElmnt.word;
-                //     }
-                //     DivElmnt.word++;
-                // } else {
-                //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
-                // }
-
-
+                let width = (document.getElementById("story-scroll").offsetWidth);
                 DivElmnt.addEventListener('wheel', function (e) {
                     console.log("scroll triggered");
                     document.getElementById('highlight-line').style.opacity = 0;
@@ -229,7 +211,8 @@ function Goats() {
                         DivElmnt.scrollTop = currentScrollPlace;
                         DivElmnt.word = 0;
                     } else {
-                        DivElmnt.word++;
+                        let increment = 614 / width;
+                        DivElmnt.word += increment;
                     }
                 } else {
                     console.log("Story Paused, Curr Word: " + DivElmnt.word);
@@ -279,6 +262,9 @@ function Goats() {
                                         <p className="story-text">
                                             {story.split(" ").map((ele, index2, index) => (getTag(ele, removeHighlight, handleWordClick)))}
                                             {/* <span className="targetWord" onClick={handleWordClick}>Once</span> upon a time there was a sweet little girl who was <span className="targetWord" onClick={handleWordClick}>loved</span> by everyone who knew her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave the girl a little cape with a hood of red velvet, which suited her so well that she would never wear anything else; so she was alawys called 'Little Red Riding Hood.’ */}
+                                        </p>
+                                        <p id="story-spacer">
+                                            <br></br>
                                         </p>
                                     </div>
                                 </div>
