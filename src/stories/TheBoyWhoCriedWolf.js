@@ -149,6 +149,7 @@ function TheBoyWhoCriedWolf() {
             DivElmnt = document.getElementById('story-scroll');
             DivElmnt.scrollTop = 0;
             DivElmnt.word = 0;
+            let width = (document.getElementById("story-scroll").offsetWidth);
 
             // scrollInterval = setInterval('scrollDiv()', ScrollRate);
             scrollInterval = setInterval(() => {
@@ -171,7 +172,6 @@ function TheBoyWhoCriedWolf() {
                 //     reachedMaxScroll = (DivElmnt.scrollTop == 0) ? false : true;
                 // }
 
-                let width = (document.getElementById("story-scroll").offsetWidth);
                 DivElmnt.addEventListener('wheel', function (e) {
                     console.log("scroll triggered");
                     document.getElementById('highlight-line').style.opacity = 0;
