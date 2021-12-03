@@ -49,7 +49,7 @@ const Popup = ({ isVisible, onClose, choosenWord }) => {
                                 <h4>{word.variation}</h4>
                                 <h4>{word.pronounciation}</h4>
                                 <p>{word.definition}</p>
-                                <p hidden id="wordImage">{word.image}</p>
+                                <image hidden id="wordImage">{word.image}</image>
                             </div>
                             <button onClick={handleTargetQuiz} value="hello" className="quizBtnDesign" id="quizBtn">Quiz</button>
                         </div>
