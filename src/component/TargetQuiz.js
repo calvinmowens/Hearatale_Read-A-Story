@@ -11,27 +11,26 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
 
     useEffect(() => {
         //randomize answer choices.
-        let choices = document.getElementsByClassName("answerInput");
+        let choices = document.getElementsByClassName(".answerInput");
         for (let i = 0; i < choices.length; i++) {
             let target = Math.floor(Math.random() * choices.length - 1) + 1;
             let target2 = Math.floor(Math.random() * choices.length - 1) + 1;
-            //choices.eq(target).before(choices.eq(target2));
-            choices[target].before(choices[target2]);
+            choices.eq(target).before(choices.eq(target2));
         }
     })
 
     function randomIntFromInterval(min, max, otherkey) { // min and max included 
-        var rnum = Math.floor(Math.random() * (max - min + 1) + min);
+        var rnum = Math.floor(Math.random() * (max - min) + min);
 
 
         while (rnum == otherkey) {
             console.log("inside while");
-            rnum = Math.floor(Math.random() * (max - min + 1) + min);
+            rnum = Math.floor(Math.random() * (max - min) + min);
         }
 
         return rnum;
     }
-
+    /*
     //CREATE RANDOM KEY1 TO ACCESS FROM JSON
     const randomValues = randomIntFromInterval(1, 5, null);
     const randomValues2 = randomIntFromInterval(1, 5, randomValues);
@@ -40,21 +39,52 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
     let m = randomValues2.toString();
 
 
-    //GET RANDOM ANSWER OBJECT FOR CHOICE 1
-    const randomAnswers = RandomAnswer.filter(
+    //GET RANDOM ANSWER OBJECT FROM JSON1
+    let randomAnswers = RandomAnswer.filter(
         (post) => post.id === n)[0];
     console.log(randomAnswers);
 
-    //GET RANDOM ANSWER OBJECT FOR CHOICE 2
-    const randomAnswer2 = RandomAnswer.filter(
+    //GET RANDOM ANSWER OBJECT FROM JSON2
+    let randomAnswer2 = RandomAnswer.filter(
         (post) => post.id === m)[0];
     console.log(randomAnswer2);
+    */
 
     //GET CORRECT ANSWER FROM JSON
     const word = PostData.filter(
         (post) => post.word?.toLowerCase() === quizzedWord?.toLowerCase()
     )[0];
 
+    const allTargets = PostData.filter(
+        (post) => post.word?.toLowerCase().charAt(0) === quizzedWord?.toLowerCase().charAt(0)
+    );
+    
+    /*
+    console.log('Target Test:\n')
+    console.log(targetWord)
+    console.log('Quiz Test')
+    console.log(quizzedWord)
+    */
+    let randomAnswers = 'RA';
+    let randomAnswers2 = 'RA2';
+
+    if (allTargets.length > 0) {
+        console.log(allTargets)
+        let randomValues = randomIntFromInterval(0, allTargets.length, null);
+        let randomValues2 = randomIntFromInterval(0, allTargets.length, randomValues);
+        console.log(randomValues)
+        console.log(randomValues2)
+        randomAnswers = allTargets[randomValues].word;
+        if (randomAnswers?.toLowerCase() === quizzedWord?.toLowerCase()) {
+            randomValues = randomValues - 1
+            randomAnswers = allTargets[randomValues].word;
+        }
+        randomAnswers2 = allTargets[randomValues2].word;
+        if (randomAnswers2?.toLowerCase() === quizzedWord?.toLowerCase()) {
+            randomValues2 = randomValues2 - 1
+            randomAnswers2 = allTargets[randomValues2].word;
+        }
+    }
 
     //Use state for coins 
     const [coins, incrementCoins] = useState(0);
@@ -78,6 +108,8 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
             console.log('works???');
             document.getElementById("choice3").style.color = "green";
             incrementCoins(coins + 1);
+            randomAnswers2 = 'RA2';
+            randomAnswers = 'RA';
         } else if (value == "wrong1") {
             console.log('doesnt works???');
             console.log(value);
@@ -96,16 +128,16 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
                 <div className="popupContainer quizContainer">
                     <h3 className="coinHolder"><span className="iconM">💰</span><span id="coin">{coins}</span></h3>
                     <form>
-                        <h1 className="question">What is the definition of {targetWord} ?</h1>
+                        <h1 className="question">Definition: {word.definition} ?</h1>
                         <div className="answerChoices">
                             <div id="choice1" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong1" />
-                                <p>{randomAnswers.answer}</p>
+                                <p>{randomAnswers}</p>
                             </div>
                             <div id="choice2" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="wrong2" />
-                                <p>{randomAnswer2.answer}<br /></p>
+                                <p>{randomAnswers2}<br /></p>
                             </div>
                             <div id="choice3" className="answerInput"><input required id="answer" className="radio" type="radio" name="group1" defaultValue="correct" />
-                                <p>{word.definition}</p>
+                                <p>{quizzedWord.toLowerCase()}</p>
                             </div>
 
                         </div>
