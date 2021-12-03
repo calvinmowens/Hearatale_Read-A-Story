@@ -3,7 +3,6 @@ import '../StoryQuiz.css';
 import '../../Story.css'
 import '../../component/Quiz.css'
 import '../../data/targetwords.json'
-import PostData from './GoldilocksStoryQuizJson.json'
 
 function GoldilocksStoryQuiz() {
 
