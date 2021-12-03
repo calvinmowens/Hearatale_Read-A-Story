@@ -76,12 +76,14 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
         console.log(randomValues2)
         randomAnswers = allTargets[randomValues].word;
         if (randomAnswers?.toLowerCase() === quizzedWord?.toLowerCase()) {
-            randomValues = randomValues - 1
+            allTargets.splice(randomValues, 1)
+            randomValues = randomIntFromInterval(0, allTargets.length, null);
             randomAnswers = allTargets[randomValues].word;
         }
         randomAnswers2 = allTargets[randomValues2].word;
         if (randomAnswers2?.toLowerCase() === quizzedWord?.toLowerCase()) {
-            randomValues2 = randomValues2 - 1
+            allTargets.splice(randomValues2, 1)
+            randomValues2 = randomIntFromInterval(0, allTargets.length, randomValues);
             randomAnswers2 = allTargets[randomValues2].word;
         }
     }
