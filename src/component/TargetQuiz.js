@@ -11,11 +11,12 @@ const TargetQuiz = ({ isQuizVisible, closeQuiz, targetWord, quizzedWord }) => {
 
     useEffect(() => {
         //randomize answer choices.
-        let choices = document.getElementsByClassName(".answerInput");
+        let choices = document.getElementsByClassName("answerInput");
         for (let i = 0; i < choices.length; i++) {
             let target = Math.floor(Math.random() * choices.length - 1) + 1;
             let target2 = Math.floor(Math.random() * choices.length - 1) + 1;
-            choices.eq(target).before(choices.eq(target2));
+            //choices.eq(target).before(choices.eq(target2));
+            choices[target].before(choices[target2]);
         }
     })
 
