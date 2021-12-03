@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../Story.css';
 import Popup from "../component/Popup";
 //will need to change to a new json file.
-import PostData from '../data/targetwords.json'
+import PostData from '../stories/goldilocks-and-the-three-bears/targetwords.json'
 import sound from "./goldilocks-and-the-three-bears/audio.mp3"
 import image1 from "./goldilocks-and-the-three-bears/art/1.png"
 import image2 from "./goldilocks-and-the-three-bears/art/2.png"

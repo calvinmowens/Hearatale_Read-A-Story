@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../Story.css';
 import Popup from "../component/Popup";
 //will need to change to a new json file.
-import PostData from '../data/targetwords.json'
+import PostData from '../stories/little-red-hen/targetwords.json'
 import sound from "./little-red-hen/audio.mp3"
 import image1 from "./little-red-hen/art/1.png"
 import image2 from "./little-red-hen/art/2.png"
