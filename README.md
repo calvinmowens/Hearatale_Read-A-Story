@@ -1,132 +1,100 @@
 # Hearatale_Read-A-Story
 
-This is the repository for Hearatale's Read-A-Story Application. This app was built by Georgia Tech Junior Design Team 1111 and completed December 2021.  
+This is the repository for Hearatale's Read-A-Story Application. This app was built by Georgia Tech Junior Design Team 1111 and completed December 2021. 📖🐝  
 
-## Release Notes
+## 🚨 Release Notes
 v1.0 - The Launch!
-Features:
-* Homescreen
-* Login
-* Bookshelf
-* Story Pages for 10 Different Stories
-* Popup for definition on Target Words
+* Homescreen, with Links to Future Hearatale App Suite
+* Large Keyboard Login (Mouse Operated)
+* Bookshelf with 10 Unique Stories
+* Reading Pages for all 10 Stories (Featuring: audio, auto-scroll and auto-highlighting, images, and play/pause)
+* "Clickable" Targert Words, displaying Popup with Definition, Image, Pronounciation an
 * Quizzes for Target Words
-* Quizzes for Each Story
-* Rewards Linked to User
+* Quizzes for ALL Target Words in a Story
 
-Known Bugs and Missing Features:
-* TBD
+## 🐞 Known Bugs and Missing Features:
+* **User Based Rewards**  
+Rewards are currently stored using `localStorage` to track rewards locally and is working across quiz instances and broswer session, but they are not linked to the currently signed-in user.  
+* **DAP Connection**  
+Data from Read-A-Story is not stored in any way for statistics like stories read, quiz questions answered, and correct first-attempt answers. These values will need to have a counter in their respective locations within the React components then these values linked to the user. Then you can link the user database (MySQL) to the exisitng DAP.
+* **Gold Star Rewards**  
+No gold stars have been added for correct first-attempt and this data is not tracked. Both logic and front-end implementation will need to be added in order to launch this feature.
+* **Store**  
+Apart of Read-A-Story, there is no place to spend rewards. We see potential for Hearatale as a platform to share a unified rewards system (connected to the DAP) and a single store to use across all applicaitons. In our implementation, a `localStorage` rewards value is updated and would need to be stored to the user, then to the DAP and from there allow that user to access a future build of a store page.
+* **Target Words Missing Data**  
+Some target words are missing image/audio data and thus that is not populated in the Target Words popups. This is a simple fix by adding an audio file to `Hearatale_Read-A-Story/public/audio` in the manner of `WORD.mp3` (replacing WORD with the target word). Or likewise, adding an image file to `Hearatale_Read-A-Story/public/img` in the manner of `WORD.png` (replacing WORD with the target word).
 
-## Install Guide
-Application
-**Build instructions (if needed):**
-Application:  
-`npm install`  
-`npm start`  
+## ⬇️ Install Guide
 
-Server: 
-* install mysql
-    mysql -u root -p
-* install pip
-* pip install flask, flask-login, flask-mysqldb, flask-sqlalchemy, bcrypt
-* 
+**📚 Application**  
+**Pre-requisites:**  
+Almost all hardware running a modern operating system link Windows or MacOS should be able to both run and develope in React. Coming out in 2013, there should be few instances of hardware/operating system related issues -- if you run into this case try updating your operating system.  
 
+**Dependencies:**  
+You are going to need NPM (or Yarn, alternatively). Let's use NPM for this example.  
+  
+If you don't have it installed on your system, then you need to head to the [official Node.js website](https://nodejs.org/en/) to download and install Node, which also includes NPM (Node Package Manager). Download the install that is "Reccommended for Most Users".  
+  
+User `node -v` and `npm -v` to check versions of note and npm (Node Package Manager) respectively.  
+That's all you need to get this thing rolling!  
+  
+**Download instructions:**  
+This project currently does not have an executable to run or hosting site to access, so to download:  
+  
+Download the github repository by clicking the green "Code" button and then "Download ZIP". Download this in a location farmiliar to you and one you will be able to `cd` to easily.  
+  
+**Run instructions:**  
+Now that node is installed, to run the application `cd` into the main project directory (Hearatale_Read-A-Story).
+Next run `npm install` to install the node modules needed to run the React application, let that install, this could take a few minutes depending on internet speed and your device.  
+  
+Lastly, run `npm start` to start the Node server. Your default browser window should open to `http://localhost:3000`, and if it doesn't happen automaticall please go to that URL into your browser of choice to lead the application.  
+  
+To stop running, user `Control + C` or `Alt + C` on Windows.  
+  
+**Troubleshooting:**  
+Common isues are likely related to `npm` and `node_modules` errors. To fix these:  
+Run `rm Rf- node_modules` when in the main directory.
+Then run, `npm install` to reinstall node modules.
+Then run, `npm start` to restart the server.
 
+---
 
-**Pre-requisites:** 
-what is the required configuration of software and hardware that the customer must have before they can begin the installation process?
-**Dependencies:**
-what third party software must be installed for your software to function?
-**Download instructions:** how will the customer and users get access to the project?
-**Build instructions (if needed):** if you are providing the raw source code rather than a binary build, how will the customer and users create the required executable application?
-Installation of actual application: what steps have to be taken after the software is built? What directories are required for installation?
-**Run instructions:**  what does the user/customer have to do to get the software to execute?
-**Troubleshooting:**  what are common errors that occur during installation and what is the corrective action?
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and made with love ♥️ by Team 1111.
-
-TEAM:  
+**👥 Server**  
+  
+**Pre-requisites:**  
+Almost all hardware running a modern operating system link Windows or MacOS should be able to both run and develope in React. Coming out in 2013, there should be few instances of hardware/operating system related issues -- if you run into this case try updating your operating system.  
+  
+**Dependencies:**  
+Alright, you're going to need a few more things compared to the application...  
+  
+First, you'll need to [install MySQL](https://dev.mysql.com/downloads/mysql/), select your operating system and version number, latest recommended and install that by instructions.  
+  
+Next you'll need to have `pip` to install the next packages. To do this, `cd` into the directory you want the `pip` install file stored in, then run `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`. Now download pip by running `python3 get-pip.py`.  
+You can test this install worked by running `pip3 --version` and you should get a version number in return.  
+  
+Next, you need to install the following packages using `pip3` (it is recommended you do this inside the Hearatale_Read-A-Story) project directory. The structure for these install statements will be `pip3 install PACKAGE-NAME` by replacing PACKAGE-NAME with the packge you are installing. These are as follows:  
+* flask
+* flask-login
+* flask-mysqldb
+* flask-sqlalchemy
+* bcrypt
+  
+This concludes the dependencies needed to run the MySQL server using flask.  
+  
+**Run instructions:**  
+Now that you've installed all that, to run the server...  
+TODO  
+  
+---
+  
+This project was made with love ♥️ by Team 1111 and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+  
+**TEAM 1111:**  
 Sungeun (Harry) Bae  
 Selena Do  
 Kush Dabhi  
 Robbie McCormick  
 Calvin Owens  
 Luke LaScala  
-
-Here is a link to our current Figma screens:  
-https://www.figma.com/file/4TOYQrMV8yfeuMj9gfahlJ/Prototype?node-id=0%3A1
-
-
----
-
-## Usage
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-**Testing Login:** CCCCC
-
-## Avaliable Scripts && React Docs
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
+Lastly, here are some [Figma](https://www.figma.com/file/4TOYQrMV8yfeuMj9gfahlJ/Prototype?node-id=0%3A1) screens for your viewing pleasure.
