@@ -113,8 +113,10 @@ function verifyLogin() {
 			localStorage.setItem('userToken', 'CALVIN');
 			console.log(localStorage.getItem('userToken'));
 			location.href = "bookshelf.html";
-		 }
+		}
 
+	// ! To incorperate user login, replace the above conditional with this fetch 
+	// ! statement to be used when server is running
 	// 	fetch('http://localhost:5000/student/login', {
 	// 			method: 'POST', // or 'PUT'
 	// 			headers: {
@@ -172,4 +174,3 @@ function verifyLogin() {
 	// 	alert("Wrong password entered, please enter correct password.");
 	// }
 }
-
