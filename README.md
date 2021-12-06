@@ -83,7 +83,7 @@ This concludes the dependencies needed to run the MySQL server using flask.
   
 **Run instructions:**  
 Now that you've installed all that, to run the server...  
-TODO  
+`python run.py` will start the flask server on port 5000. Ensure no other process is running on port 5000. 
   
 ---
   
